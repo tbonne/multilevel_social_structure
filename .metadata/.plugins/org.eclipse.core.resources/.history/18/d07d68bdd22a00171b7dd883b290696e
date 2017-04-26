@@ -2,13 +2,13 @@ package multiLevelGroups;
 
 import java.util.ArrayList;
 
+import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealVector;
 
 import repast.simphony.random.RandomHelper;
 import cern.jet.random.VonMises;
 
-import com.jgoodies.binding.beans.Model;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Envelope;
 
@@ -21,6 +21,7 @@ public class OMU {
 	RealVector myTravelVector;
 	ArrayList<OMU> familiarOMUs;
 	ArrayList<Double> familiarOMU_values;
+	NormalDistribution nd;
 
 
 	/****************************OMU Construction************************/
@@ -37,6 +38,8 @@ public class OMU {
 		familiarOMUs = new ArrayList<OMU>();
 
 		myTravelVector = new ArrayRealVector(2);
+		
+		nd = new NormalDistribution(0,Params.errorInd);
 	}
 
 	/****************************OMU Behaviour************************/
@@ -130,8 +133,8 @@ public class OMU {
 		for(Cell c : foodSites){
 
 			//calculate weight
-			double distance = Math.max(Params.cellSize/2,  c.getCoord().distance(this.getMyCoord()));
-			double weight = ( Math.pow( c.getResourceLevel(),4)/distance )*  c.getFamiliarity(this) ; //
+			double distance = Math.max(1,  c.getCoord().distance(this.getMyCoord()));
+			double weight = (1-Params.homeWeight)*( c.getResourceLevel()/distance ) +  (Params.homeWeight)*(c.getFamiliarity(this));  
 			weights.add(weight);
 			sum = sum + weight;
 
@@ -153,7 +156,7 @@ public class OMU {
 			weightsStan.add(d/sum);
 		}
 
-		//calculate the avg direction (weights*dir to each patch)
+		//calculate the avg direction 
 		RealVector avgFoodVector = new ArrayRealVector(2);
 		for(int i = 0 ; i< weightsStan.size();i++){
 			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weightsStan.get(i)));
@@ -166,12 +169,10 @@ public class OMU {
 
 
 		/********************Social effects**********************/
-		//int countSocialInd = 0;
+		//calculate the weights of each visible individual
 		double sumSoc = 0;
 		ArrayList<Double> weightsSoc = new ArrayList<Double>();
 		ArrayList<RealVector> directionsSoc = new ArrayList<RealVector>();
-
-		//bias based on visual individuals
 		for(OMU ind : inds){
 
 			if(familiarOMUs.contains(ind)){
@@ -180,7 +181,6 @@ public class OMU {
 				double weightSoc = familiarOMU_values.get(familiarOMUs.indexOf(ind));
 				sumSoc = sumSoc + weightSoc;
 				weightsSoc.add(weightSoc);
-
 
 				//calculate the direction
 				RealVector indVector = new ArrayRealVector(2);
@@ -214,7 +214,9 @@ public class OMU {
 			}
 		}
 
+		//If there was a visible individual
 		if(inds.size()>0){
+			
 			//standardize the patch weights to sum to one
 			ArrayList<Double> weightsSocStan = new ArrayList<Double>();
 			for(Double d : weightsSoc){
@@ -231,11 +233,12 @@ public class OMU {
 			avgIndVector.unitize();
 			avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
 			myVector = myVector.add(avgIndVector);
-			//countSocialInd++;
 		}
 
 
 		/********************Effect of uncertainty**********************/
+		
+		//estimate uncertainty (length of the resulting movement vector / max possible length of the resulting vector)
 		RealVector finalVector = new ArrayRealVector(2);
 		double u = Math.atan2(myVector.getEntry(1), myVector.getEntry(0));
 		double length = Math.pow(Math.pow(myVector.getEntry(0),2)+Math.pow(myVector.getEntry(1), 2),0.5);
@@ -246,7 +249,8 @@ public class OMU {
 			maxLength = Params.bearingWeight + Params.foodWeight ; 
 		}
 		double k = Math.max(-2*Math.log(length/maxLength),0.0001);
-		if(u==0)System.out.println("zero u");
+		
+		//add uncertainty to the final movement vector
 		if(u!=0){
 			u = u + VonMises.staticNextDouble(1/k); 
 			double deltaX = Math.cos(u);
@@ -256,9 +260,11 @@ public class OMU {
 			//finalVector.unitize();
 		}
 
-
-		//set travel infor
+		//multiply by movement scale and set travel information
 		myTravelVector = finalVector.mapMultiply(Params.maxDistPerStep);
+		
+		//record current vector as previous vector for next movements
+		this.setPreviousBearing(myTravelVector);
 
 	}
 
@@ -278,16 +284,15 @@ public class OMU {
 
 	private void eat(){
 
+		//get the food cell that i'm in.
 		ArrayList<Cell> foodSites = new ArrayList<Cell>();
 		Cell myCell = null;
-
 		Iterable<Cell> objectsInArea = null;
 		Envelope envelope = new Envelope();
 		envelope.init(this.getMyCoord());
 		envelope.expandBy(Params.cellSize);
 		objectsInArea = ModelSetup.getGeog().getObjectsWithin(envelope,Cell.class);
 		envelope.setToNull();
-
 
 		for(Cell c : objectsInArea){
 			foodSites.add(c);
@@ -306,10 +311,10 @@ public class OMU {
 			myCell = foodSites.get(0);
 		}
 
+		//If i'm in a food cell eat and update familiarity
 		if(myCell!=null){
 			myCell.eatMe();
 			myCell.updateFam(this);
-			//myCell.setFamiliarity(this.getMyID(), 0.999);
 		}
 
 	}
@@ -327,20 +332,30 @@ public class OMU {
 		//increase familiarity with those visible
 		for(OMU o : visibleInds){
 
-			//already on the familiarity list
+			//already on my familiarity list
 			if(familiarOMUs.contains(o)){
 
 				int indexO = familiarOMUs.indexOf(o);
 				double f = familiarOMU_values.get(indexO);
-				f = Math.max( (f + (Params.iGrow-Params.iDecay) * (1-f)*f),Params.famMinInd);
+				if(f<0){
+					f = Math.max( (f - (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMinInd);
+				} else {
+					f = Math.max( (f + (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMaxInd);
+				}
+				
 				familiarOMU_values.set(indexO, f);
 
-				//needing to be added to the familiarity list
+			//needing to be added to my familiarity list
 			} else {
+				
 				//add new individual
 				familiarOMUs.add(o);
 				double f = Params.famMinInd;
-				f = Math.max( (f + (Params.iGrow-Params.iDecay) * (1-f)*f),Params.famMinInd);
+				if(f<0){
+					f = Math.max( (f - (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMinInd);
+				} else {
+					f = Math.min( (f + (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMaxInd);
+				}
 				familiarOMU_values.add(f);
 			}
 		}
@@ -352,14 +367,18 @@ public class OMU {
 			if(visibleInds.contains(inds)==false){
 				int indexO = familiarOMUs.indexOf(inds);
 				double f = familiarOMU_values.get(indexO);
-				f = Math.max( (f  - Params.iDecay * (1-f)*f),Params.famMinInd);
+				if(f<0){
+					f = Math.max( (f  + Params.iDecay * (1-f)*f),Params.famMinInd);
+				}else{
+					f = Math.max( (f  - Params.iDecay * (1-f)*f),Params.famMinInd);
+				}
 				familiarOMU_values.set(indexO, f);
 				if(f <= Params.famMinInd)removeFams.add(inds);
 			}
 		}
 
 
-		//update list (remove all individuals that are lower or equal to the min)
+		//update list (remove all individuals that are lower or equal to the min familiarity)
 		for(OMU omu:removeFams){
 			familiarOMU_values.remove(familiarOMUs.indexOf(omu));
 			familiarOMUs.remove(omu);

@@ -385,6 +385,11 @@ public class OMU {
 		}
 
 	}
+	
+	need to figure out this error as i think that individuals are missing after a longer run
+	
+	Problem lies in OMU codejava.lang.IllegalArgumentException: Points of LinearRing do not form a closed linestring
+	Problem lies in OMU action codejava.lang.IllegalArgumentException: Points of LinearRing do not form a closed linestring
 
 
 	/****************************
