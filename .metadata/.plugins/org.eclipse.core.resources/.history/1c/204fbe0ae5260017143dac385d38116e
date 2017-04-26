@@ -1,0 +1,65 @@
+package multiLevelGroups;
+
+import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.parameter.Parameters;
+
+public class Params {
+
+	/********************************
+	 * 								*
+	 * Model parameters				*
+	 * 								*
+	 * ******************************/
+	
+	final static Parameters p = RunEnvironment.getInstance().getParameters();
+	
+	//Simulation
+	public final static int numberOfThreads = 1;
+	
+	//landscape
+	public final static String geog = "geog";
+	public static int landscapeWidth = 50;
+	public static double envHomogen = 0.5;
+	
+	//resource cells
+	public final static int cellSize = 30;
+	public static double regrowthRate = 0.001;
+	public final static double depletionRate = 0.1;
+	//public static double cellChangeRate = 0.01;
+	
+	//OMU population
+	public static int numbOMU = 1;
+	
+	//OMU foraging behaviour
+	public static int foodSearchRange = 50;
+	public static int visualSearchRange = 100;
+	
+	//OMU momvement behaviour
+	public static double bearingWeight = 0;
+	public static double foodWeight = 0.8;
+	public static double socialWeight = 0.2;
+	public final static int maxDistPerStep = 10;
+	
+	//Familiarity
+	public static final double lGrow = 0.3;
+	public static final double lDecay = 0.01;
+	public static final double iGrow = 0.01;
+	public static final double iDecay = 0.009;
+	public static final double famMinInd = 0.001;
+	public static final double famMinCell = 0.001;
+	
+	
+	//Constructor: used to set values from batch runs or the GUI
+		public Params(){
+			
+			//envHomogen = (Double)p.getValue("envHomogen");
+			//regrowthRate = (Double)p.getValue("regrow");
+			//numbOMU = (Integer)p.getValue("NumbOMU");
+			//landscapeWidth = (Integer)p.getValue("landWidth");
+			//cellChangeRate = (Double)p.getValue("fDecay");
+			//foodSearchRange = (Integer)p.getValue("vRange");
+			//bearingWeight = (Double)p.getValue("bearing");
+			
+		}
+	
+}

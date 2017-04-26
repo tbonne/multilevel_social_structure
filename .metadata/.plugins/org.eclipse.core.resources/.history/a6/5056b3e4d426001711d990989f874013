@@ -1,0 +1,21 @@
+package multiLevelGroups;
+
+import repast.simphony.util.ContextUtils;
+
+public class Observer {
+	
+	
+	//this will export all influence patterns between individuals
+	public static void recordInfluencePatterns(){
+		
+		//get all individuals
+		ModelSetup.getContext().getAgentLayer(OMU.class);
+		
+		
+		for(OMU omu : ModelSetup)
+		
+		
+	}
+	
+
+}

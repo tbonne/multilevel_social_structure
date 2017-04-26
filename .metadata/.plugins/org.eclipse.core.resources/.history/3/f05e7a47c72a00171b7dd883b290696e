@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+
+	<parameter name="randomSeed" displayName="Default Random Seed"
+		type="int" defaultValue="__NULL__" />
+
+	<parameter name="regrow" displayName="Patch Regrowth" type="java.lang.Double"
+		defaultValue="0.001" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+		
+	<parameter name="depletionRate" displayName="Patch depletion rate" type="java.lang.Double"
+		defaultValue="0.1" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+		
+	<parameter name="NumbOMU" displayName="Number of OMU" type="java.lang.Integer"
+		defaultValue="10" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+		
+	<parameter name="foodSearchRange" displayName="foodSearchRange" type="java.lang.Integer"
+		defaultValue="100" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	
+	<parameter name="visualSearchRange" displayName="VisualSearchRange" type="java.lang.Integer"
+		defaultValue="100" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+		
+	<parameter name="bearingWeight" displayName="Influence of bearing"
+		type="java.lang.Double" defaultValue="0.2" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+		
+		
+		
+		
+
+	<parameter name="fDecay" displayName="Familiarity decay"
+		type="java.lang.Double" defaultValue="0.001" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+
+	<parameter name="vRange" displayName="Visual Range" type="java.lang.Integer"
+		defaultValue="100" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	<parameter name="landWidth" displayName="Landscape width"
+		type="java.lang.Integer" defaultValue="100" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	
+
+
+
+	<parameter name="envHomogen" displayName="Environmental Homogeneity"
+		type="java.lang.Double" defaultValue="0.5" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+
+</parameters>

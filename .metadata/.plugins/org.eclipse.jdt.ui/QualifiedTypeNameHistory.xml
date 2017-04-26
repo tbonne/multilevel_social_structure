@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.vividsolutions.jts.awt.PointShapeFactory.Point"/>
+<fullyQualifiedTypeName name="com.vividsolutions.jts.geom.Point"/>
+<fullyQualifiedTypeName name="cern.jet.random.Uniform"/>
+<fullyQualifiedTypeName name="cern.jet.random.Beta"/>
+<fullyQualifiedTypeName name="net.sf.cglib.core.CollectionUtils"/>
+<fullyQualifiedTypeName name="com.jgoodies.binding.beans.Model"/>
+<fullyQualifiedTypeName name="repast.simphony.util.ContextUtils"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+</qualifiedTypeNameHistroy>

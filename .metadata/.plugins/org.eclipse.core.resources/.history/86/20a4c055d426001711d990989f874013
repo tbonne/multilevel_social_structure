@@ -1,0 +1,15 @@
+package multiLevelGroups;
+
+public class Observer {
+	
+	
+	//
+	public void recordInfluencePatterns(){
+		
+		
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,29 @@
+package multiLevelGroups;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import repast.simphony.util.ContextUtils;
+
+public class Observer {
+	
+	
+	//this will export all influence patterns between individuals
+	public static void recordInfluencePatterns(){
+		
+		//get all individuals
+		Iterable<OMU> allAgents = ModelSetup.getContext().getAgentLayer(OMU.class);
+		List allAgentsOrdered = new ArrayList<OMU>();
+		
+		//place it into a list
+		for(OMU omu : allAgents){
+			allAgentsOrdered.add(omu);
+		}
+		
+		//for each agent place associations into a vector and add to a matrix
+		
+		
+	}
+	
+
+}
