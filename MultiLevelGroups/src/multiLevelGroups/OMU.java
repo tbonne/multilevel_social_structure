@@ -151,15 +151,15 @@ public class OMU {
 		}
 
 		//standardize the patch weights to sum to one
-		ArrayList<Double> weightsStan = new ArrayList<Double>();
-		for(Double d : weights){
-			weightsStan.add(d/sum);
-		}
+		//ArrayList<Double> weightsStan = new ArrayList<Double>();
+		//for(Double d : weights){
+		//	weightsStan.add(d/sum);
+		//}
 
 		//calculate the avg direction 
 		RealVector avgFoodVector = new ArrayRealVector(2);
-		for(int i = 0 ; i< weightsStan.size();i++){
-			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weightsStan.get(i)));
+		for(int i = 0 ; i< weights.size();i++){
+			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weights.get(i)));
 		}
 
 		//add to myVector
@@ -179,6 +179,9 @@ public class OMU {
 
 				//calculate weight
 				double weightSoc = familiarOMU_values.get(familiarOMUs.indexOf(ind));
+				if(weightSoc>1.1){
+					System.out.println("Something here: familiarity values too high in movement method");
+				}
 				sumSoc = sumSoc + weightSoc;
 				weightsSoc.add(weightSoc);
 
@@ -218,20 +221,21 @@ public class OMU {
 		if(inds.size()>0){
 			
 			//standardize the patch weights to sum to one
-			ArrayList<Double> weightsSocStan = new ArrayList<Double>();
-			for(Double d : weightsSoc){
-				weightsSocStan.add(d/sumSoc);
-			}
+			//ArrayList<Double> weightsSocStan = new ArrayList<Double>();
+			//for(Double d : weightsSoc){
+			//	weightsSocStan.add(d/sumSoc);
+			//}
 
 			//calculate the avg direction (weights*dir to each ind)
 			RealVector avgIndVector = new ArrayRealVector(2);
-			for(int i = 0 ; i< weightsSocStan.size();i++){
-				avgIndVector = avgIndVector.add(directionsSoc.get(i).mapMultiply(weightsSocStan.get(i)));
+			for(int i = 0 ; i< weightsSoc.size();i++){
+				avgIndVector = avgIndVector.add(directionsSoc.get(i).mapMultiply(weightsSoc.get(i)));
 			}
 
 			//add to myVector
 			avgIndVector.unitize();
 			avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
+			
 			myVector = myVector.add(avgIndVector);
 		}
 
@@ -266,6 +270,12 @@ public class OMU {
 		//record current vector as previous vector for next movements
 		this.setPreviousBearing(myTravelVector);
 
+		if(myTravelVector.getEntry(1)>-10000){
+			//nothing
+		} else{
+			System.out.println("Something here: NAN in vector");
+		}
+		
 	}
 
 
@@ -340,7 +350,7 @@ public class OMU {
 				if(f<0){
 					f = Math.max( (f - (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMinInd);
 				} else {
-					f = Math.max( (f + (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMaxInd);
+					f = Math.min( (f + (Params.iGrow-Params.iDecay) * (1-f)*f)+nd.sample(),Params.famMaxInd);
 				}
 				
 				familiarOMU_values.set(indexO, f);
@@ -383,15 +393,8 @@ public class OMU {
 			familiarOMU_values.remove(familiarOMUs.indexOf(omu));
 			familiarOMUs.remove(omu);
 		}
-
 	}
 	
-	need to figure out this error as i think that individuals are missing after a longer run
-	
-	Problem lies in OMU codejava.lang.IllegalArgumentException: Points of LinearRing do not form a closed linestring
-	Problem lies in OMU action codejava.lang.IllegalArgumentException: Points of LinearRing do not form a closed linestring
-
-
 	/****************************
 	 * 
 	 * get and set methods

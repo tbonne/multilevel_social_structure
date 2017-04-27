@@ -5,12 +5,15 @@ import java.util.Collections;
 import java.util.Random;
 
 import jsc.distributions.Beta;
-import jsc.distributions.Lognormal;
+import jsc.distributions.PowerFunction;
 
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 
+import cern.jet.random.Distributions;
+import cern.jet.random.engine.MersenneTwister;
+import cern.jet.random.engine.RandomEngine;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.gis.GeographyFactory;
 import repast.simphony.context.space.gis.GeographyFactoryFinder;
@@ -78,6 +81,8 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 
 		//adding hexagon grid cells
 		Beta beta = new Beta(Params.envHomogen,Params.envHomogen);
+		MersenneTwister mt = new MersenneTwister();
+		
 		double xcoord=0,ycoord=0;
 		int offset=0,count=0;
 
@@ -85,7 +90,8 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 			for (int j = 0; j < xdim; ++j) {
 
 				//double food = 0;
-				double food = beta.random();
+				//double food = beta.random();
+				double food = 1/Distributions.nextPowLaw(2.6, 10, mt);
 				Cell cell=null;
 
 				if(offset==0){

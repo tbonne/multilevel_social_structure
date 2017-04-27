@@ -13,14 +13,13 @@ The simulations are based on a movement model proposed by Van Moorter et al (200
 ### Parameters:
 
 -   **The movement model requires four parameters:**
--   Weight of previous bearing on movement
--   Weight of landscape cells on movement
--   Weight of individuals on movement
--   Relative weight of familiar sites (i.e., how familiar is it?) Vs. valuable sites (i.e., amount food/distance)
-
+    -   Weight of previous bearing on movement
+    -   Weight of landscape cells on movement
+    -   Weight of individuals on movement
+    -   Relative weight of familiar sites (i.e., how familiar is it?) Vs. valuable sites (i.e., amount food/distance)
 -   **The familiarization model requires two parameters:**
--   Growth/Decay of familiarization towards individuals
--   Decay of familiarization towards landscape cells (maximum familiarization of a cell when an individual is within the cell)
+    -   Growth/Decay of familiarization towards individuals
+    -   Growth/Decay of familiarization towards landscape cells
 
 ### Model visual
 
@@ -32,11 +31,12 @@ The simulations are based on a movement model proposed by Van Moorter et al (200
 -   Individuals develop familiarization for only individuals, producing large groups and no consistent home range.
     ![](Figs/multi_soc_2.gif "Simulation 2a")
 
--   After a while...
-    ![](Figs/multi_soc_3.gif "Simulation 2b")
+    -   After a while...
+
+![](Figs/multi_soc_3.gif "Simulation 2b")
 
 ### Model outputs
 
--   The output from the model is an association matrix capturing the familarization between individuals. Note: this example was taken from the last of the above simulations, where all individuals formed one group. Negative weights are present as all individuals are initially assigned negative weights (i.e., avoid unfamiliar individuals).
+-   The output from the model is an association matrix capturing the familarization between individuals.
 
 ![](Figs/multi_soc_output.png "Output from simulation 2")

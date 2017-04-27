@@ -8,6 +8,78 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Orion: Orion Moved to Github</title>
+	<guid isPermaLink="false">http://planetorion.org/news/?p=887</guid>
+	<link>http://planetorion.org/news/2017/04/orion-moved-to-github/</link>
+	<description>&lt;p&gt;You may have heard a couple of weeks back that &lt;a href=&quot;https://dev.eclipse.org/mhonarc/lists/orion-dev/msg04073.html&quot;&gt;Orion moved to Github&lt;/a&gt;. If not, then let this be the notice that Orion moved to Github!&lt;/p&gt;
+&lt;p&gt;We are very excited about the move. The webmasters (Derek Toolan in particular) did an amazing job in making the transition seamless and simple.&lt;/p&gt;
+&lt;h2&gt;Why?&lt;/h2&gt;
+&lt;p&gt;You are probably wondering to yourself: “why did you move, you had a great home at eclipse.org?”. The answer boils down to &lt;em&gt;simpler contributing&lt;/em&gt;. With Github, we felt that it would be far easier for committers, community and everyone in-between to be able to contribute to our project. No more Gerrit, confusing Gerrit configurations, or multiple remotes – just fork the project, make awesome code and open a pull request. Simple.&lt;/p&gt;
+&lt;h2&gt;Ok, so where’s the code&lt;/h2&gt;
+&lt;p&gt;All of the Orion source code can now be found in the following locations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/orion.client&quot;&gt;orion.client&lt;/a&gt; – the Orion client code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/orion.server&quot;&gt;orion.server&lt;/a&gt; – the Orion Java server code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/orion.server.node&quot;&gt;orion.server.node&lt;/a&gt; – this will eventually be the home of the Node.js-based Orion server. Its currently empty while we sort out what code we want to separate out&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/orion.electron&quot;&gt;orion.electron&lt;/a&gt; – this will eventually be the place we host our Electron-based app from. Currently it is empty while we sort out the builds, etc for the app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;What else do I need to know?&lt;/h2&gt;
+&lt;p&gt;There are a few pretty important things that need to be addressed – especially if you are currently a contributor / committer to Orion.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure your Eclipse account is linked to your Github id. This is super-mega-ultra important, especially if you are a committer. The webmasters have provided a great wiki page that &lt;a href=&quot;https://wiki.eclipse.org/Social_Coding/Hosting_a_Project_at_GitHub#Moving_Your_Existing_Project_Repositories_to_GitHub&quot;&gt;talks more about this&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Make sure to update your repos / remotes. The old Git repositories have been set to read-only (as have the gerrits) – so make sure you update (or just re-clone) the repositories to avoid accidentally working against the old stuff.&lt;/li&gt;
+&lt;li&gt;We are still using Bugzilla (so no changes in how to file / search / triage bugs). For the time being we will keep using it until we figure out a good flow for tracking issues across multiple repositories in GitHub.&lt;/li&gt;
+&lt;li&gt;All contributions should be made as pull requests. The Gerrit instances for each old repository are set to read-only so they cannot be used, and if you really want to, you could still attach a patch to the bug you want to fix (but seriously, please use a pull request).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thanks again to everyone that helped make this possible.&lt;/p&gt;
+&lt;p&gt;Happy coding!&lt;/p&gt;</description>
+	<pubDate>Thu, 27 Apr 2017 16:24:10 +0000</pubDate>
+</item>
+<item>
+	<title>Benjamin Cabe: Unveiling the Eclipse IoT Open Testbeds</title>
+	<guid isPermaLink="false">https://blog.benjamin-cabe.com/?p=2850</guid>
+	<link>http://feedproxy.google.com/~r/benjamin-cabe-planet-eclipse/~3/EEkC9zDmh2c/unveiling-the-eclipse-iot-open-testbeds</link>
+	<description>&lt;p&gt;Today we are &lt;a href=&quot;https://www.eclipse.org/org/press-release/20170426_iottestbeds.php&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;announcing&lt;/a&gt; the &lt;a href=&quot;https://iot.eclipse.org/testbeds&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse IoT Open Testbeds&lt;/a&gt;, a new initiative for driving adoption of open source and open standards in the industry.&lt;/p&gt;
+&lt;p&gt;For more than five years, over 30 open source projects have been calling &lt;a href=&quot;https://iot.eclipse.org/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Eclipse IoT&lt;/strong&gt;&lt;/a&gt; home. Yet, it doesn’t necessarily make it easy for people to &lt;strong&gt;understand how to put all the pieces together&lt;/strong&gt;, from integration with sensors and hardware, to networking and connectivity, to cloud computing and enterprise integration.&lt;/p&gt;
+&lt;p&gt;More often than not, I am asked about where to find blueprints or reference architectures for IoT, and how one is expected to leverage open source software such as what Eclipse IoT has to offer. These are very legitimate questions as building any IoT solution requires much more than just open source software components.&lt;/p&gt;
+&lt;p&gt;I believe the &lt;strong&gt;Eclipse Open IoT Testbeds&lt;/strong&gt; are a unique approach to answering these kind of questions, especially since this is the first time IoT leading companies are effectively &lt;strong&gt;developing the testbeds in open source&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Open Source FTW!&lt;/h2&gt;
+&lt;p&gt;Creating testbeds that demonstrate how a particular set of technologies can be used is certainly not a new idea, I’ll give you that. What is unique with the approach we are taking, though, is that &lt;strong&gt;we are making the testbeds available in open source&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This means that you can really learn firsthand how all the pieces of an IoT solution are being put together to solve a real business case, as well as experiment with the actual code and dive into the architecture.&lt;/p&gt;
+&lt;p&gt;Over time I certainly expect people will start forking the testbeds’ code to create their own extensions and, even better, will contribute them back to the community.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter wp-image-2854&quot; height=&quot;157&quot; src=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/asset-tracking-testbed-header-1024x256.jpg&quot; width=&quot;628&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;Open Testbed for Asset Tracking&lt;/h1&gt;
+&lt;p&gt;The&lt;strong&gt; &lt;a href=&quot;https://iot.eclipse.org/testbeds/asset-tracking&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;first testbed we have been working on is around Asset Tracking Management&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In a nutshell, we are showing how to &lt;strong&gt;track valuable assets&lt;/strong&gt; (think expensive/valuable parcels such as artwork) in real-time in order to optimize their transport, and in particular&lt;strong&gt; minimize the costs due to spoilage, damage or delays&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/asset-tracking-value-proposition.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter wp-image-2866&quot; height=&quot;146&quot; src=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/asset-tracking-value-proposition-1024x241.png&quot; width=&quot;621&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The testbed features Eclipse open source projects such as &lt;a href=&quot;https://eclipse.org/kura&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse Kura&lt;/a&gt;, &lt;a href=&quot;https://eclipse.org/kapua&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse Kapua&lt;/a&gt;, &lt;a href=&quot;https://eclipse.org/kapua&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse Paho&lt;/a&gt; or &lt;a href=&quot;https://eclipse.org/che&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse Che&lt;/a&gt;, but is of course also leveraging other technologies and commercial offerings – like any solution should, right?&lt;/p&gt;
+&lt;p&gt;Head over to the &lt;strong&gt;&lt;a href=&quot;https://iot.eclipse.org/testbeds/asset-tracking/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Asset Tracking testbed webpage&lt;/a&gt;&lt;/strong&gt; to learn how, to name a few, OpenShift, Zulu Embedded, Samsung ARTIK, and more, have been integrated to demonstrate a full end-to-end IoT solution, all the way from data collection to complex event processing, to exposing information to 3rd parties through open APIs.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/architecture-diagram-e1493299672882.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter wp-image-2858&quot; height=&quot;200&quot; src=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/architecture-diagram-1024x341.png&quot; width=&quot;600&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;What’s next?&lt;/h1&gt;
+&lt;p&gt;The Asset Tracking Open Testbed is our first take at demonstrating how companies are building real IoT Solutions today.&lt;/p&gt;
+&lt;p&gt;We are already planning to create other testbeds around e.g Smart Manufacturing, and therefore are inviting anyone interested in existing or future testbeds to join us at &lt;a href=&quot;https://iot.eclipse.org/testbeds&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://iot.eclipse.org/testbeds&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Join us at Red Hat Summit and IoT World 2017!&lt;/h1&gt;
+&lt;p&gt;If you are attending Red Hat Summit (May 2-4, Boston) or IoT World 2017 (May 16-18, Santa Clara), please make sure to stop by our Asset Tracking Testbed Demo, see it run live, and understand better the contribution each partner has been making to the testbed.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.redhat.com/en/summit/2017&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-medium wp-image-2863&quot; height=&quot;161&quot; src=&quot;https://blog.benjamin-cabe.com/wp-content/uploads/2017/04/May-2-4-2017-Boston-MA-300x161.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/benjamin-cabe-planet-eclipse/~4/EEkC9zDmh2c&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 27 Apr 2017 14:44:59 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: New Eclipse IoT Open Testbeds</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/GTmsZQAPDx4/20170426_iottestbeds.php</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/GTmsZQAPDx4/20170426_iottestbeds.php</link>
+	<description>Announcing the creation of the Eclipse IoT Open Testbeds, an initiative to drive adoption of IoT open source and open standards.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/GTmsZQAPDx4&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 27 Apr 2017 13:05:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: New Release of Eclipse Kura 3.0 Drives Simplification of IoT Edge Computing</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/gB7lgcVXi5I/20170426_kura3.php</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/gB7lgcVXi5I/20170426_kura3.php</link>
+	<description>Eclipse Kura 3.0 will be available for download in early May.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/gB7lgcVXi5I&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 27 Apr 2017 12:30:00 +0000</pubDate>
+</item>
+<item>
 	<title>vert.x project: Building a real-time web app with Angular/Ngrx and Vert.x</title>
 	<guid isPermaLink="true">http://vertx.io/blog/building-a-real-time-web-app-with-angular-ngrx-and-vert-x</guid>
 	<link>http://vertx.io/blog/building-a-real-time-web-app-with-angular-ngrx-and-vert-x</link>
@@ -1200,223 +1272,6 @@ Preferences: General &amp;gt; Appearance &amp;gt; Theme: Clean Sheet&lt;/p&gt;
 &lt;h6&gt;Title Image: © Depositphotos.com/piccola&lt;/h6&gt;
 &lt;p&gt;The post &lt;a href=&quot;http://www.codeaffine.com/2017/04/11/clean-sheet-service-update/&quot; rel=&quot;nofollow&quot;&gt;Clean Sheet Service Update&lt;/a&gt; appeared first on &lt;a href=&quot;http://www.codeaffine.com&quot; rel=&quot;nofollow&quot;&gt;Code Affine&lt;/a&gt;.&lt;/p&gt;</description>
 	<pubDate>Tue, 11 Apr 2017 11:31:49 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: EPLv2: A New Version of the Eclipse Public License</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/gTIWYU6JAIs/</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/gTIWYU6JAIs/</link>
-	<description>Participate in the community discussion on the Eclipse Foundation's revised Eclipse Public License (EPL).&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/gTIWYU6JAIs&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Mon, 10 Apr 2017 15:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Sebastian Zarnekow: Moving on</title>
-	<guid isPermaLink="false">tag:blogger.com,1999:blog-6255758224607466565.post-9069237360198255066</guid>
-	<link>http://zarnekow.blogspot.com/2017/04/moving-on.html</link>
-	<description>&lt;div dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;&lt;span id=&quot;docs-internal-guid-aef576b6-57ae-b6b1-d444-9d6b8d0ef9f9&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;After an exciting journey of 15 months as the Director Engineering at SMACC, I decided to move on. It was not an easy decision to make, though it’s still one that I wanted to make. In the past year I made many new friends, met great people, and had the chance to work in a super nice team. It was a great time with plenty of challenges, important learnings and great fun. But I also realized that I was missing the time as a technical consultant. Language engineering always was and still is a strong passion of mine. So I figured it’s about time to move on and refocus. Xtext, Eclipse, Language oriented programming - exciting times ahead. Keeping you posted ...&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</description>
-	<pubDate>Mon, 10 Apr 2017 11:46:13 +0000</pubDate>
-	<author>noreply@blogger.com (Sebastian Zarnekow)</author>
-</item>
-<item>
-	<title>Mike Milinkovich: EPLv2: A New Version of the Eclipse Public License</title>
-	<guid isPermaLink="false">http://mmilinkov.wordpress.com/?p=1239</guid>
-	<link>https://mmilinkov.wordpress.com/2017/04/07/eplv2-a-new-version-of-the-eclipse-public-license/</link>
-	<description>&lt;p&gt;The Eclipse Foundation is in the process of revising the &lt;a href=&quot;https://www.eclipse.org/org/documents/epl-v10.php&quot; target=&quot;_blank&quot;&gt;Eclipse Public License&lt;/a&gt; (EPL). Refreshing a popular open source license is a big job, and one that we have been chipping away at for over a year.&lt;/p&gt;
-&lt;p&gt;The EPL and its predecessor the &lt;a href=&quot;https://opensource.org/licenses/CPL-1.0&quot; target=&quot;_blank&quot;&gt;Common Public License&lt;/a&gt; have been around for about 16 years now. For a full presentation on the changes we are considering and their motivation, you can check out our &lt;a href=&quot;https://www.slideshare.net/MikeMilinkovich/eplv2-a-new-version-of-the-eclipse-public-license&quot; target=&quot;_blank&quot;&gt;presentation&lt;/a&gt;, or the &lt;a href=&quot;https://youtu.be/exhk6sS5_0I&quot; target=&quot;_blank&quot;&gt;video on YouTube&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Please get involved. Just as importantly, if you are a developer involved in the Eclipse community and ecosystem, encourage your colleagues in the legal department to get involved. The discussions are happening on the &lt;a href=&quot;http://dev.eclipse.org/mhonarc/lists/epl-discuss/&quot; target=&quot;_blank&quot;&gt;epl-discuss@eclipse.org&lt;/a&gt; mail list (&lt;a href=&quot;https://dev.eclipse.org/mailman/listinfo/epl-discuss&quot; target=&quot;_blank&quot;&gt;subscription required&lt;/a&gt;). The most recent public drafts of the EPLv2 can be found &lt;a href=&quot;http://dev.eclipse.org/mhonarc/lists/epl-discuss/msg00116.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;Filed under: &lt;a href=&quot;https://mmilinkov.wordpress.com/category/foundation/&quot;&gt;Foundation&lt;/a&gt;, &lt;a href=&quot;https://mmilinkov.wordpress.com/category/open-source/&quot;&gt;Open Source&lt;/a&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/mmilinkov.wordpress.com/1239/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/mmilinkov.wordpress.com/1239/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=mmilinkov.wordpress.com&amp;amp;blog=19461799&amp;amp;post=1239&amp;amp;subd=mmilinkov&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Fri, 07 Apr 2017 18:17:35 +0000</pubDate>
-</item>
-<item>
-	<title>Maximilian and Jonas: JSON Forms – Day 5 – Layouts</title>
-	<guid isPermaLink="false">http://eclipsesource.com/blogs/?p=28066</guid>
-	<link>http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/</link>
-	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;JSON Forms is a framework for efficiently building form-based web UIs. These UIs, which are usually embedded in a business application, allow end users to enter, modify, and view data. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand. It allows you to create customizable forms by leveraging the capabilities of JSON and &lt;/span&gt;&lt;a href=&quot;http://json-schema.org/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;JSON schema&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on AngularJS. If you would like to know more about JSON Forms, the &lt;/span&gt;&lt;a href=&quot;http://jsonforms.io&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;JSON Forms homepage&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; is a good starting point.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In this blog series, we would like to introduce the framework based on a real-world example application, a task tracker called “Make It happen”. On &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/21/json-forms-make-it-happen-blog-series-pilot/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;day 1&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; and &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/27/json-forms-day-2-introducing-the-ui-schema/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;day 2&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;, we described the overall requirements as well as created a fully working form for the entity “Task”. On &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;day 3&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; we showed how to extend the form with new attributes and controls. On &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/02/09/json-forms-day-4-visibility-rules/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;day 4&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; we introduced rule-based visibility of controls, based on the data, the user has entered.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;If you would like to follow this blog series please &lt;/span&gt;&lt;a href=&quot;https://twitter.com/jsonforms&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;follow us on twitter&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. This is where we will announce every new blog post regarding JSON Forms. After the first 4 days, the current form looks like this:&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image10.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28069&quot; height=&quot;253&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image10-300x253.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;While the form is already fully functional, including data binding, validation, and even rule-based validation, the layout is definitely not optimal. Basically, we just see a vertical list of all controls. Therefore, in this blog post, we want to refine the layout using the JSON Forms layout elements.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;So far, we have embedded all controls into one root “VerticalLayout”. This type of layout always arranges its children vertically. However, JSON Forms also supports different layout types, e.g. “HorizontalLayout”. Of course, those layouts can be combined by embedding one layout element into another. For example to achieve a two column layout you can use a “HorizontalLayout” element which contains two “VerticalLayout” elements.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In our current form, we could save some vertical space by putting the “dueDate” attribute in one shared “HorizontalLayout” with the “rating” property. The same applies for “recurrence” and “recurrence_interval”. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;The resulting UI schema looks like this:&lt;/span&gt;&lt;/p&gt;
- &lt;pre lang=&quot;JSON&quot;&gt;{
-  &quot;type&quot;: &quot;VerticalLayout&quot;,
-  &quot;elements&quot;: [
-    {
-      &quot;type&quot;: &quot;Control&quot;,
-      &quot;label&quot;: false,
-      &quot;scope&quot;: {
-        &quot;$ref&quot;: &quot;#/properties/done&quot;
-      }
-    },
-    {
-      &quot;type&quot;: &quot;Control&quot;,
-      &quot;scope&quot;: {
-        &quot;$ref&quot;: &quot;#/properties/name&quot;
-      }
-    },
-    {
-      &quot;type&quot;: &quot;HorizontalLayout&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/due_date&quot;
-          }
-        },
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/rating&quot;
-          }
-        }
-      ]
-    },
-    {
-      &quot;type&quot;: &quot;Control&quot;,
-      &quot;scope&quot;: {
-        &quot;$ref&quot;: &quot;#/properties/description&quot;
-      },
-      &quot;options&quot;: {
-          &quot;multi&quot;:true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;HorizontalLayout&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/recurrence&quot;
-          }
-        },
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/recurrence_interval&quot;
-          },
-          &quot;rule&quot;: {
-              &quot;effect&quot;: &quot;HIDE&quot;,
-              &quot;condition&quot;: {
-                  &quot;scope&quot;: {
-                      &quot;$ref&quot;: &quot;#/properties/recurrence&quot;
-                  },
-                  &quot;expectedValue&quot;: &quot;Never&quot;
-              }
-          }
-        }
-      ]
-    }
-  ]
-}
-&lt;/pre&gt; 
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;So by simply moving things around a bit in the UI schema, we can produce the following layout:&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image12.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28071&quot; height=&quot;188&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image12-300x188.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As you can imagine, it is pretty easy to produce more advanced layouts by just combining layout elements.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Please note, that EMF Forms supports more layout types than horizontal and vertical. As an example, you could use the element “Categorization” to separate controls into several sub categories. The following screenshot shows a rendered categorization element, where the attributes of a task are split into two tabs. Please note that the horizontal layout described before is now nested into the categorization.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image05.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28072&quot; height=&quot;145&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image05-300x145.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image14.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28073&quot; height=&quot;119&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image14-300x119.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;The UI Schema for this layout is as follows:&lt;/span&gt;&lt;/p&gt;
- &lt;pre lang=&quot;JSON&quot;&gt;{
-  &quot;type&quot;: &quot;Categorization&quot;,
-  &quot;elements&quot;: [
-    {
-      &quot;type&quot;: &quot;Category&quot;,
-      &quot;label&quot;: &quot;Main&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;label&quot;: false,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/done&quot;
-          }
-        },
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/name&quot;
-          }
-        },
-        {
-          &quot;type&quot;: &quot;Control&quot;,
-          &quot;scope&quot;: {
-            &quot;$ref&quot;: &quot;#/properties/description&quot;
-          },
-          &quot;options&quot;: {
-              &quot;multi&quot;:true
-          }
-        }
-      ]
-    },
-    {
-      &quot;type&quot;: &quot;Category&quot;,
-      &quot;label&quot;: &quot;Additional&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;HorizontalLayout&quot;,
-          &quot;elements&quot;: [
-            {
-              &quot;type&quot;: &quot;Control&quot;,
-              &quot;scope&quot;: {
-                &quot;$ref&quot;: &quot;#/properties/due_date&quot;
-              }
-            },
-            {
-              &quot;type&quot;: &quot;Control&quot;,
-              &quot;scope&quot;: {
-                &quot;$ref&quot;: &quot;#/properties/rating&quot;
-              }
-            }
-          ]
-        },
-        {
-          &quot;type&quot;: &quot;HorizontalLayout&quot;,
-          &quot;elements&quot;: [
-            {
-              &quot;type&quot;: &quot;Control&quot;,
-              &quot;scope&quot;: {
-                &quot;$ref&quot;: &quot;#/properties/recurrence&quot;
-              }
-            },
-            {
-              &quot;type&quot;: &quot;Control&quot;,
-              &quot;scope&quot;: {
-                &quot;$ref&quot;: &quot;#/properties/recurrence_interval&quot;
-              },
-              &quot;rule&quot;: {
-                  &quot;effect&quot;: &quot;HIDE&quot;,
-                  &quot;condition&quot;: {
-                      &quot;scope&quot;: {
-                          &quot;$ref&quot;: &quot;#/properties/recurrence&quot;
-                      },
-                      &quot;expectedValue&quot;: &quot;Never&quot;
-                  }
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-&lt;/pre&gt; 
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Please refer to &lt;/span&gt;&lt;a href=&quot;http://jsonforms.io/#/docs/uischema&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;this page&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; for an overview of the available layout elements in JSON Forms.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As you might have noticed, the layout types of JSON Forms are a little different from what you know from HTML or any widget toolkit. As an example, there is no element called “tabbed layout”, but rather, it is called “Categorization”. The reason for this is that the UI Schema of JSON Forms is focussed on describing the structure of the layout rather than the actual rendering. The concrete visualization is the responsibility of the rendering component. This is analogous to the combination of HTML and CSS and allows for flexibility in rendering. As an example, the categorization element described above basically only specifies, that a form is split into several categories. The default renderer will translate this information into tabs. However, you could also implement an alternative renderer, which would display categories slightly differently, e.g. like this:&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image04.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28074&quot; height=&quot;133&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image04-300x133.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image11.png&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-medium wp-image-28075&quot; height=&quot;108&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2017/04/image11-300x108.png&quot; width=&quot;300&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Talking about alternative renderers: This is a core feature of JSON Forms! So far, we have just used the default renderer for controls as well as for layouts. In the next post, we will describe how to implement and plugin custom renderers in order to adapt the way in which a form is rendered. So stay tuned!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;If you are interested in trying out JSON Forms, please refer to the &lt;/span&gt;&lt;a href=&quot;http://github.eclipsesource.com/jsonforms/#/docs/firstform&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Getting-Started tutorial&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. This explains how to set up JSON Forms in your own project and how you can try out the first few steps yourself. If you would like to follow this blog series, please &lt;/span&gt;&lt;a href=&quot;https://twitter.com/jsonforms&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;follow us on twitter&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. We will announce every new blog post on JSON Forms there. If you need support for JSON Forms or if you are interested in new features, please feel free to &lt;/span&gt;&lt;a href=&quot;http://github.eclipsesource.com/jsonforms/#/support&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;contact us&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We hope to see you soon for the next day!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;List of all available days to date:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/21/json-forms-make-it-happen-blog-series-pilot/&quot;&gt;Day 0 and 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/27/json-forms-day-2-introducing-the-ui-schema/&quot;&gt;Day 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&quot;&gt;Day 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/02/09/json-forms-day-4-visibility-rules/&quot;&gt;Day 4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/&quot;&gt;Day 5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/04/21/json-forms-day-6-custom-renderers/&quot;&gt;Day 6&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block;&quot;&gt;&lt;a href=&quot;https://twitter.com/intent/tweet?source=webclient&amp;amp;text=JSON+Forms+%26%238211%3B+Day+5+%26%238211%3B+Layouts&amp;amp;via=eclipsesource&amp;amp;url=http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;&lt;img alt=&quot;Twitter&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/twitter.png&quot; title=&quot;Twitter&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://plus.google.com/share?url=http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;+1&quot;&gt;&lt;img alt=&quot;Google+&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/google_plus.png&quot; title=&quot;Google+&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;http://www.linkedin.com/cws/share?url=http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on LinkedIn&quot;&gt;&lt;img alt=&quot;LinkedIn&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/linkedin.png&quot; title=&quot;LinkedIn&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/&amp;amp;t=JSON+Forms+%26%238211%3B+Day+5+%26%238211%3B+Layouts&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;img alt=&quot;Facebook&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/facebook.png&quot; title=&quot;Facebook&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/04/07/json-forms-day-5-layouts/#respond&quot;&gt;Leave a Comment&lt;/a&gt;. Tagged with &lt;a href=&quot;http://eclipsesource.com/blogs/tag/angularjs/&quot; title=&quot;AngularJS Tag&quot;&gt;AngularJS&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/forms/&quot; title=&quot;Forms Tag&quot;&gt;Forms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json/&quot; title=&quot;JSON Tag&quot;&gt;JSON&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json-schema/&quot; title=&quot;JSON Schema Tag&quot;&gt;JSON Schema&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/angularjs/&quot; title=&quot;AngularJS Tag&quot;&gt;AngularJS&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/forms/&quot; title=&quot;Forms Tag&quot;&gt;Forms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json/&quot; title=&quot;JSON Tag&quot;&gt;JSON&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json-schema/&quot; title=&quot;JSON Schema Tag&quot;&gt;JSON Schema&lt;/a&gt;&lt;p&gt;&lt;/p&gt;</description>
-	<pubDate>Fri, 07 Apr 2017 06:55:45 +0000</pubDate>
 </item>
 
 </channel>

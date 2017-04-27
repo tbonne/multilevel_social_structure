@@ -13,4 +13,8 @@
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.apache.commons.math3.distribution.NormalDistribution"/>
+<fullyQualifiedTypeName name="jsc.distributions.PowerFunction"/>
+<fullyQualifiedTypeName name="cern.jet.random.Distributions"/>
+<fullyQualifiedTypeName name="cern.jet.random.engine.RandomEngine"/>
+<fullyQualifiedTypeName name="cern.jet.random.engine.MersenneTwister"/>
 </qualifiedTypeNameHistroy>

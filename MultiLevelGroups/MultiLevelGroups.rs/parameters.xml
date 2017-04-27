@@ -41,7 +41,7 @@
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 		
 	<parameter name="homeWeight" displayName="Influence ratio of landscape: familiar Vs. food/dist"
-		type="java.lang.Double" defaultValue="0.01" isReadOnly="false"
+		type="java.lang.Double" defaultValue="0.001" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 		
 	<parameter name="lDecay" displayName="Familiarity decay: landscape"
@@ -61,7 +61,7 @@
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 		
 	<parameter name="famMinCell" displayName="Min landscape familiarity"
-		type="java.lang.Double" defaultValue="0.01" isReadOnly="false"
+		type="java.lang.Double" defaultValue="-0.999" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 		
 	<parameter name="famMaxCell" displayName="Max landscape familiarity"
