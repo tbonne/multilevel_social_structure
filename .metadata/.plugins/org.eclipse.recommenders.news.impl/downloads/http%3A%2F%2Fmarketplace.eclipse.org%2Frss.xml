@@ -6,6 +6,187 @@
     <language>en</language>
      <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>MintJams FetchMail</title>
+    <link>http://marketplace.eclipse.org/content/mintjams-fetchmail</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2015-01-25 07:10&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:39&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams FetchMail is mail-retrieval and forwarding tool.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Sun, 25 Jan 2015 12:10:47 +0000</pubDate>
+ <dc:creator>kfukudar10</dc:creator>
+ <guid isPermaLink="false">2156826 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/mintjams-fetchmail#comments</comments>
+  </item>
+  <item>
+    <title>MintJams Terminal Plug-in</title>
+    <link>http://marketplace.eclipse.org/content/mintjams-terminal-plug</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/no_image.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2013-06-11 15:02&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:37&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams Terminal Plug-in allows to open a terminal window in Eclipse. It adds a following two pop-up menu item to the Package Explorer and Project Explorer.
+
+
+
+			
+
+&lt;ul&gt;&lt;li&gt;
+					Open Terminal Here: Terminal window is opened in a editor area. The current directory of the terminal is the directory which was selected with the popup menu.&lt;/li&gt;
+&lt;li&gt;
+					Open Terminal: Terminal window is opened in a editor area. The current directory of the terminal is current user&#039;s home directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+		New features in v2.0.5:
+&lt;ul&gt;&lt;li&gt;
+			Integrate with Console view.&lt;/li&gt;
+&lt;/ul&gt;
+
+		New features in v1.1.0:
+&lt;ul&gt;&lt;li&gt;
+			Pasting file path into the Terminal via drag-and-drop.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		Features:
+&lt;ul&gt;&lt;li&gt;
+			Command-line terminal for Windows&lt;/li&gt;
+&lt;li&gt;
+			Local shell terminal for Mac OS X&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		Related:
+&lt;ul&gt;&lt;li&gt;
+			&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+			&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Tue, 11 Jun 2013 19:02:13 +0000</pubDate>
+ <dc:creator>kfukudar10</dc:creator>
+ <guid isPermaLink="false">909243 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/mintjams-terminal-plug#comments</comments>
+  </item>
+  <item>
+    <title>MintJams Content Management Tools Standard</title>
+    <link>http://marketplace.eclipse.org/content/mintjams-content-management-tools-standard</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cmtlogo_0.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2010-05-05 23:48&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:37&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams Content Management Tools Standard is user interface for CR5.
+
+	&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/adding-social-login-with-bpmn-20?qid=ef98a24b-4bea-43e3-a13b-ea356349dc1c&quot; rel=&quot;nofollow&quot;&gt;Adding Social Login with BPMN 2.0&lt;/a&gt;
+
+	Documents:
+&lt;ul&gt;&lt;li&gt;
+			&lt;a href=&quot;http://www.slideshare.net/mintjams/getting-started-31643179&quot; rel=&quot;nofollow&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+			&lt;a href=&quot;http://www.slideshare.net/mintjams/managing-users-and-groups&quot; rel=&quot;nofollow&quot;&gt;Managing Users and Groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+			&lt;a href=&quot;http://www.slideshare.net/mintjams/recommended-securitysettings&quot; rel=&quot;nofollow&quot;&gt;Recommended Security Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 06 May 2010 03:48:40 +0000</pubDate>
+ <dc:creator>kfukudar10</dc:creator>
+ <guid isPermaLink="false">1200 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/mintjams-content-management-tools-standard#comments</comments>
+  </item>
+  <item>
+    <title>MintJams Content Management Tools</title>
+    <link>http://marketplace.eclipse.org/content/mintjams-content-management-tools</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cmtlogo.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2012-08-27 02:05&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:36&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;The MintJams Content Management Tools is an innovative content management tool. MintJams Content Management Tools enables you to connect, access and manage local storage, WebDAV storage, and FTP storage using same user interface in powerful new ways. Designed to meet the needs of today&#039;s business, MintJams Content Management Tools helps you get more done -- easier, faster, better.
+
+	&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/adding-social-login-with-bpmn-20?qid=ef98a24b-4bea-43e3-a13b-ea356349dc1c&quot; rel=&quot;nofollow&quot;&gt;Adding Social Login with BPMN 2.0&lt;/a&gt;
+
+
+		New features in v3.12.0:
+&lt;ul&gt;&lt;li&gt;
+			Support for Amazon S3&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		New features in v2.9.0:
+&lt;ul&gt;&lt;li&gt;
+			Support for SSH/local terminal (integrate with &lt;a href=&quot;http://marketplace.eclipse.org/content/mintjams-terminal-plug&quot; rel=&quot;nofollow&quot;&gt;Terminal plug-in&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		New features in v2.8.50:
+&lt;ul&gt;&lt;li&gt;
+			SSH login with the managed identity (integrate with &lt;a href=&quot;http://marketplace.eclipse.org/content/mintjams-pki-tools&quot; rel=&quot;nofollow&quot;&gt;PKI tools&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		Perspectives:
+&lt;ul&gt;&lt;li&gt;
+			Content Management&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		Team providers:
+&lt;ul&gt;&lt;li&gt;
+			Content Management Tools&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+		Supported protocols and schemes:
+
+		WebDAV storage
+&lt;ul&gt;&lt;li&gt;
+			HTTP) webdav://host:[port]/...&lt;/li&gt;
+&lt;li&gt;
+			HTTP over SSL) webdavs://host:[port]/...&lt;/li&gt;
+&lt;/ul&gt;
+
+		FTP storage
+&lt;ul&gt;&lt;li&gt;
+			FTP) &lt;a href=&quot;ftp://host:[port]/&quot; rel=&quot;nofollow&quot;&gt;ftp://host:[port]/&lt;/a&gt;...&lt;/li&gt;
+&lt;li&gt;
+			FTP over SSL) ftps://host:[port]/... OR ftpes://host:[port]/...&lt;/li&gt;
+&lt;li&gt;
+			FTP over SSH) &lt;a href=&quot;sftp://host:[port]/&quot; rel=&quot;nofollow&quot;&gt;sftp://host:[port]/&lt;/a&gt;...&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Mon, 27 Aug 2012 06:05:12 +0000</pubDate>
+ <dc:creator>kfukudar10</dc:creator>
+ <guid isPermaLink="false">390933 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/mintjams-content-management-tools#comments</comments>
+  </item>
+  <item>
+    <title>Veracode Greenlight</title>
+    <link>http://marketplace.eclipse.org/content/veracode-greenlight</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/01_Eclipse_Transparent_0.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-04-10 14:32&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 17:13&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Veracode%22&quot;&gt;Veracode&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/jbaker4rv/listings&quot; title=&quot;Jeremy Baker&quot;&gt;Jeremy Baker&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Veracode Greenlight finds security defects in your code and provides contextual remediation advice to help you fix issues in seconds, right in your Eclipse IDE. With Veracode Greenlight, find issues early, reduce development and remediation costs, and deploy quality code on your timeline.&lt;/p&gt;
+&lt;p&gt;Using the Veracode Greenlight Eclipse Plugin Visit &lt;a href=&quot;https://analysiscenter.veracode.com/auth/helpcenter/api/c_about_greenlight.html&quot; rel=&quot;nofollow&quot;&gt;https://analysiscenter.veracode.com/auth/helpcenter/api/c_about_greenlig...&lt;/a&gt; to access our internal Help Center for installation and usage instructions. If you have any questions or need assistance at any time, please contact your Veracode Program Manager or &lt;a href=&quot;mailto:Support@Veracode.com&quot; rel=&quot;nofollow&quot;&gt;Support@Veracode.com&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Mon, 10 Apr 2017 18:32:57 +0000</pubDate>
+ <dc:creator>jbaker4rv</dc:creator>
+ <guid isPermaLink="false">3388415 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/veracode-greenlight#comments</comments>
+  </item>
+  <item>
+    <title>Azure Toolkit for Eclipse</title>
+    <link>http://marketplace.eclipse.org/content/azure-toolkit-eclipse</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/azure110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2014-09-16 16:39&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 17:12&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Microsoft%20Corp.%22&quot;&gt;Microsoft Corp.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/msawicki/listings&quot; title=&quot;Martin Sawicki&quot;&gt;Martin Sawicki&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Azure Toolkit for Eclipse provides functionality that allow you to easily create, develop, configure, test, and deploy lightweight, highly available and scalable Java web apps to Microsoft Azure using the Eclipse development environment running on Mac OS, Linux and Windows. It also contains all the key Azure service API clients for Java, exposed as Eclipse libraries, including the Azure Management SDK, Storage SDK, Application Insights SDK and JDBC (for SQL Server and Azure SQL Database). Other key features of the Azure Toolkit for Eclipse include: &lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		quick deployment of a Java application to an Azure Web App container&lt;/li&gt;
+&lt;li&gt;
+		quick dev/test deployments of Java applications to Docker containers running within Azure Docker Host VMs, for which the plugin also provides basic management support&lt;/li&gt;
+&lt;li&gt;
+		create Spark applications for Azure HDInsight Spark Linux cluster using Java or Scala&lt;/li&gt;
+&lt;li&gt;
+		use any JVM with your cloud app, including the OpenJDK (e.g. Azul Zulu) or the Oracle JDK&lt;/li&gt;
+&lt;li&gt;
+		deploy any application server, including Tomcat, Jetty, JBoss or GlassFish; or rely on a version of Tomcat or Jetty made available in Azure by Microsoft&lt;/li&gt;
+&lt;li&gt;
+		use the Azure Explorer view to navigate and manage your Azure storage accounts (blobs, tables, queue), web apps, HDInsight (Spark) resources, Docker hosts and published Docker containers on Azure&lt;/li&gt;
+&lt;li&gt;
+		program against Azure&#039;s services such as Storage, Azure SQL Database and more, using the Azure SDK APIs for Java&lt;/li&gt;
+&lt;li&gt;
+		enable automated telemetry for your applications using Application Insights logging directly into the Azure cloud, regardless of where your application is running&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Learn more at the &lt;a href=&quot;http://go.microsoft.com/fwlink/?LinkID=699529&quot; rel=&quot;nofollow&quot;&gt;documentation site&lt;/a&gt;, and learn more about Java on Azure in general at the &lt;a href=&quot;https://azure.microsoft.com/develop/java/&quot; rel=&quot;nofollow&quot;&gt;Azure Developer Center for Java&lt;/a&gt;. &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Tue, 16 Sep 2014 20:39:08 +0000</pubDate>
+ <dc:creator>msawicki</dc:creator>
+ <guid isPermaLink="false">1919278 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/azure-toolkit-eclipse#comments</comments>
+  </item>
+  <item>
     <title>Eclipse Class Decompiler</title>
     <link>http://marketplace.eclipse.org/content/eclipse-class-decompiler</link>
     <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/components.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2012-10-15 06:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 11:09&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Chen%20Chao%28cnfree2000%40hotmail.com%29%22&quot;&gt;Chen Chao(cnfree2000@hotmail.com)&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cchao/listings&quot; title=&quot;Chen Chao&quot;&gt;Chen Chao&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Eclipse Class Decompiler integrates JD, Jad, FernFlower, CFR, Procyon seamlessly with Eclipse and allows Java developers to debug class files without source code directly. It also integrates Javadoc and supports the syntax of JDK8 lambda expressions.&lt;/p&gt;
@@ -61,151 +242,6 @@
  <dc:creator>pseverinqw0</dc:creator>
  <guid isPermaLink="false">801 at http://marketplace.eclipse.org</guid>
  <comments>http://marketplace.eclipse.org/content/wireframesketcher-wireframing-tool#comments</comments>
-  </item>
-  <item>
-    <title>Eclipse Zip Editor</title>
-    <link>http://marketplace.eclipse.org/content/eclipse-zip-editor</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/zip-icon.png&quot; width=&quot;48&quot; height=&quot;48&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2014-06-23 03:26&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 01:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Uwe%20Voigt%22&quot;&gt;Uwe Voigt&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/uvoigt/listings&quot; title=&quot;Uwe Voigt&quot;&gt;Uwe Voigt&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;This is a Zip archive editor for the Eclipse platform.&lt;br /&gt;
-	It supports drag and drop from within the platform as well as from outside applications.&lt;br /&gt;
-	Files can be modified directly within the archive which is updated after file modification.&lt;/p&gt;
-&lt;p&gt;Since release 1.1.2 you can also use the Eclipse search to recursively search in archives.&lt;/p&gt;
-&lt;p&gt;Currently, Eclipse ZipEditor supports files with the following compression/archive algorithms associated with their default file extensions:&lt;/p&gt;
-&lt;dl&gt;&lt;dt&gt;
-		&lt;strong&gt;bzip&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		bz2&lt;/dd&gt;
-&lt;dt&gt;
-		&lt;strong&gt;gzip&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		gz&lt;/dd&gt;
-&lt;dt&gt;
-		&lt;strong&gt;tar&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		tar&lt;/dd&gt;
-&lt;dt&gt;
-		&lt;strong&gt;bzip compressed tar&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		tar.bz2, tbz&lt;/dd&gt;
-&lt;dt&gt;
-		&lt;strong&gt;gzip compressed tar&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		tar.gz, tgz&lt;/dd&gt;
-&lt;dt&gt;
-		&lt;strong&gt;zip&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-		ear, jar, war, zip&lt;/dd&gt;
-&lt;/dl&gt;&lt;p&gt;Further extensions like aar or apk can nevertheless be added using the Content Types preference page.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Mon, 23 Jun 2014 07:26:00 +0000</pubDate>
- <dc:creator>uvoigt</dc:creator>
- <guid isPermaLink="false">1760305 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/eclipse-zip-editor#comments</comments>
-  </item>
-  <item>
-    <title>RepreZen API Studio</title>
-    <link>http://marketplace.eclipse.org/content/reprezen-api-studio</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/icon-eclipse-marketplace.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2016-10-27 21:28&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 21:10&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22RepreZen%22&quot;&gt;RepreZen&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/tepsteinccr/listings&quot; title=&quot;Theodore Epstein&quot;&gt;Theodore Epstein&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;h2&gt;Powerful Swagger-OpenAPI Design, Documentation &amp;amp; Development&lt;/h2&gt;
-
-&lt;p&gt;RepreZen API Studio is the most productive REST API design environment, with breakthrough capabilities to help you design, document and deliver world-class APIs and microservices in a fraction of the time.&lt;/p&gt;
-&lt;dl&gt;&lt;dt&gt;
-			&lt;strong&gt;New 1.5 Release!&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-			With comprehensive multi-file project support, synchronized documentation view, expanded code generation with NSwag for .NET, and more....&lt;/dd&gt;
-&lt;/dl&gt;&lt;h2&gt;
-		Key capabilities:&lt;/h2&gt;
-&lt;p&gt;	&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Model your APIs&lt;/strong&gt; with industry-standard &lt;a href=&quot;http://swagger.io&quot; rel=&quot;nofollow&quot;&gt;Swagger&lt;/a&gt;–&lt;a href=&quot;http://openapis.org/&quot; rel=&quot;nofollow&quot;&gt;OpenAPI&lt;/a&gt; 2.0 or with &lt;a href=&quot;http://rapid-api.org/rapid-ml&quot; rel=&quot;nofollow&quot;&gt;RAPID-ML&lt;/a&gt;, an innovative, domain-driven API modeling language. (... &lt;a href=&quot;https://www.reprezen.com/blog/kaizen-openapi-3_0-parser-swagger-java-open-source&quot; rel=&quot;nofollow&quot;&gt;OpenAPI 3.0&lt;/a&gt; coming soon!)&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Full-featured Editors&lt;/strong&gt;, with code assist, customizable templates, detailed validation messages, outline view, customizable fonts &amp;amp; syntax color themes.&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Live documentation and diagram views&lt;/strong&gt; give you immediate insight to your API design, as you edit. You can also generate and publish these as documentation for your API client developers.&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Easily supports large multi-file projects&lt;/strong&gt;, allowing you to split a Swagger Specification across multiple files for easier navigation and team collaboration. One of our users, working on a massive API documentation catalog, thinks API Studio is &quot;&lt;a href=&quot;https://www.g2crowd.com/survey_responses/reprezen-api-studio-review-129992&quot; rel=&quot;nofollow&quot;&gt;Likely the best Swagger editor on planet Earth&lt;/a&gt;&quot; for this reason.  :-)&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;	&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Built-in sandbox testing&lt;/strong&gt; with the integrated mock service and Swagger-UI view.&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Powerful, extensible code gen framework&lt;/strong&gt; lets you build &lt;a href=&quot;http://docs.reprezen.com/#code-gen&quot; rel=&quot;nofollow&quot;&gt;custom generators&lt;/a&gt; with powerful Xtend templates and integrated debugging. Also fully supports Swagger-Codegen, and a growing collection of 3rd-party open source generators. Over 70 generators ready to use, including server implementation stubs, client libraries, documentation .&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Maven and Gradle build automation &lt;/strong&gt;for code generation, and a convenient YAML configuration format for each generation target that provides access code gen options. Standard and custom generators all use this project structure to run inside API Studio, from the command line, or from continuous integration.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;	&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Runs on Eclipse&lt;/strong&gt; as a standalone RCP app, or as a plug-in feature in a standard Eclipse IDE. You can do your work in your primary development space, with full access to all of your resources, not stuck in a browser sandbox.&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Plug-in team collaboration &lt;/strong&gt;with Eclipse integrations. API Studio supports a wide range of version control, issue trackers, and continuous integration tools. Git and GitHub are fully supported. Collaboration works on the platforms you&#039;re already using, so you don&#039;t have to manage a separate set of teams and permissions.&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;
-			&lt;strong&gt;Your APIs. Your code. No limits.&lt;/strong&gt; RepreZen doesn&#039;t hold your API designs hostage, and won&#039;t put any limits on the number of APIs or resources you create. So go ahead and redesign your world as microservices. Edit, test, generate, collaborate, publish, deploy... and become the stuff of API legend.&lt;/li&gt;
-&lt;/ul&gt;&lt;dl&gt;&lt;dt&gt;
-			&lt;strong&gt;Note:&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;
-			This is the add-on solution for Eclipse IDE distributions, Mars.2 or later. The standalone RCP application is &lt;a href=&quot;http://reprezen.com/swagger-tools&quot; rel=&quot;nofollow&quot;&gt;available here&lt;/a&gt;.&lt;/dd&gt;
-&lt;/dl&gt;&lt;h3&gt;
-		More information:&lt;/h3&gt;
-&lt;ul&gt;&lt;li&gt;
-			&lt;a href=&quot;http://reprezen.com/swagger-tools&quot; rel=&quot;nofollow&quot;&gt;Product Video and Feature Tour&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-			&lt;a href=&quot;http://reprezen.com/pricing&quot; rel=&quot;nofollow&quot;&gt;Plans and Pricing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-			&lt;a href=&quot;https://goo.gl/dQSwjU&quot; rel=&quot;nofollow&quot;&gt;Getting Started Videos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-			&lt;a href=&quot;http://support.reprezen.com&quot; rel=&quot;nofollow&quot;&gt;Community &amp;amp; Support Site&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-			&lt;a href=&quot;http://RepreZen.com/blog&quot; rel=&quot;nofollow&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Fri, 28 Oct 2016 01:28:20 +0000</pubDate>
- <dc:creator>tepsteinccr</dc:creator>
- <guid isPermaLink="false">3138718 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/reprezen-api-studio#comments</comments>
-  </item>
-  <item>
-    <title>Eclipse Docker Tooling</title>
-    <link>http://marketplace.eclipse.org/content/eclipse-docker-tooling</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2016-02-02 16:42&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 14:22&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Eclipse.org%22&quot;&gt;Eclipse.org&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/rgrunberg/listings&quot; title=&quot;Roland Grunberg&quot;&gt;Roland Grunberg&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Eclipse Docker Tooling plugin provides the ability to manage Docker images and containers from within the Eclipse IDE.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Tue, 02 Feb 2016 21:42:02 +0000</pubDate>
- <dc:creator>rgrunberg</dc:creator>
- <guid isPermaLink="false">2706327 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/eclipse-docker-tooling#comments</comments>
-  </item>
-  <item>
-    <title>Dynatrace Eclipse Integration Plugin</title>
-    <link>http://marketplace.eclipse.org/content/dynatrace-eclipse-integration-plugin</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/logo_37.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 05:32&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 11:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Dynatrace%20LLC%22&quot;&gt;Dynatrace LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/mweyer/listings&quot; title=&quot;Michael Weyer&quot;&gt;Michael Weyer&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Dynatrace Eclipse Integration Plugin allow you to:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-		launch applications with an injected Dynatrace Agent directly from Eclipse&lt;/li&gt;
-&lt;li&gt;
-		retrieve &amp;amp; display the key architectural metrics (such as number of SQL queries, external API calls, exceptions and log messages) from your tests&lt;/li&gt;
-&lt;li&gt;
-		perform look-ups of sources files and methods from applications under diagnosis in Dynatrace Application Monitoring&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Wed, 26 Apr 2017 09:32:08 +0000</pubDate>
- <dc:creator>mweyer</dc:creator>
- <guid isPermaLink="false">3414376 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/dynatrace-eclipse-integration-plugin#comments</comments>
-  </item>
-  <item>
-    <title>g9 Database Import</title>
-    <link>http://marketplace.eclipse.org/content/g9-database-import</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/Esito-g9-110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2016-09-14 09:30&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 10:22&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Esito%20AS%22&quot;&gt;Esito AS&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dbyesen/listings&quot; title=&quot;Dag Bøyesen&quot;&gt;Dag Bøyesen&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Do you need to create Java classes, or an Xcore or Ecore representation of your exisiting database? &lt;strong&gt;g9 Database Model Import&lt;/strong&gt; is a free g9 Eclipse plugin producing models based on structure information read from databases. Given a connection to an existing database, the g9 Database Import will read tables and columns in your database (using the database schema) and create the corresponding model either in Java, Xcore or Ecore depending on the project type of your Eclipse project. An import of your database to a Java Project will create Java classes, an import to an Xcore Project will create an Xcore model, all other Eclipse Project types will result in an Ecore model. The Java classes may be enriched with &lt;em&gt;JPA annotations&lt;/em&gt;. If you work with Xcore or Ecore models you should use &lt;em&gt;Eclipse for Java and DSL Developers&lt;/em&gt;. In the g9 Database Import feature you connect to a database using a JDBC driver. The built-in drivers are MySQL, MS SQL Server (jTDS) and Sybase ASE (jTDS). Use the function [&lt;strong&gt;Maintain JDBC Drivers&lt;/strong&gt;] in the g9 Import feature to connect to other databases, e.g Oracle, PostgreSQL, Firebird or a DBMS of your choice. Choose&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-		which tables to include: by default all tables are included and a class name based on the table names are suggested&lt;/li&gt;
-&lt;li&gt;
-		which columns to include: by default all columns are included and an attribute name based on the column names are suggested&lt;/li&gt;
-&lt;li&gt;
-		the data type mappings for your domain model based on the JDBC types - or use default values&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;You may download the complete &lt;strong&gt;g9&lt;/strong&gt; product and use the Database import feature in a g9 Eclipse Project. To be able to exploit the other features in g9, you should create a &lt;em&gt;g9 UI Modeling Project&lt;/em&gt; and import your database to an Ecore, Xcore model or Java source with &lt;em&gt;g9 annotations&lt;/em&gt;. Please see the User guide for more information about the g9 Database Import feature.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Wed, 14 Sep 2016 13:30:45 +0000</pubDate>
- <dc:creator>dbyesen</dc:creator>
- <guid isPermaLink="false">3072599 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/g9-database-import#comments</comments>
-  </item>
-  <item>
-    <title>Eclipse Java Development Tools</title>
-    <link>http://marketplace.eclipse.org/content/eclipse-java-development-tools-0</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2016-08-17 06:14&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-04-26 08:56&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Eclipse%20community%2C%20JDT%20contributors%22&quot;&gt;Eclipse community, JDT contributors&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/mistria/listings&quot; title=&quot;Mickael Istria&quot;&gt;Mickael Istria&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Java Development Tools (JDT) project contributes a set of plug-ins that add the capabilities of a full-featured Java IDE to the Eclipse platform.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Wed, 17 Aug 2016 10:14:19 +0000</pubDate>
- <dc:creator>mistria</dc:creator>
- <guid isPermaLink="false">3029282 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/eclipse-java-development-tools-0#comments</comments>
   </item>
   </channel>
 </rss>

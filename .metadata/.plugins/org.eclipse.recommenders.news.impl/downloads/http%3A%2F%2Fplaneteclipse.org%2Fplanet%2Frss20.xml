@@ -8,6 +8,43 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Paolo Patierno: IoT developer survey : my 2 cents one year later …</title>
+	<guid isPermaLink="false">http://paolopatierno.wordpress.com/?p=4639</guid>
+	<link>https://paolopatierno.wordpress.com/2017/04/28/iot-developer-survey-my-2-cents-one-year-later/</link>
+	<description>&lt;p style=&quot;text-align: justify;&quot;&gt;As last year, I have decided to write a blog post about my point of view on the &lt;strong&gt;IoT developer survey&lt;/strong&gt; from the &lt;a href=&quot;http://iot.eclipse.org/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eclipse Foundation&lt;/a&gt; (IoT Working Group) with &lt;a href=&quot;http://iot.ieee.org/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;IEEE&lt;/a&gt;, &lt;a href=&quot;http://agile-iot.eu/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Agile IoT&lt;/a&gt; and the &lt;a href=&quot;http://www.theinternetofthings.eu/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;IoT Council&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;From my point of view, the final report gives always interesting insights on where the IoT business is going and about that, &lt;a href=&quot;https://twitter.com/IanSkerrett&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Ian Skerrett&lt;/a&gt; (Vice President of Marketing at Eclipse Foundation) has already analyzed the results, available &lt;a href=&quot;https://www.slideshare.net/IanSkerrett/iot-developer-survey-2017&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;, writing a great &lt;a href=&quot;https://ianskerrett.wordpress.com/2017/04/19/iot-developer-trends-2017-edition/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;I want just to add 2 more cents on that …&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;Industry adoption …&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;It’s clear that industries are adopting IoT and there is a big increment for industrial automation, smart cities, energy management, building automation, transportation, healthcare and so on. IoT is becoming “real” even if, as we will see in the next paragraphs, it seems that we are &lt;strong&gt;still in a prototyping stage&lt;/strong&gt;. A lot of companies are investing on that but few of them have real solutions running in the field. Finally, from my point of view, it could be great to add more information about countries because I think that there is a big difference on how and where every country is investing for IoT.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;The concerns …&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Security is always the big concern&lt;/strong&gt; but, as Ian said, interoperability and connectivity are on a downward trend; I agree with him saying that all the available middleware solutions and the IoT connectivity platforms are solving these problems. The great news is that all of them &lt;strong&gt;support different open and standard protocols&lt;/strong&gt; (MQTT, AMQP but even HTTP) that is the way to go for having &lt;strong&gt;interoperability&lt;/strong&gt;; at same time we are able to connect a lot of different devices, supporting different protocols, so the &lt;strong&gt;connectivity&lt;/strong&gt; problem is addressed as well.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Coming back to security, the survey shows that much more software developers are involved on building IoT solutions even because all the stuff they mostly use are SSL/TLS and data encryption so at software level. From my point of view, some security concerns should be addressed at hardware level (using crypto-chip, TPM and so on) but this is an area where software developers have a lack of knowledge. It’s not a surprise because we know that IoT needs a lot of different knowledge from different people but the survey shows that in some cases not the “right” people are involved on developing IoT solution. Too much web and mobile developers are working on that, too few embedded developer with a real hardware knowledge.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;Languages : finally a distinction !&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Last year, in my 2 cents, I asked for having a distinction on which side of an IoT solution we consider the most used programming languages. I’m happy to know that Eclipse Foundation got this suggestion so this year survey asked about languages used on constrained devices, gateway and cloud.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img alt=&quot;iot_survey&quot; class=&quot;alignnone size-full wp-image-4737&quot; src=&quot;https://paolopatierno.files.wordpress.com/2017/04/iot_survey.jpg?w=620&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;The results don’t surprise me : &lt;strong&gt;C is the most used language on “real” low constrained devices&lt;/strong&gt; and all the other languages from Java to Python are mostly used on gateways; JavaScript fits in the cloud mainly with NodeJS. In any case, NodeJS is not a language so my idea is that providing only JavaScript as possible answer was enough even because other than using a server-side framework like NodeJS the other possibility is using JavaScript in “function as a service” platforms (i.e. Lambda from AWS, Azure Functions and so on) that are mostly based on NodeJS. Of course, &lt;strong&gt;the most used language in the cloud is Java&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;What about OS ?&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Linux is the most used OS&lt;/strong&gt; for both constrained devices and IoT gateways but … here a strange thing comes in my mind. On “real” constrained devices that are based on MCUs (i.e. Cortex-Mx) you can run few specific Linux distros (i.e. uCLinux) and not a full Linux distro so it’s strange that Linux wins on constrained devices but then when the survey shows what distros are used, uCLinux has a very low percentage. My guess is that a lot of software developers don’t know what a constrained device is &lt;img alt=&quot;🙂&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;On constrained devices I expect that developers uses “no OS” (programming on bare metal) or a really tiny RTOS but not something closed to Linux.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;On gateways I totally agree with Linux but Windows is growing from last year.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Regarding the most used distros, the Raspbian victory shows that we are still in a prototyping stage. I can’t believe that developers are using Raspbian so the related Raspberry Pi hardware in production ! If it’s true … I’m scared about that ! If you know what are the planes, trains, building automation systems which are using something like that, please tell me … I have to avoid them &lt;img alt=&quot;🙂&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;Regarding the protocols …&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;From my point of view, the presence of TCP/IP in the connectivity protocols results is misleading. TCP/IP is a protocol used on top of Ethernet and Wi-Fi that are in the same results and we can’t compare them.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Regarding communication protocols, the current know-how is still leading; this is the reason why HTTP 1.1 is still on the top and HTTP 2.0 is growing. MQTT is there followed by CoAP, which is surprising me considering the necessity to have an HTTP proxy for exporting local traffic outside of a local devices network. AMQP is finding its own way and I think that in the medium/long term it will become a big player on that.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;Cloud services&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;In this area we should have a distinction because the question is pretty general but we know that you can use Amazon AWS or Microsoft Azure for IoT in two ways :&lt;/p&gt;
+&lt;ul style=&quot;text-align: justify;&quot;&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;as IaaS hosting your own solution or an open source one for IoT (i.e. just using provided virtual machines for running an IoT software stack)&lt;/li&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;as PaaS using the managed IoT platforms (i.e. AWS IoT, Azure IoT Hub, …)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Having Amazon AWS on the top doesn’t surprise me but we could have more details on how it is used by the IoT developers.&lt;/p&gt;
+&lt;h2 style=&quot;text-align: justify;&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;The IoT business is growing and its adoption as well but looking at these survey results, most of the companies are still in a prototyping stage and few of them have a real IoT solution in the field.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;It means that there is a lot of space for all to be invited to the party ! &lt;img alt=&quot;😀&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f600.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;&lt;br /&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/paolopatierno.wordpress.com/4639/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/paolopatierno.wordpress.com/4639/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=paolopatierno.wordpress.com&amp;amp;blog=15467422&amp;amp;post=4639&amp;amp;subd=paolopatierno&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Fri, 28 Apr 2017 06:59:58 +0000</pubDate>
+</item>
+<item>
 	<title>Orion: Orion Moved to Github</title>
 	<guid isPermaLink="false">http://planetorion.org/news/?p=887</guid>
 	<link>http://planetorion.org/news/2017/04/orion-moved-to-github/</link>
@@ -78,6 +115,13 @@
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/gB7lgcVXi5I/20170426_kura3.php</link>
 	<description>Eclipse Kura 3.0 will be available for download in early May.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/gB7lgcVXi5I&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Thu, 27 Apr 2017 12:30:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Program Ready for EclipseCon France 2017</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/H5MB7DarBtc/2017-06-21</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/H5MB7DarBtc/2017-06-21</link>
+	<description>See the &lt;a href=&quot;https://www.eclipsecon.org/france2017/conference/schedule/session/2017-06-21&quot;&gt;program&lt;/a&gt;, and register by May 12 for the best price.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/H5MB7DarBtc&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 27 Apr 2017 09:10:00 +0000</pubDate>
 </item>
 <item>
 	<title>vert.x project: Building a real-time web app with Angular/Ngrx and Vert.x</title>
@@ -1114,164 +1158,6 @@ The component properties and predefined values are available via &lt;code&gt;o
 &lt;/blockquote&gt;
 &lt;/article&gt;</description>
 	<pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Patrik Suzzi: Dynamic Menu Item to select Theme in Eclipse IDE</title>
-	<guid isPermaLink="false">http://www.asegno.com/?p=886</guid>
-	<link>http://www.asegno.com/2017/eclipse/dynamic-menu-item-to-select-theme-in-eclipse-ide/</link>
-	<description>&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;In &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=515085&quot;&gt;Bug 514458&lt;/a&gt;, I added the “Theme” dynamic menu to the Eclipse IDE. This post explains how I did this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;_menu_eclipse_3_x_style&quot;&gt;Menu Eclipse 3.x style&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;First edit the &lt;code&gt;plugin.xml&lt;/code&gt;, and add a menu contribution. With the locationURI &lt;code&gt;menu:org.eclipse.ui.appearance?after=org.eclipse.ui.window.appearance.separator1&lt;/code&gt;, you’ll contribute a submenu to the &lt;strong&gt;Window &amp;gt; Appearance&lt;/strong&gt; menu, just after the separator.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;a href=&quot;http://www.asegno.com/wp-content/uploads/2017/04/appearance-menu-structure.png&quot;&gt;&lt;img alt=&quot;appearance-menu-structure&quot; class=&quot;alignnone size-full wp-image-887&quot; height=&quot;262&quot; src=&quot;http://www.asegno.com/wp-content/uploads/2017/04/appearance-menu-structure.png&quot; width=&quot;742&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Add a &lt;strong&gt;Theme&lt;/strong&gt; menu under the menuContribution, and then add a child dynamic element.&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;&amp;lt;menuContribution
-      locationURI=&quot;menu:org.eclipse.ui.appearance?after=org.eclipse.ui.window.appearance.separator1&quot;&amp;gt;
-   &amp;lt;menu
-         id=&quot;org.eclipse.ui.appearance.theme&quot;
-         label=&quot;Theme&quot;&amp;gt;
-      &amp;lt;dynamic
-            class=&quot;org.eclipse.ui.internal.actions.ThemeDynamicMenu&quot;
-            id=&quot;org.eclipse.ui.ide.dynamic1&quot;&amp;gt;
-      &amp;lt;/dynamic&amp;gt;
-   &amp;lt;/menu&amp;gt;
-&amp;lt;/menuContribution&amp;gt;&lt;/pre&gt;&lt;p&gt;
-&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Next, create the java class implementing the dynamic menu, and add mock code to verify the menu works.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;public class ThemeDynamicMenu extends ContributionItem {
-
-	@Override
-	public void fill(Menu menu, int index) {
-		MenuItem menuItem = new MenuItem(menu, SWT.CHECK, index);
-		menuItem.setText(&quot;Theme 1&quot;); //$NON-NLS-1$
-		menuItem.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				// executed on menu select
-				System.out.println(&quot;Selected&quot;); //$NON-NLS-1$
-			}
-		});
-	}
-
-}&lt;/pre&gt;&lt;p&gt; &lt;/p&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Verify the menu is displayed where you expect, and the submenu dynamic entries are working.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;a href=&quot;http://www.asegno.com/wp-content/uploads/2017/04/new-theme-dynamic-menu.png&quot;&gt;&lt;img alt=&quot;new-theme-dynamic-menu&quot; class=&quot;alignnone size-full wp-image-888&quot; height=&quot;222&quot; src=&quot;http://www.asegno.com/wp-content/uploads/2017/04/new-theme-dynamic-menu.png&quot; width=&quot;593&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Now remove the line which adds the “Theme 1” item, and rewrite the body of the widgetSelected.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The menu should have one menu item for each available theme, and each &lt;code&gt;widgetSelected(){…}&lt;/code&gt; should activate the corresponding theme.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;The theme selection code is inspired tothe &lt;code&gt;ViewsPreferencePage&lt;/code&gt; one.&lt;/p&gt;&lt;pre class=&quot;crayon-plain-tag&quot;&gt;/**
- * Implements the Dynamic Menu to choose the Theme.
- */
-public class ThemeDynamicMenu extends ContributionItem {
-
-	private static String THEME_ID = &quot;THEME_ID&quot;; //$NON-NLS-1$
-
-	private IThemeEngine engine;
-	private boolean highContrastMode;
-
-	public ThemeDynamicMenu() {
-		IWorkbench workbench = PlatformUI.getWorkbench();
-		MApplication application = workbench.getService(MApplication.class);
-		IEclipseContext context = application.getContext();
-		engine = context.get(IThemeEngine.class);
-		highContrastMode = workbench.getDisplay().getHighContrast();
-	}
-
-	@Override
-	public void fill(Menu menu, int index) {
-		for (ITheme theme : engine.getThemes()) {
-			if (!highContrastMode &amp;amp;&amp;amp; !Util.isGtk() &amp;amp;&amp;amp; theme.getId().equals(E4Application.HIGH_CONTRAST_THEME_ID)) {
-				continue;
-			}
-			MenuItem menuItem = new MenuItem(menu, SWT.CHECK, index);
-			menuItem.setText(theme.getLabel());
-			menuItem.setData(THEME_ID, theme.getId());
-			menuItem.addSelectionListener(new SelectionAdapter() {
-				@Override
-				public void widgetSelected(SelectionEvent e) {
-					engine.setTheme(theme, !highContrastMode);
-				}
-			});
-		}
-
-		menu.addMenuListener(new MenuAdapter() {
-			@Override
-			public void menuShown(MenuEvent e) {
-				for (MenuItem item : menu.getItems()) {
-					boolean isActive = item.getData(THEME_ID).equals(engine.getActiveTheme().getId());
-					item.setEnabled(!isActive);
-					item.setSelection(isActive);
-				}
-			}
-		});
-
-	}
-
-}&lt;/pre&gt;&lt;p&gt;Finally, launch the Eclipse IDE to check the menu works as expected.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.asegno.com/wp-content/uploads/2017/04/theming-menu.gif&quot;&gt;&lt;img alt=&quot;theming-menu&quot; class=&quot;alignnone size-full wp-image-895&quot; height=&quot;634&quot; src=&quot;http://www.asegno.com/wp-content/uploads/2017/04/theming-menu.gif&quot; width=&quot;1011&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-	<pubDate>Tue, 11 Apr 2017 17:23:55 +0000</pubDate>
-</item>
-<item>
-	<title>Frank Appel: Clean Sheet Service Update</title>
-	<guid isPermaLink="false">https://facon-biz.prossl.de/?p=13375</guid>
-	<link>http://www.codeaffine.com/2017/04/11/clean-sheet-service-update/</link>
-	<description>&lt;p&gt;Written by &lt;a href=&quot;http://www.codeaffine.com/author/fappel/&quot; rel=&quot;nofollow&quot;&gt;Frank Appel&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Early enough to pass as an easter gift we provide a Clean Sheet service update. The new version (0.5) is a simple bugfix release related to some &lt;code&gt;StyledText&lt;/code&gt; adapter problems on windows.&lt;/p&gt;
-&lt;div class=&quot;notification lock cannothide&quot;&gt;&lt;div class=&quot;boximg infoimg&quot;&gt;&lt;/div&gt;&lt;h2&gt;The Clean Sheet Eclipse Design&lt;/h2&gt;
-
-In case you've missed out on the topic and you are wondering what I'm talking about, here is a screenshot of my real world setup using the Clean Sheet theme (click on the image to enlarge).
-
-&lt;a href=&quot;http://fappel.github.io/xiliary/clean-sheet-screenshot.html&quot;&gt;&lt;img alt=&quot;Eclipse IDE Look and Feel: Clean Sheet Screenshot&quot; class=&quot;alignnone size-full wp-image-12279&quot; height=&quot;408&quot; src=&quot;http://www.codeaffine.com/wp-content/uploads/2015/11/clean-sheet-eclipse-theme.png&quot; width=&quot;850&quot; /&gt;&lt;/a&gt;
-
-For more information please refer to the features landing page at &lt;a href=&quot;http://fappel.github.io/xiliary/clean-sheet.html&quot; target=&quot;_blank&quot;&gt;http://fappel.github.io/xiliary/clean-sheet.html&lt;/a&gt;, read the introductory Clean Sheet feature description &lt;a href=&quot;http://www.codeaffine.com/2015/11/04/clean-sheet-an-ergonomic-eclipse-theme-for-windows-10/&quot;&gt;blog post&lt;/a&gt;, and check out the &lt;a href=&quot;http://fappel.github.io/xiliary/clean-sheet-new-and-noteworthy.html&quot; target=&quot;_blank&quot;&gt;New &amp;amp; Noteworthy&lt;/a&gt; page.&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;h2&gt;Clean Sheet Service Update&lt;/h2&gt;
-&lt;p&gt;Thanks to the participation of dedicated users, we were able to spot and resolve some nuisances. On windows, the Mylyn task editor is working again with Bugzilla. Also on windows, line number updates in java editors are propageted again on vertical scrolling per mouse drag. Please refer to the issues &lt;a href=&quot;https://github.com/fappel/xiliary/issues/75&quot; target=&quot;_blank&quot;&gt;#75&lt;/a&gt; and &lt;a href=&quot;https://github.com/fappel/xiliary/issues/76&quot; target=&quot;_blank&quot;&gt;#76&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;h2&gt;Clean Sheet Installation&lt;/h2&gt;
-
-&lt;p&gt;Drag the 'Install' link below to your running Eclipse instance&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;drag&quot; href=&quot;http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2588223&quot; title=&quot;Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client&quot;&gt;&lt;img alt=&quot;Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;p&gt;Select Help &amp;gt; Install New Software.../Check for Updates.&lt;br /&gt;
-P2 repository software site: @ &lt;a href=&quot;http://fappel.github.io/xiliary/&quot;&gt;http://fappel.github.io/xiliary/&lt;/a&gt;&lt;br /&gt;
-Feature: Code Affine Theme&lt;/p&gt;
-
-&lt;p&gt;After feature installation and workbench restart select the ‘Clean Sheet’ theme:&lt;br /&gt;
-Preferences: General &amp;gt; Appearance &amp;gt; Theme: Clean Sheet&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;h2&gt;On a Final Note, …&lt;/h2&gt;
-&lt;p&gt;Of course, it’s interesting to hear suggestions or find out about potential issues that need to be resolved. Feel free to use the &lt;a href=&quot;https://github.com/fappel/xiliary/issues&quot; target=&quot;_blank&quot;&gt;Xiliary Issue Tracker&lt;/a&gt; or the comment section below for reporting.&lt;/p&gt;
-&lt;p&gt;With this in mind, I’d like to thank all the Clean Sheet adopters for the support and wish everybody a happy easter egg hunt &lt;img alt=&quot;😉&quot; class=&quot;wp-smiley&quot; src=&quot;http://s.w.org/images/core/emoji/72x72/1f609.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;
-&lt;h6&gt;Title Image: © Depositphotos.com/piccola&lt;/h6&gt;
-&lt;p&gt;The post &lt;a href=&quot;http://www.codeaffine.com/2017/04/11/clean-sheet-service-update/&quot; rel=&quot;nofollow&quot;&gt;Clean Sheet Service Update&lt;/a&gt; appeared first on &lt;a href=&quot;http://www.codeaffine.com&quot; rel=&quot;nofollow&quot;&gt;Code Affine&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Tue, 11 Apr 2017 11:31:49 +0000</pubDate>
 </item>
 
 </channel>

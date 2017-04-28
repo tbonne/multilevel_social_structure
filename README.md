@@ -23,20 +23,19 @@ The simulations are based on a movement model proposed by Van Moorter et al (200
 
 ### Model visual
 
--   Below is a few examples of model runs:
+Below is a few examples of model runs:
 
--   Individuals quickly develop familiarization for both cells and individuals, producing small groups and small home ranges.
-    ![](Figs/multi_soc_1.gif "Simulation 1")
+-   Individuals with no familiarization for either cells or individuals, producing wide ranging and randomly spatially associating with other individuals.
+    <img src="Figs/multi_soc_1.gif" title="Simulation 1" height="500" />
 
--   Individuals develop familiarization for only individuals, producing large groups and no consistent home range.
-    ![](Figs/multi_soc_2.gif "Simulation 2a")
+-   Individuals develop familiarization for cells only, producing home range like behaviour.
+    <img src="Figs/multi_soc_2.gif" title="Simulation 2" height="500" />
 
-    -   After a while...
-
-![](Figs/multi_soc_3.gif "Simulation 2b")
+-   Individuals develop familiarization only for individuals, producing larger groups based on random spatial associations.
+    <img src="Figs/multi_soc_3.gif" title="Simulation 3" height="500" />
 
 ### Model outputs
 
--   The output from the model is an association matrix capturing the familarization between individuals.
+-   The output from the model is an association matrix capturing the familarization between individuals. Note: this example network was taken for the case where individuals develop familiarization with others (last example from above) resulting in three groups, where two group are linked by individual 'V1'.
 
-![](Figs/multi_soc_output.png "Output from simulation 2")
+<img src="Figs/multi_soc_output.png" title="Output from simulation 2" width="500" />

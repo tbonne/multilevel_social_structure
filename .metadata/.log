@@ -4567,3 +4567,17 @@ java.lang.Exception: Stack Trace
 	at org.eclipse.jdi.internal.event.EventQueueImpl.remove(EventQueueImpl.java:68)
 	at org.eclipse.jdt.internal.debug.core.EventDispatcher.run(EventDispatcher.java:240)
 	at java.lang.Thread.run(Thread.java:745)
+!SESSION 2017-04-28 09:52:44.408 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.committers.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.committers.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-28 09:52:55.728
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\t-work'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
