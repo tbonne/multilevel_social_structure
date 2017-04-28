@@ -26,13 +26,16 @@ The simulations are based on a movement model proposed by Van Moorter et al (200
 Below is a few examples of model runs:
 
 -   Individuals with no familiarization for either cells or individuals, producing wide ranging and randomly spatially associating with other individuals.
-    <img src="Figs/multi_soc_1b.gif" title="Simulation 1" height="500" />
+
+<img src="Figs/multi_soc_1b.gif" title="Simulation 1" height="500" />
 
 -   Individuals develop familiarization for cells only, producing home range like behaviour.
-    <img src="Figs/multi_soc_2b.gif" title="Simulation 2" height="500" />
+
+<img src="Figs/multi_soc_2b.gif" title="Simulation 2" height="500" />
 
 -   Individuals develop familiarization only for individuals, producing larger groups based on random spatial associations.
-    <img src="Figs/multi_soc_3b.gif" title="Simulation 3" height="500" />
+
+<img src="Figs/multi_soc_3b.gif" title="Simulation 3" height="500" />
 
 ### Model outputs
 
