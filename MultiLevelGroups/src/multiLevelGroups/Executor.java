@@ -102,6 +102,10 @@ public class Executor {
 		//System.out.println("Finished all cell threads");
 
 	}
+	
+	public static void updateInds(){
+		ModelSetup.removeDeadIndividuals();
+	}
 
 	public static void endModel(){
 

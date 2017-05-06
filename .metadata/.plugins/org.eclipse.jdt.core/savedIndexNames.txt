@@ -50,7 +50,6 @@ INDEX VERSION 1.129+C:\Users\t-work\Documents\GitHub\multilevel_social_structure
 3381187889.index
 3495408619.index
 1718591987.index
-2544500870.index
 683476891.index
 3666969430.index
 4272375843.index

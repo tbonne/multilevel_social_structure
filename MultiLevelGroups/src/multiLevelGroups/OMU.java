@@ -2,6 +2,8 @@ package multiLevelGroups;
 
 import java.util.ArrayList;
 
+import javax.help.Map;
+
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealVector;
@@ -11,24 +13,55 @@ import cern.jet.random.VonMises;
 
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Envelope;
+import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Point;
 
 public class OMU {
 
 	Coordinate myCoord;
-	int id;
 	Coordinate destination;
 	RealVector previousBearing;
 	RealVector myTravelVector;
 	ArrayList<OMU> familiarOMUs;
 	ArrayList<Double> familiarOMU_values;
 	NormalDistribution nd;
+	long age,maxAge,juveAge;
+	long IBI_count;
+	double food_count;
+	OMU motherAgent=null;
+	int sex;
 
 
 	/****************************OMU Construction************************/
 
-	public OMU(Coordinate coord, int ID) {
+	public OMU(Coordinate coord) {
 		myCoord = coord;
-		id = ID;
+		sex = RandomHelper.nextInt();
+		maxAge = Params.maxAge;
+		juveAge = Params.juveStage;
+		age = Math.round(RandomHelper.nextDoubleFromTo(Params.juveStage, maxAge));
+		IBI_count=0;
+		food_count=0;
+		previousBearing = new ArrayRealVector(2);
+		previousBearing.setEntry(0, RandomHelper.nextDouble()-0.5);
+		previousBearing.setEntry(1, RandomHelper.nextDouble()-0.5);
+		previousBearing.unitize();
+		
+		familiarOMU_values = new ArrayList<Double>();
+		familiarOMUs = new ArrayList<OMU>();
+
+		myTravelVector = new ArrayRealVector(2);
+		
+		nd = new NormalDistribution(0,Params.errorInd);
+	}
+	
+	public OMU(Coordinate coord, OMU mother) {
+		myCoord = coord; 
+		maxAge = Params.maxAge;
+		juveAge = Params.juveStage;
+		age = 0;
+		IBI_count=0;
+		food_count=0;
 		previousBearing = new ArrayRealVector(2);
 		previousBearing.setEntry(0, RandomHelper.nextDouble()-0.5);
 		previousBearing.setEntry(1, RandomHelper.nextDouble()-0.5);
@@ -40,6 +73,9 @@ public class OMU {
 		myTravelVector = new ArrayRealVector(2);
 		
 		nd = new NormalDistribution(0,Params.errorInd);
+		
+		motherAgent = mother;
+		sex = RandomHelper.nextInt();
 	}
 
 	/****************************OMU Behaviour************************/
@@ -57,6 +93,9 @@ public class OMU {
 		move();
 		setMyCoord(ModelSetup.getGeog().getGeometry(this).getCoordinate());
 		eat();
+		if(age>juveAge && sex == 1)repro();
+		if(age>maxAge)die();
+		age++;
 	}
 
 	/****************************
@@ -102,7 +141,50 @@ public class OMU {
 
 		return obj;
 	}
+	
+	
+	/****************************
+	 * 
+	 * 
+	 * OMU birth/death methods
+	 * 
+	 * 
+	 * ************************/
 
+	private void repro(){
+		
+		IBI_count++;
+		if(IBI_count>Params.IBI){
+			
+			//double probOfBirth = 1 / ( 1 + Math.exp(-Params.foodOnBirth*((food_count/IBI_count) - Params.depletionRate/100) ) );
+			double probOfBirth = 1 / ( 1 + Math.exp(-Params.foodOnBirth*10*food_count/IBI_count  ) );
+			System.out.println("comsumption rate = " + food_count/(IBI_count));
+			System.out.println("prob of birth = " + probOfBirth);
+			if(probOfBirth>Math.random()){
+				createNewAgent();
+			}
+			IBI_count=0;
+			food_count=0;
+		}
+	}
+	
+	private void createNewAgent(){
+		
+		OMU newInd = new OMU(this.getMyCoord(),this);
+		ModelSetup.getContext().add(newInd);
+		ModelSetup.getAllOMUs().add(newInd);
+		GeometryFactory fac = new GeometryFactory();
+		Point geom = fac.createPoint(this.getMyCoord());
+		ModelSetup.getGeog().move(newInd, geom);
+		
+	}
+	
+	private void die(){
+		
+		ModelSetup.getIndividualsToRemove().add(this);
+		System.out.println("Death!! " +this.age);
+		
+	}
 
 	/****************************
 	 * 
@@ -129,7 +211,7 @@ public class OMU {
 		ArrayList<Double> weights = new ArrayList<Double>();  
 		ArrayList<RealVector> directions = new ArrayList<RealVector>();
 		double sum = 0;
-
+		
 		for(Cell c : foodSites){
 
 			//calculate weight
@@ -163,7 +245,7 @@ public class OMU {
 		}
 
 		//add to myVector
-		avgFoodVector.unitize();
+		if(avgFoodVector.getEntry(0)!=0 && avgFoodVector.getEntry(1)!=0)avgFoodVector.unitize();
 		avgFoodVector = avgFoodVector.mapMultiply(Params.foodWeight);
 		myVector = myVector.add(avgFoodVector);
 
@@ -180,7 +262,7 @@ public class OMU {
 				//calculate weight
 				double weightSoc = familiarOMU_values.get(familiarOMUs.indexOf(ind));
 				if(weightSoc>1.1){
-					System.out.println("Something here: familiarity values too high in movement method");
+					System.out.println("Something here:  familiarity values too high in movement method");
 				}
 				sumSoc = sumSoc + weightSoc;
 				weightsSoc.add(weightSoc);
@@ -189,12 +271,10 @@ public class OMU {
 				RealVector indVector = new ArrayRealVector(2);
 				double distX = ind.getMyCoord().x-this.getMyCoord().x;
 				double distY = ind.getMyCoord().y-this.getMyCoord().y;
-				if((distX==0 && distY==0)==false){
 					indVector.setEntry(0,distX);
 					indVector.setEntry(1,distY);
-					indVector.unitize();
+					if((distX==0 && distY==0)==false)indVector.unitize();
 					directionsSoc.add(indVector);
-				}
 
 
 			} else {
@@ -212,6 +292,10 @@ public class OMU {
 					indVector.setEntry(0,distX);
 					indVector.setEntry(1,distY);
 					indVector.unitize();
+					directionsSoc.add(indVector);
+				} else {
+					indVector.setEntry(0,distX);
+					indVector.setEntry(1,distY);
 					directionsSoc.add(indVector);
 				}
 			}
@@ -233,8 +317,11 @@ public class OMU {
 			}
 
 			//add to myVector
-			avgIndVector.unitize();
-			avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
+			if(avgIndVector.getEntry(0)+avgIndVector.getEntry(0)>0){
+				avgIndVector.unitize();
+				avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
+			}
+			
 			
 			myVector = myVector.add(avgIndVector);
 		}
@@ -270,17 +357,21 @@ public class OMU {
 		//record current vector as previous vector for next movements
 		this.setPreviousBearing(myTravelVector);
 
-		if(myTravelVector.getEntry(1)>-10000){
-			//nothing
-		} else{
-			System.out.println("Something here: NAN in vector");
-		}
+//		if(myTravelVector.getEntry(1)>-10000){
+//			//nothing
+//		} else{
+//			System.out.println("Something here: NAN in vector");
+//		}
 		
 	}
 
 
 	private void move(){
-		ModelSetup.getGeog().moveByDisplacement(this, myTravelVector.getEntry(0), myTravelVector.getEntry(1));	
+		if(this.age<Params.juveStage && this.motherAgent!=null){
+			ModelSetup.getGeog().moveByDisplacement(this, this.getMothersTravel().getEntry(0),this.getMothersTravel().getEntry(1));
+		} else{
+			ModelSetup.getGeog().moveByDisplacement(this, myTravelVector.getEntry(0), myTravelVector.getEntry(1));
+		}
 	}
 
 
@@ -323,7 +414,7 @@ public class OMU {
 
 		//If i'm in a food cell eat and update familiarity
 		if(myCell!=null){
-			myCell.eatMe();
+			food_count=food_count+myCell.eatMe();
 			myCell.updateFam(this);
 		}
 
@@ -370,7 +461,6 @@ public class OMU {
 			}
 		}
 
-
 		//decrease familiarity with those not visible
 		ArrayList<OMU> removeFams = new ArrayList<OMU>();
 		for(OMU inds: familiarOMUs){
@@ -386,7 +476,6 @@ public class OMU {
 				if(f <= Params.famMinInd)removeFams.add(inds);
 			}
 		}
-
 
 		//update list (remove all individuals that are lower or equal to the min familiarity)
 		for(OMU omu:removeFams){
@@ -407,17 +496,20 @@ public class OMU {
 	public void setMyCoord(Coordinate c){
 		myCoord=c;
 	}
-	public int getMyID(){
-		return id;
-	}
-	public void setMyID(int i){
-		id = i;
-	}
 	public void setPreviousBearing(RealVector r){
 		previousBearing = r;
 	}
 	public RealVector getPreviousBearing(){
 		return previousBearing;
+	}
+	public RealVector getMyTravelVector(){
+		return myTravelVector;
+	}
+	public RealVector getMothersTravel(){
+		return motherAgent.getMyTravelVector();
+	}
+	public int getSex(){
+		return sex;
 	}
 
 }

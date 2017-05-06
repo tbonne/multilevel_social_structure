@@ -28,7 +28,11 @@ public class Params {
 	
 	//OMU population
 	public static int numbOMU = 10;
-	
+	public static int IBI = 1000;  //inter-birth interval
+	public static int maxAge = IBI*10; 
+	public static int juveStage = IBI/2; //amount of time with mother
+	public static double foodOnBirth = 10; //adjustment of food intake on probability of birth (probOfBirth = 1 / ( 1 + Math.exp(-Params.foodOnBirth*(food_count/IBI_count) - Params.depletionRate ) );)
+		
 	//OMU foraging behaviour
 	public static int foodSearchRange = 100;
 	public static int visualSearchRange = 100;

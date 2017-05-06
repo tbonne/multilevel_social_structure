@@ -6,242 +6,170 @@
     <language>en</language>
      <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
       <item>
-    <title>MintJams FetchMail</title>
-    <link>http://marketplace.eclipse.org/content/mintjams-fetchmail</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2015-01-25 07:10&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:39&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams FetchMail is mail-retrieval and forwarding tool.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Sun, 25 Jan 2015 12:10:47 +0000</pubDate>
- <dc:creator>kfukudar10</dc:creator>
- <guid isPermaLink="false">2156826 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/mintjams-fetchmail#comments</comments>
+    <title>eMoflon</title>
+    <link>http://marketplace.eclipse.org/content/emoflon</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/eMoflonLogoNoText_semitransparent.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2016-12-30 08:43&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-05-05 16:52&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/rkluge/listings&quot; title=&quot;Roland Kluge&quot;&gt;Roland Kluge&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;eMoflon is a tool for building tools. It allows you to model software systems using a visual or a textual syntax, afterwards generating EMF-compliant Java code from your model.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 30 Dec 2016 13:43:16 +0000</pubDate>
+ <dc:creator>rkluge</dc:creator>
+ <guid isPermaLink="false">3234744 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/emoflon#comments</comments>
   </item>
   <item>
-    <title>MintJams Terminal Plug-in</title>
-    <link>http://marketplace.eclipse.org/content/mintjams-terminal-plug</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/no_image.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2013-06-11 15:02&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:37&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams Terminal Plug-in allows to open a terminal window in Eclipse. It adds a following two pop-up menu item to the Package Explorer and Project Explorer.
-
-
-
-			
-
+    <title>FeatureIDE</title>
+    <link>http://marketplace.eclipse.org/content/featureide</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/logo1056.png&quot; width=&quot;110&quot; height=&quot;53&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2010-12-04 04:23&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-05-05 07:56&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22University%20of%20Magdeburg%22&quot;&gt;University of Magdeburg&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/tthuemsri/listings&quot; title=&quot;Thomas Thuem&quot;&gt;Thomas Thuem&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;FeatureIDE supports feature-oriented software development in Eclipse&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Sat, 04 Dec 2010 09:23:25 +0000</pubDate>
+ <dc:creator>tthuemsri</dc:creator>
+ <guid isPermaLink="false">22848 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/featureide#comments</comments>
+  </item>
+  <item>
+    <title>InPlace Bundle Activator</title>
+    <link>http://marketplace.eclipse.org/content/inplace-bundle-activator</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/xwork-logo.png&quot; width=&quot;110&quot; height=&quot;48&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2012-10-22 05:35&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-05-05 07:55&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Lingo%20Norge%20as%22&quot;&gt;Lingo Norge as&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/ernsundyot/listings&quot; title=&quot;Eirik  Grønsund&quot;&gt;Eirik  Grønsund&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Run and update your plug-in projects in-place in the same instance of Eclipse as you develop them.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;
-					Open Terminal Here: Terminal window is opened in a editor area. The current directory of the terminal is the directory which was selected with the popup menu.&lt;/li&gt;
+		Main features:&lt;/li&gt;
 &lt;li&gt;
-					Open Terminal: Terminal window is opened in a editor area. The current directory of the terminal is current user&#039;s home directory.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-
-
-		New features in v2.0.5:
-&lt;ul&gt;&lt;li&gt;
-			Integrate with Console view.&lt;/li&gt;
-&lt;/ul&gt;
-
-		New features in v1.1.0:
-&lt;ul&gt;&lt;li&gt;
-			Pasting file path into the Terminal via drag-and-drop.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		Features:
-&lt;ul&gt;&lt;li&gt;
-			Command-line terminal for Windows&lt;/li&gt;
+		Dynamic bundle management&lt;/li&gt;
 &lt;li&gt;
-			Local shell terminal for Mac OS X&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		Related:
-&lt;ul&gt;&lt;li&gt;
-			&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;/li&gt;
+		Automatic and manual bundle activation, deactivation and update&lt;/li&gt;
 &lt;li&gt;
-			&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;/li&gt;
+		Bundle life cycle management&lt;/li&gt;
+&lt;li&gt;
+		Bundle dependency management and analysis&lt;/li&gt;
+&lt;li&gt;
+		Build integration&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Get an &lt;a href=&quot;http://javatime.no/blog/inplace-activator-overview/&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;overview&lt;/strong&gt;&lt;/a&gt; of the &lt;a href=&quot;http://javatime.no/&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;product&lt;/strong&gt;&lt;/a&gt; and read a summary of the &lt;a href=&quot;http://javatime.no/blog/dynamic-bundles-in-eclipse/&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;concept&lt;/strong&gt;&lt;/a&gt; behind the InPlace Activator. If you plan to activate plug-ins that makes contributions to the workbench using extensions, version 3.7.x-3.8.x is recommended. Plug-ins activated dynamically works as expected in version 4.x except for its lack of responsiveness to dynamic updates of the Eclipse UI. The plugin runs under Java 1.7 &amp;amp; 1.8&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Mon, 22 Oct 2012 09:35:32 +0000</pubDate>
+ <dc:creator>ernsundyot</dc:creator>
+ <guid isPermaLink="false">485277 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/inplace-bundle-activator#comments</comments>
+  </item>
+  <item>
+    <title>Ctrlflow Insights for Java</title>
+    <link>http://marketplace.eclipse.org/content/ctrlflow-insights-java</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/ctrlflow-logo_1.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2013-08-09 14:38&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-05-05 06:08&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Codetrails%20GmbH%22&quot;&gt;Codetrails GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cteamrav/listings&quot; title=&quot;Codetrails Team&quot;&gt;Codetrails Team&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;Ctrlflow Insights&lt;/strong&gt; data mines your Java source code, extracts the programming knowledge hidden therein and integrates it back into your IDE by:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		augmenting your Javadoc with code snippets and code statistics&lt;/li&gt;
+&lt;li&gt;
+		enriching your content assist proposals with recommendations&lt;/li&gt;
+&lt;li&gt;
+		extending Findbugs with your API-specific bug patterns&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;– all mined from your code in your Eclipse Workspace.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://ctrlflow.com/insights/enterprise/developer/?utm_campaign=ctrlflow&amp;amp;utm_source=marketplace&amp;amp;utm_medium=ctrlflow-insights&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Go to Ctrlflow Insights homepage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ctrlflow Insights&lt;/strong&gt; is developed by the committers of &lt;a href=&quot;https://eclipse.org/recommenders/?utm_campaign=recommenders&amp;amp;utm_source=marketplace&amp;amp;utm_medium=ctrlflow-insights&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Eclipse Code Recommenders&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 09 Aug 2013 18:38:51 +0000</pubDate>
+ <dc:creator>cteamrav</dc:creator>
+ <guid isPermaLink="false">1082014 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/ctrlflow-insights-java#comments</comments>
+  </item>
+  <item>
+    <title>Angular IDE</title>
+    <link>http://marketplace.eclipse.org/content/angular-ide</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/angular.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2016-11-09 19:04&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 22:48&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Now with Angular 4! Content assist, TypeScript 2.2 support, real-time validation, formatting, debugging, and more. Standalone version at &lt;a href=&quot;https://www.genuitec.com/products/angular-ide/&quot; rel=&quot;nofollow&quot;&gt;Angular IDE&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 10 Nov 2016 00:04:48 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">3157661 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/angular-ide#comments</comments>
+  </item>
+  <item>
+    <title>Code Sharing for Slack</title>
+    <link>http://marketplace.eclipse.org/content/code-sharing-slack</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/ecs.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2015-10-26 10:10&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 22:47&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Code Sharing for Slack provides code sharing to your &lt;strong&gt;#Slack&lt;/strong&gt; channel automatically! 100% free, installable separably from the &lt;a href=&quot;https://www.genuitec.com/products/webclipse/&quot; rel=&quot;nofollow&quot;&gt;Webclipse&lt;/a&gt; suite.  If you have Slack for Eclipse installed and a teammate shares code with you, your Eclipse can offer opening the same code being discussed. Made available for free, for unlimited usage. &lt;a href=&quot;https://www.genuitec.com/products/webclipse/pricing/&quot; rel=&quot;nofollow&quot;&gt;Learn more&lt;/a&gt; about other always free Webclipse features as well as some other great features as well!&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Mon, 26 Oct 2015 14:10:50 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">2582095 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/code-sharing-slack#comments</comments>
+  </item>
+  <item>
+    <title>TypeScript</title>
+    <link>http://marketplace.eclipse.org/content/typescript-0</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/ts-110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2016-09-21 18:24&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 22:45&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;TypeScript plugin with: content assist, tsconfig.js support, real-time validation, formatting, coloring, and more. Optimized for Angular 2. Also in &lt;a href=&quot;https://genuitec.com/products/webclipse/&quot; rel=&quot;nofollow&quot;&gt;Webclipse&lt;/a&gt; - click to learn more.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Wed, 21 Sep 2016 22:24:43 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">3083980 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/typescript-0#comments</comments>
+  </item>
+  <item>
+    <title>Webclipse</title>
+    <link>http://marketplace.eclipse.org/content/webclipse</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/webclipse110x80_1.png&quot; width=&quot;100&quot; height=&quot;73&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2015-07-27 09:32&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 22:44&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;From JSjet with TypeScript and JavaScript to Live Preview, from Breadcrumbs to an enhanced Project Explorer, &lt;strong&gt;Webclipse&lt;/strong&gt; powers up Eclipse for the full-stack developer. Web developers can now get outstanding web development, from rapid validation, syntax coloring, call hierarchies, content assist to refactoring, outline views, and more. Included in Webclipse:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		&lt;strong&gt;JSjet&lt;/strong&gt; gives you a jet engine to power your TypeScript &amp;amp; JavaScript coding - no more does JS in Eclipse need to be a second class citizen! Includes support for node.js.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Angular IDE&lt;/strong&gt; gives you a powerful development environment for Angular 2 development including advanced template editing support.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;TypeScript&lt;/strong&gt; support gives you commercial-grade coding, validation and transpilaton of your TypeScript projects including Angular 2.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;JavaScript Debugger&lt;/strong&gt; lets you find and fix bugs in your JavaScript right inside your Eclipse IDE.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;CodeLive w/Live Preview&lt;/strong&gt; lets you see changes inside Firefox, Chrome, Edge and Safari simultaneously while you change HTML, CSS and JSP files!&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Emmet&lt;/strong&gt; lets you type short css-like expressions to expand rich blocks in HTML and CSS.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Slack Code Sharing&lt;/strong&gt; lets you share snippets of code directly from within Eclipse to your teammates.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;Breadcrumb&lt;/strong&gt; toolbar simplifies navigation to related elements in your workspace right next to your active editor.&lt;/li&gt;
+&lt;li&gt;
+		Not to mention other power-ups like the &lt;strong&gt;Minimap&lt;/strong&gt; and the &lt;strong&gt;Project Explorer+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+		Stay tuned. We have exciting updates coming frequently!&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Tue, 11 Jun 2013 19:02:13 +0000</pubDate>
- <dc:creator>kfukudar10</dc:creator>
- <guid isPermaLink="false">909243 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/mintjams-terminal-plug#comments</comments>
+     <pubDate>Mon, 27 Jul 2015 13:32:00 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">2456312 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/webclipse#comments</comments>
   </item>
   <item>
-    <title>MintJams Content Management Tools Standard</title>
-    <link>http://marketplace.eclipse.org/content/mintjams-content-management-tools-standard</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cmtlogo_0.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2010-05-05 23:48&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:37&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;MintJams Content Management Tools Standard is user interface for CR5.
-
-	&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/adding-social-login-with-bpmn-20?qid=ef98a24b-4bea-43e3-a13b-ea356349dc1c&quot; rel=&quot;nofollow&quot;&gt;Adding Social Login with BPMN 2.0&lt;/a&gt;
-
-	Documents:
+    <title>Darkest Dark Theme</title>
+    <link>http://marketplace.eclipse.org/content/darkest-dark-theme</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/DARKESTdark-theme.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-01-31 12:51&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 22:42&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Updated with editor color themes! &lt;a href=&quot;https://www.genuitec.com/tech/darkest-dark/&quot; rel=&quot;nofollow&quot;&gt;Darkest Dark theme&lt;/a&gt; is a free plug-in and theme that provides a clean flat look to Eclipse Neon and Oxygen. Included:&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;
-			&lt;a href=&quot;http://www.slideshare.net/mintjams/getting-started-31643179&quot; rel=&quot;nofollow&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+		High impact colors on dark background&lt;/li&gt;
 &lt;li&gt;
-			&lt;a href=&quot;http://www.slideshare.net/mintjams/managing-users-and-groups&quot; rel=&quot;nofollow&quot;&gt;Managing Users and Groups&lt;/a&gt;&lt;/li&gt;
+		Dynamic selection of editor color themes&lt;/li&gt;
 &lt;li&gt;
-			&lt;a href=&quot;http://www.slideshare.net/mintjams/recommended-securitysettings&quot; rel=&quot;nofollow&quot;&gt;Recommended Security Settings&lt;/a&gt;&lt;/li&gt;
+		Icon replacement technology to refresh Eclipse icons&lt;/li&gt;
+&lt;li&gt;
+		Lots of tidy-up of dark coloring over many tool stacks&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Entirely free to use!&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Tue, 31 Jan 2017 17:51:53 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">3274405 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/darkest-dark-theme#comments</comments>
+  </item>
+  <item>
+    <title>FileSync</title>
+    <link>http://marketplace.eclipse.org/content/filesync</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/refresh_med.gif&quot; width=&quot;64&quot; height=&quot;64&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2006-05-17 10:23&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-05-04 09:07&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Andrey%20Loskutov%22&quot;&gt;Andrey Loskutov&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/aloskutov/listings&quot; title=&quot;Andrey Loskutov&quot;&gt;Andrey Loskutov&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;FileSync plugin for Eclipse is a file synchronisation tool. The main goal is to keep files outside of Eclipse projects in-sync with Eclipse project files. The plugin works as builder in Eclipse and will synchronize all changes on Eclipse project files with mapped external folders. E.g. if a file is created, changed or deleted in Eclipse, then the mapped (external) file will be created, changed or deleted too.&lt;/p&gt;
+&lt;p&gt;FileSync is often used for J2EE developement to copy *.jsp or *.html files from Eclipse project to webserver/application root and greatly simplifies the J2EE web developement.&lt;/p&gt;
+&lt;p&gt;Support development of the plugin!&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+
+	   
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;My other plugins on EPIC:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		&lt;a href=&quot;http://marketplace.eclipse.org/content/anyedit-tools&quot; rel=&quot;nofollow&quot;&gt;AnyEdit Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;http://marketplace.eclipse.org/content/bytecode-outline&quot; rel=&quot;nofollow&quot;&gt;Bytecode Outline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;http://marketplace.eclipse.org/content/extended-vs-presentation&quot; rel=&quot;nofollow&quot;&gt;Extended VS Presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;http://marketplace.eclipse.org/content/jdepend4eclipse&quot; rel=&quot;nofollow&quot;&gt;JDepend4Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;http://marketplace.eclipse.org/content/data-hierarchy&quot; rel=&quot;nofollow&quot;&gt;Data Hierarchy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		&lt;a href=&quot;https://marketplace.eclipse.org/content/plugin-dependencies-explorer&quot; rel=&quot;nofollow&quot;&gt;Plug-In Dependencies Explorer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Thu, 06 May 2010 03:48:40 +0000</pubDate>
- <dc:creator>kfukudar10</dc:creator>
- <guid isPermaLink="false">1200 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/mintjams-content-management-tools-standard#comments</comments>
-  </item>
-  <item>
-    <title>MintJams Content Management Tools</title>
-    <link>http://marketplace.eclipse.org/content/mintjams-content-management-tools</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cmtlogo.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2012-08-27 02:05&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 22:36&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22MintJams%20Inc.%22&quot;&gt;MintJams Inc.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/kfukudar10/listings&quot; title=&quot;Kenichi Fukuda&quot;&gt;Kenichi Fukuda&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;The MintJams Content Management Tools is an innovative content management tool. MintJams Content Management Tools enables you to connect, access and manage local storage, WebDAV storage, and FTP storage using same user interface in powerful new ways. Designed to meet the needs of today&#039;s business, MintJams Content Management Tools helps you get more done -- easier, faster, better.
-
-	&lt;a href=&quot;http://www.slideshare.net/mintjams/creating-a-web-application-with-javascript-jquery?qid=bb946b81-bae1-4124-ae7b-897841fe552f&quot; rel=&quot;nofollow&quot;&gt;Creating a Web Application with JavaScript + jQuery&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/event-handling-basics?qid=09d056d6-e14d-4dd4-a09c-848917c095af&quot; rel=&quot;nofollow&quot;&gt;Event Handling Basics&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;http://www.slideshare.net/mintjams/adding-social-login-with-bpmn-20?qid=ef98a24b-4bea-43e3-a13b-ea356349dc1c&quot; rel=&quot;nofollow&quot;&gt;Adding Social Login with BPMN 2.0&lt;/a&gt;
-
-
-		New features in v3.12.0:
-&lt;ul&gt;&lt;li&gt;
-			Support for Amazon S3&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		New features in v2.9.0:
-&lt;ul&gt;&lt;li&gt;
-			Support for SSH/local terminal (integrate with &lt;a href=&quot;http://marketplace.eclipse.org/content/mintjams-terminal-plug&quot; rel=&quot;nofollow&quot;&gt;Terminal plug-in&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		New features in v2.8.50:
-&lt;ul&gt;&lt;li&gt;
-			SSH login with the managed identity (integrate with &lt;a href=&quot;http://marketplace.eclipse.org/content/mintjams-pki-tools&quot; rel=&quot;nofollow&quot;&gt;PKI tools&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		Perspectives:
-&lt;ul&gt;&lt;li&gt;
-			Content Management&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		Team providers:
-&lt;ul&gt;&lt;li&gt;
-			Content Management Tools&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-		Supported protocols and schemes:
-
-		WebDAV storage
-&lt;ul&gt;&lt;li&gt;
-			HTTP) webdav://host:[port]/...&lt;/li&gt;
-&lt;li&gt;
-			HTTP over SSL) webdavs://host:[port]/...&lt;/li&gt;
-&lt;/ul&gt;
-
-		FTP storage
-&lt;ul&gt;&lt;li&gt;
-			FTP) &lt;a href=&quot;ftp://host:[port]/&quot; rel=&quot;nofollow&quot;&gt;ftp://host:[port]/&lt;/a&gt;...&lt;/li&gt;
-&lt;li&gt;
-			FTP over SSL) ftps://host:[port]/... OR ftpes://host:[port]/...&lt;/li&gt;
-&lt;li&gt;
-			FTP over SSH) &lt;a href=&quot;sftp://host:[port]/&quot; rel=&quot;nofollow&quot;&gt;sftp://host:[port]/&lt;/a&gt;...&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Mon, 27 Aug 2012 06:05:12 +0000</pubDate>
- <dc:creator>kfukudar10</dc:creator>
- <guid isPermaLink="false">390933 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/mintjams-content-management-tools#comments</comments>
-  </item>
-  <item>
-    <title>Veracode Greenlight</title>
-    <link>http://marketplace.eclipse.org/content/veracode-greenlight</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/01_Eclipse_Transparent_0.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-04-10 14:32&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 17:13&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Veracode%22&quot;&gt;Veracode&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/jbaker4rv/listings&quot; title=&quot;Jeremy Baker&quot;&gt;Jeremy Baker&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Veracode Greenlight finds security defects in your code and provides contextual remediation advice to help you fix issues in seconds, right in your Eclipse IDE. With Veracode Greenlight, find issues early, reduce development and remediation costs, and deploy quality code on your timeline.&lt;/p&gt;
-&lt;p&gt;Using the Veracode Greenlight Eclipse Plugin Visit &lt;a href=&quot;https://analysiscenter.veracode.com/auth/helpcenter/api/c_about_greenlight.html&quot; rel=&quot;nofollow&quot;&gt;https://analysiscenter.veracode.com/auth/helpcenter/api/c_about_greenlig...&lt;/a&gt; to access our internal Help Center for installation and usage instructions. If you have any questions or need assistance at any time, please contact your Veracode Program Manager or &lt;a href=&quot;mailto:Support@Veracode.com&quot; rel=&quot;nofollow&quot;&gt;Support@Veracode.com&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Mon, 10 Apr 2017 18:32:57 +0000</pubDate>
- <dc:creator>jbaker4rv</dc:creator>
- <guid isPermaLink="false">3388415 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/veracode-greenlight#comments</comments>
-  </item>
-  <item>
-    <title>Azure Toolkit for Eclipse</title>
-    <link>http://marketplace.eclipse.org/content/azure-toolkit-eclipse</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/azure110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2014-09-16 16:39&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 17:12&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Microsoft%20Corp.%22&quot;&gt;Microsoft Corp.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/msawicki/listings&quot; title=&quot;Martin Sawicki&quot;&gt;Martin Sawicki&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Azure Toolkit for Eclipse provides functionality that allow you to easily create, develop, configure, test, and deploy lightweight, highly available and scalable Java web apps to Microsoft Azure using the Eclipse development environment running on Mac OS, Linux and Windows. It also contains all the key Azure service API clients for Java, exposed as Eclipse libraries, including the Azure Management SDK, Storage SDK, Application Insights SDK and JDBC (for SQL Server and Azure SQL Database). Other key features of the Azure Toolkit for Eclipse include: &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-		quick deployment of a Java application to an Azure Web App container&lt;/li&gt;
-&lt;li&gt;
-		quick dev/test deployments of Java applications to Docker containers running within Azure Docker Host VMs, for which the plugin also provides basic management support&lt;/li&gt;
-&lt;li&gt;
-		create Spark applications for Azure HDInsight Spark Linux cluster using Java or Scala&lt;/li&gt;
-&lt;li&gt;
-		use any JVM with your cloud app, including the OpenJDK (e.g. Azul Zulu) or the Oracle JDK&lt;/li&gt;
-&lt;li&gt;
-		deploy any application server, including Tomcat, Jetty, JBoss or GlassFish; or rely on a version of Tomcat or Jetty made available in Azure by Microsoft&lt;/li&gt;
-&lt;li&gt;
-		use the Azure Explorer view to navigate and manage your Azure storage accounts (blobs, tables, queue), web apps, HDInsight (Spark) resources, Docker hosts and published Docker containers on Azure&lt;/li&gt;
-&lt;li&gt;
-		program against Azure&#039;s services such as Storage, Azure SQL Database and more, using the Azure SDK APIs for Java&lt;/li&gt;
-&lt;li&gt;
-		enable automated telemetry for your applications using Application Insights logging directly into the Azure cloud, regardless of where your application is running&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Learn more at the &lt;a href=&quot;http://go.microsoft.com/fwlink/?LinkID=699529&quot; rel=&quot;nofollow&quot;&gt;documentation site&lt;/a&gt;, and learn more about Java on Azure in general at the &lt;a href=&quot;https://azure.microsoft.com/develop/java/&quot; rel=&quot;nofollow&quot;&gt;Azure Developer Center for Java&lt;/a&gt;. &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Tue, 16 Sep 2014 20:39:08 +0000</pubDate>
- <dc:creator>msawicki</dc:creator>
- <guid isPermaLink="false">1919278 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/azure-toolkit-eclipse#comments</comments>
-  </item>
-  <item>
-    <title>Eclipse Class Decompiler</title>
-    <link>http://marketplace.eclipse.org/content/eclipse-class-decompiler</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/components.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2012-10-15 06:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 11:09&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Chen%20Chao%28cnfree2000%40hotmail.com%29%22&quot;&gt;Chen Chao(cnfree2000@hotmail.com)&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cchao/listings&quot; title=&quot;Chen Chao&quot;&gt;Chen Chao&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Eclipse Class Decompiler integrates JD, Jad, FernFlower, CFR, Procyon seamlessly with Eclipse and allows Java developers to debug class files without source code directly. It also integrates Javadoc and supports the syntax of JDK8 lambda expressions.&lt;/p&gt;
-&lt;p&gt;Github Project Page: &lt;a href=&quot;https://www.cpupk.com/decompiler&quot; rel=&quot;nofollow&quot;&gt;https://www.cpupk.com/decompiler&lt;/a&gt;&lt;br /&gt;
-	Plugin Update Site: &lt;a href=&quot;https://www.cpupk.com/decompiler/update&quot; rel=&quot;nofollow&quot;&gt;https://www.cpupk.com/decompiler/update&lt;/a&gt;&lt;br /&gt;
-	Tutorial: &lt;a href=&quot;https://www.eclipse.org/community/eclipse_newsletter/2017/february/article8.php&quot; rel=&quot;nofollow&quot;&gt;The Features of Eclipse Class Decompiler&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;a href=&quot;https://marketplace.eclipse.org/sites/default/files/debug_0.png&quot; title=&quot;Eclipse Class Decompiler&quot; class=&quot;colorbox init-colorbox-processed cboxElement&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;
-&lt;a href=&quot;https://marketplace.eclipse.org/sites/default/files/decompiler_0.png&quot; title=&quot;Eclipse Class Decompiler&quot; class=&quot;colorbox init-colorbox-processed cboxElement&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Mon, 15 Oct 2012 10:11:20 +0000</pubDate>
- <dc:creator>cchao</dc:creator>
- <guid isPermaLink="false">472922 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/eclipse-class-decompiler#comments</comments>
-  </item>
-  <item>
-    <title>IBM MobileFirst Foundation Studio</title>
-    <link>http://marketplace.eclipse.org/content/ibm-mobilefirst-foundation-studio</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/default_images/default_2.png&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2012-06-14 13:17&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 08:16&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/mplatform/listings&quot; title=&quot;MobileFirst Platform&quot;&gt;MobileFirst Platform&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The IBM MobileFirst™ Studio plug-in helps you manage your Cordova project in the Eclipse development environment. Cordova projects are typically managed by entering commands on the Cordova command line. After integrating the IBM MobileFirst Studio plug-in into your Eclipse environment, you can run the following commands on your Cordova app without leaving the Eclipse development environment: Open server console Preview app Register app Encrypt app Pull app Push app Update app View the &lt;a href=&quot;https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/using-the-mfpf-sdk/using-mobilefirst-cli-in-eclipse/&quot; rel=&quot;nofollow&quot;&gt;Tutorial&lt;/a&gt; to get up and running quickly using step-by-step instructions. For additional information and support go to &lt;a href=&quot;https://mobilefirstplatform.ibmcloud.com/&quot; rel=&quot;nofollow&quot;&gt;https://mobilefirstplatform.ibmcloud.com/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Thu, 14 Jun 2012 17:17:18 +0000</pubDate>
- <dc:creator>mplatform</dc:creator>
- <guid isPermaLink="false">298621 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/ibm-mobilefirst-foundation-studio#comments</comments>
-  </item>
-  <item>
-    <title>EMF-IncQuery</title>
-    <link>http://marketplace.eclipse.org/content/emf-incquery</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/tool_logo_XL_w_text.png&quot; width=&quot;110&quot; height=&quot;71&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2012-10-02 12:36&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 08:03&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Eclipse.org%22&quot;&gt;Eclipse.org&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/irathyxf/listings&quot; title=&quot;Istvan Rath&quot;&gt;Istvan Rath&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;EMF-IncQuery has merged into VIATRA in 2016.&lt;/strong&gt; This entry is only kept for backwards compatibility, all users are recommended to update to &lt;a href=&quot;https://marketplace.eclipse.org/content/viatra&quot; rel=&quot;nofollow&quot;&gt;VIATRA&lt;/a&gt; as soon as possible.&lt;/p&gt;
-&lt;p&gt;EMF-IncQuery is a high perfomance incremental graph search framework. With IncQuery, you can deﬁne declarative queries over EMF models, and execute them efﬁciently without manual Java coding (think SPARQL for EMF). The intuitive, Xtext-base query language is based on graph patterns that provide high (OCL-like) expressive power with a more concise, reusability-focused syntax that also supports integrating inline Xbase/Java. This versatile language is supported by a high performance query evaluation engine based on the Rete algorithm, known from expert systems. With this technology, EMF-IncQuery can provide real-time query evaluation performance (that is, instantaneous re-evaluation as the models change) for really complex queries over very large instance models (up to several millions of EObjects in size). In addition to the model query features, EMF-IncQuery provides built-in support for the specification and execution of model validation rules that will be checked on-the-fly, and the specification and automatic maintenance of derived features (edges and attributes) that support EMF notifications out of the box.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Tue, 02 Oct 2012 16:36:30 +0000</pubDate>
- <dc:creator>irathyxf</dc:creator>
- <guid isPermaLink="false">450505 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/emf-incquery#comments</comments>
-  </item>
-  <item>
-    <title>WireframeSketcher Wireframing Tool</title>
-    <link>http://marketplace.eclipse.org/content/wireframesketcher-wireframing-tool</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/sketch_80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2008-11-03 09:15&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-04-27 05:59&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22WireframeSketcher%22&quot;&gt;WireframeSketcher&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/pseverinqw0/listings&quot; title=&quot;Peter Severin&quot;&gt;Peter Severin&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;WireframeSketcher is a rapid wireframing tool that helps quickly create wireframes, mockups and prototypes for desktop, web and mobile applications. It comes both as a plug-in for any Eclipse IDE and a standalone version. With WireframeSketcher users can quickly gather useful feedback from stakeholders, show off their proposals to clients, share their ideas with fellow developers and in the end build better software. Install the 14 days free trial and test it for yourself.&lt;/p&gt;
-&lt;h3&gt;
-	Some of the top features:&lt;/h3&gt;
-&lt;ul&gt;&lt;li&gt;
-		Extensive library of built-in controls for any type of UI. Stencils for Android, iPhone, iPad apps and more are available.&lt;/li&gt;
-&lt;li&gt;
-		Hand-drawn look for wireframes. Your stakeholders won&#039;t be distracted by little details and you can focus on what’s important. Clean look is also available.&lt;/li&gt;
-&lt;li&gt;
-		Create interactive prototypes. Present your prototypes in full-screen mode and click-through to show how the application or website is supposed work. Export your prototypes to clickable, high-quality PDF, or easily share them online in a few clicks.&lt;/li&gt;
-&lt;li&gt;
-		More than 200 wireframing icons. Icons come in vector format, work at any size, can be colored, rotated, and embedded in any text.&lt;/li&gt;
-&lt;li&gt;
-		Use components to create your own reusable bits. Easy inheritance mechanism lets you modify component&#039;s instance without breaking the link to its origin.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Download standalone version from our website: &lt;a href=&quot;http://wireframesketcher.com/download.html&quot; rel=&quot;nofollow&quot;&gt;http://wireframesketcher.com/download.html&lt;/a&gt;. &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Mon, 03 Nov 2008 14:15:53 +0000</pubDate>
- <dc:creator>pseverinqw0</dc:creator>
- <guid isPermaLink="false">801 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/wireframesketcher-wireframing-tool#comments</comments>
+     <pubDate>Wed, 17 May 2006 14:23:01 +0000</pubDate>
+ <dc:creator>aloskutov</dc:creator>
+ <guid isPermaLink="false">204 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/filesync#comments</comments>
   </item>
   </channel>
 </rss>
