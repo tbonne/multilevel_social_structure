@@ -15,29 +15,36 @@ public class Params {
 	
 	//Simulation
 	public final static int numberOfThreads = 1;
+	public final static int endTime = 1000*10;
 	
 	//landscape
 	public final static String geog = "geog";
-	public static int landscapeWidth = 50;
-	public static double envHomogen = 0.5;
+	public static int landscapeWidth = 100;
+	public static double envHomogen = 2.5;
 	
 	//resource cells
 	public final static int cellSize = 30;
 	public static double regrowthRate = 0.001;
 	public static double depletionRate = 0.1;
+	public static double foodDensity = 1.0;
 	
 	//OMU population
-	public static int numbOMU = 10;
+	public static int numbOMU = 100;
+	public static int turnover = 10;
+	public static int turnover_time = endTime + 1; //i.e., never turnover the population
+	public static int juveAge = 100;
+	public final static int spatialAssoStartTime = endTime - 1000;
 	
 	//OMU foraging behaviour
 	public static int foodSearchRange = 100;
 	public static int visualSearchRange = 100;
+	public static int familarRange = cellSize; 
 	
 	//OMU momvement behaviour
-	public static double bearingWeight = 0.20;
+	public static double bearingWeight = 0.00;
 	public static double foodWeight = 1.0;
-	public static double socialWeight = 1.0;
-	public static double homeWeight = 0.010;
+	public static double socialWeight = 0.0;
+	public static double homeWeight = 0.0;//0.001;
 	public final static int maxDistPerStep = 5;
 	
 	//Familiarity
@@ -49,6 +56,9 @@ public class Params {
 	public static double famMaxCell = 0.999;
 	public static double famMaxInd = 0.999;
 	public static  double errorInd = 0.001;
+	
+	//Observer
+	public static int spatialRangeAsso = 100;
 	
 	//Constructor: used to set values from batch runs or the GUI
 		public Params(){

@@ -15,7 +15,7 @@ OMU omu;
 		omu.decision();
 	    } catch (Throwable e) {
 	        thrown = e;
-	        System.out.println("Problem lies in OMU code" + thrown);
+	        System.out.println("Problem lies in OMU code " + thrown);
 	        
 	    } finally {
 	    	return;

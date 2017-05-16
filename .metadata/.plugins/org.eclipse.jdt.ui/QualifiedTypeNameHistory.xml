@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.vividsolutions.jts.awt.PointShapeFactory.Point"/>
-<fullyQualifiedTypeName name="com.vividsolutions.jts.geom.Point"/>
 <fullyQualifiedTypeName name="cern.jet.random.Uniform"/>
 <fullyQualifiedTypeName name="cern.jet.random.Beta"/>
 <fullyQualifiedTypeName name="net.sf.cglib.core.CollectionUtils"/>
@@ -11,10 +9,14 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.apache.commons.math3.distribution.NormalDistribution"/>
 <fullyQualifiedTypeName name="jsc.distributions.PowerFunction"/>
 <fullyQualifiedTypeName name="cern.jet.random.Distributions"/>
 <fullyQualifiedTypeName name="cern.jet.random.engine.RandomEngine"/>
 <fullyQualifiedTypeName name="cern.jet.random.engine.MersenneTwister"/>
+<fullyQualifiedTypeName name="multiLevelGroups.Params"/>
+<fullyQualifiedTypeName name="com.vividsolutions.jts.geom.GeometryFactory"/>
+<fullyQualifiedTypeName name="com.vividsolutions.jts.awt.PointShapeFactory.Point"/>
+<fullyQualifiedTypeName name="com.vividsolutions.jts.geom.Point"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

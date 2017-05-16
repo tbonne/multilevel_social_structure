@@ -8,8 +8,7 @@ import java.util.List;
 import repast.simphony.util.ContextUtils;
 
 public class Observer {
-
-
+	
 	//this will export all influence patterns between individuals at the end of the simulation
 	public static void recordInfluencePatterns(){
 
@@ -50,9 +49,9 @@ public class Observer {
 
 		}
 
+		//print the influence association matrix
 		printMatrixToCSV(asso,allAgentsOrdered.size());
-
-
+		
 	}
 
 
@@ -61,6 +60,77 @@ public class Observer {
 		try
 		{
 			BufferedWriter writer = new BufferedWriter(new FileWriter("socialStructure.csv",false));
+
+			//for each row and column
+			for(int i = 0; i < size; i++) {
+				for (int j=0; j<size; j++) {
+					writer.append(String.valueOf(asso[i][j]));
+					writer.append(',');
+				}
+				writer.newLine();
+			}
+			
+			writer.flush();
+			writer.close();
+		}        
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+	
+	
+	//this will export all influence patterns between individuals at the end of the simulation
+	public static void recordSpatialPatterns(){  
+
+			//get all individuals
+			Iterable<OMU> allAgents = ModelSetup.getContext().getAgentLayer(OMU.class);
+			List<OMU> allAgentsOrdered = new ArrayList<OMU>();
+
+			//place it into a list
+			for(OMU omu : allAgents){
+				allAgentsOrdered.add(omu);
+			}
+
+			double[][] asso = new double[allAgentsOrdered.size()][allAgentsOrdered.size()];
+
+			//for each agent place associations into a vector and add to a matrix
+			for(OMU focal: allAgentsOrdered){
+
+				int myIndex = allAgentsOrdered.indexOf(focal);
+
+				//for all the focal agents associations
+				for(OMU other: allAgentsOrdered){
+
+					int otherIndex = allAgentsOrdered.indexOf(other);
+
+					//yes there is an association
+					if(focal.spatialAssoInds.contains(other)){
+						
+						int otherIndex_in_focal = focal.spatialAssoInds.indexOf(other);
+						asso[myIndex][otherIndex] = focal.spatialAssoVal.get(otherIndex_in_focal);
+
+					//no association
+					} else {
+
+						asso[myIndex][otherIndex] = 0 ;
+					} 
+
+				}
+
+			}
+			
+			//print the spatial association matrix
+			printMatrixToCSV_spatial(asso,allAgentsOrdered.size());
+
+		}
+	
+	public static void printMatrixToCSV_spatial(double[][] asso, int size){
+
+		try
+		{
+			BufferedWriter writer = new BufferedWriter(new FileWriter("spatialStructure.csv",false));
 
 			//for each row and column
 			for(int i = 0; i < size; i++) {

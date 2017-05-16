@@ -114,9 +114,9 @@ public class Cell {
 			} else {
 				
 				if(f<0){
-					f = Math.max( (f + Params.lDecay * (1-f)*f),Params.famMinCell);
+					f = Math.max( (f - Params.lDecay * (1+f)*f),-Params.famMaxCell);
 				} else {
-					f = Math.max( (f - Params.lDecay * (1-f)*f),Params.famMinCell);
+					f = Math.max( (f + Params.lDecay * (1-f)*f),-Params.famMaxCell);
 				}
 				
 				familiarityValues.set(i, f);

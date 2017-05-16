@@ -91,7 +91,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 
 				//double food = 0;
 				//double food = beta.random();
-				double food = 1/Distributions.nextPowLaw(2.6, 10, mt);
+				double food = 1/Distributions.nextPowLaw(Params.envHomogen, 10, mt);
 				Cell cell=null;
 
 				if(offset==0){
@@ -123,8 +123,11 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		for (Cell c: allCells){
 			c.setVisibleNeigh();
 		}
-
-
+		
+		//standardize cell resources to be the same for every run
+		setTotalResources(allCells.size());
+		
+		
 		/************************************
 		 * 							        *
 		 * Adding individuals to the landscape		*
@@ -139,7 +142,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 			int randId = RandomHelper.nextIntFromTo(1, allCells.size());
 			Coordinate coord = allCells.get(randId).getCoord();
 			//Coordinate coord = center.getCoord();
-			OMU group = new OMU(coord,j);
+			OMU group = new OMU(coord);
 			allOMUs.add(group);
 			context.add(group);
 			Point geom = fac.createPoint(coord);
@@ -156,6 +159,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		//executor takes care of the processing of the schedule
 		Executor executor = new Executor();
 		createSchedule(executor);
+		RunEnvironment.getInstance().endAt(Params.endTime);
 
 
 		/************************************
@@ -184,7 +188,13 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		ScheduleParameters agentStepParams = ScheduleParameters.createRepeating(1, 1, 1);
 		schedule.schedule(agentStepParams,executor,"updateCells");
 		
-		ScheduleParameters endModel = ScheduleParameters.createAtEnd(1);
+		ScheduleParameters agentStepCParams = ScheduleParameters.createRepeating(1, Params.turnover_time, 1);
+		schedule.schedule(agentStepCParams,executor,"populationTurnover");
+		
+		ScheduleParameters agentStepEParams = ScheduleParameters.createRepeating(Params.spatialAssoStartTime, 100, 1);
+		schedule.schedule(agentStepEParams,executor,"spatialAssociations");
+		
+		ScheduleParameters endModel = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
 		schedule.schedule(endModel,executor,"endModel");
 	}
 
@@ -195,6 +205,26 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		}
 		removeCellsToProcess.clear();
 	}
+	
+	//used to set total resources in the model
+	private void setTotalResources(int numbCells){
+			//calculate the percent difference between the total resource level now and the target level
+			double targetRes = numbCells*Params.foodDensity;
+			double perDiff = resAdded / targetRes;
+			System.out.println("conversion = "+perDiff);
+			double newTotal=0;
+			int count=0;
+
+			//Divide each resource by the percent difference to make the total equal the target resource amount
+			for (Cell c : this.getAllCells()){
+				c.setMaxResourceLevel(c.getMaxResourceLevel()/perDiff);
+				c.setResourceLevel(c.getResourceLevel()/perDiff);
+				newTotal = newTotal + c.getResourceLevel();
+				count++;
+			}
+			
+			System.out.println("total amount of food added = "+ resAdded + ",  updated to = " + newTotal);
+		}
 
 
 	/*******************************************get and set methods***********************************************/
