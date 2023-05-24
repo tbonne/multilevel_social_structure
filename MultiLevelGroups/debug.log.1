@@ -1,8 +1,65 @@
-ERROR [AWT-EventQueue-0] 2016-02-09 11:42:05,945 repast.simphony.dataLoader.engine.MIContextXMLDataLoaderAction - ModelInitializer class was not found. Unable to initialize scenario
-ERROR [AWT-EventQueue-0] 2016-02-09 11:43:52,170 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.Cell.<init>(Cell.java:45)
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:83)
+ERROR [AWT-EventQueue-0] 2016-02-22 16:31:08,163 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.set(Unknown Source)
+	at multiLevelGroups.Cell.<init>(Cell.java:54)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:93)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+ERROR [AWT-EventQueue-0] 2016-02-22 16:31:40,234 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.set(Unknown Source)
+	at multiLevelGroups.Cell.<init>(Cell.java:54)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:93)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -53,10 +110,12 @@ java.lang.NullPointerException
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 11:45:25,016 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.Cell.<init>(Cell.java:45)
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:83)
+ERROR [AWT-EventQueue-0] 2016-02-22 16:31:52,089 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.set(Unknown Source)
+	at multiLevelGroups.Cell.<init>(Cell.java:54)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:93)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -107,10 +166,19 @@ java.lang.NullPointerException
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 11:46:50,383 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.Cell.<init>(Cell.java:45)
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:83)
+WARN  [Thread-6] 2016-02-23 11:19:39,198 repast.simphony.ui.GUIScheduleRunner - Caught InterruptedException when running simulation, unpausing.
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Unknown Source)
+	at repast.simphony.ui.GUIScheduleRunner.go(GUIScheduleRunner.java:137)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:48)
+	at java.lang.Thread.run(Unknown Source)
+ERROR [AWT-EventQueue-0] 2017-04-27 14:08:59,460 repast.simphony.context.DefaultContext - Projection 'geog' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.gis.DefaultGeographyFactory.createGeography(DefaultGeographyFactory.java:23)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:73)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -124,139 +192,49 @@ java.lang.NullPointerException
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
 	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
 	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 11:48:21,544 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at repast.simphony.ui.plugin.editor.OptionsDialog.showDialog(OptionsDialog.java:251)
-	at repast.simphony.ui.plugin.editor.OptionsEditorDialog.display(OptionsEditorDialog.java:59)
-	at repast.simphony.ui.tree.ScenarioTree.showDialog(ScenarioTree.java:251)
-	at repast.simphony.ui.tree.ScenarioTree.access$1(ScenarioTree.java:242)
-	at repast.simphony.ui.tree.ScenarioTree$EditAction.actionPerformed(ScenarioTree.java:225)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 11:50:30,769 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.Cell.<init>(Cell.java:45)
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:83)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+ERROR [AWT-EventQueue-0] 2017-04-27 14:09:17,285 repast.simphony.context.DefaultContext - Projection 'geog' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.gis.DefaultGeographyFactory.createGeography(DefaultGeographyFactory.java:23)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:73)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -270,429 +248,49 @@ java.lang.NullPointerException
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
 	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
 	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 12:03:39,457 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInWindow(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInDialog(Unknown Source)
-	at repast.simphony.visualization.gui.DisplayConfigurationWizard.showDialog(DisplayConfigurationWizard.java:184)
-	at repast.simphony.visualization.gui.DisplayWizardCreator.showDialog(DisplayWizardCreator.java:29)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.createAction(DefaultDisplayMenuItem.java:62)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.actionPerformed(DefaultDisplayMenuItem.java:31)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 12:03:41,552 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInWindow(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInDialog(Unknown Source)
-	at repast.simphony.visualization.gui.DisplayConfigurationWizard.showDialog(DisplayConfigurationWizard.java:184)
-	at repast.simphony.visualization.gui.DisplayWizardCreator.showDialog(DisplayWizardCreator.java:29)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.createAction(DefaultDisplayMenuItem.java:62)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.actionPerformed(DefaultDisplayMenuItem.java:31)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 12:20:04,430 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInWindow(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInDialog(Unknown Source)
-	at repast.simphony.visualization.gui.DisplayConfigurationWizard.showDialog(DisplayConfigurationWizard.java:184)
-	at repast.simphony.visualization.gui.DisplayWizardCreator.showDialog(DisplayWizardCreator.java:29)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.createAction(DefaultDisplayMenuItem.java:62)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.actionPerformed(DefaultDisplayMenuItem.java:31)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 12:20:10,729 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisplayDescriptor cannot be cast to repast.simphony.gis.visualization.engine.GISDisplayDescriptor
-	at repast.simphony.gis.visualization.engine.DisplayCreatorFactoryGIS.createDisplayCreator(DisplayCreatorFactoryGIS.java:1)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 12:20:10,729 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
-java.lang.NullPointerException
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:105)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 14:30:14,840 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:146)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+ERROR [AWT-EventQueue-0] 2017-04-27 14:09:56,237 repast.simphony.context.DefaultContext - Projection 'geog' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.gis.DefaultGeographyFactory.createGeography(DefaultGeographyFactory.java:23)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:73)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -706,46 +304,55 @@ java.lang.NullPointerException
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
 	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
 	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 14:30:47,593 repast.simphony.ui.RSApplication - Error while initializing simulation
-java.lang.NullPointerException
-	at multiLevelGroups.ModelSetup.build(ModelSetup.java:146)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+WARN  [Thread-6] 2017-04-28 09:59:29,962 repast.simphony.ui.GUIScheduleRunner - Caught InterruptedException when running simulation, unpausing.
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at repast.simphony.ui.GUIScheduleRunner.go(GUIScheduleRunner.java:137)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR [AWT-EventQueue-0] 2017-04-28 10:10:16,066 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index: 2500, Size: 2500
+	at java.util.ArrayList.rangeCheck(ArrayList.java:638)
+	at java.util.ArrayList.get(ArrayList.java:414)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:140)
 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
@@ -759,234 +366,50 @@ java.lang.NullPointerException
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
 	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
 	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-09 14:56:10,486 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInWindow(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInDialog(Unknown Source)
-	at repast.simphony.visualization.gui.DisplayConfigurationWizard.showDialog(DisplayConfigurationWizard.java:184)
-	at repast.simphony.visualization.gui.DisplayWizardCreator.showDialog(DisplayWizardCreator.java:29)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.createAction(DefaultDisplayMenuItem.java:62)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.actionPerformed(DefaultDisplayMenuItem.java:31)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:02:04,458 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInWindow(Unknown Source)
-	at org.pietschy.wizard.Wizard.showInDialog(Unknown Source)
-	at repast.simphony.visualization.gui.DisplayConfigurationWizard.showDialog(DisplayConfigurationWizard.java:184)
-	at repast.simphony.visualization.gui.DisplayWizardCreator.showDialog(DisplayWizardCreator.java:29)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.createAction(DefaultDisplayMenuItem.java:62)
-	at repast.simphony.visualization.gui.DefaultDisplayMenuItem.actionPerformed(DefaultDisplayMenuItem.java:31)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:23:03,723 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisplayDescriptor cannot be cast to repast.simphony.gis.visualization.engine.GISDisplayDescriptor
-	at repast.simphony.gis.visualization.engine.DisplayCreatorFactoryGIS.createDisplayCreator(DisplayCreatorFactoryGIS.java:1)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+ERROR [AWT-EventQueue-0] 2017-05-06 15:56:53,224 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index: 2500, Size: 2500
+	at java.util.ArrayList.rangeCheck(ArrayList.java:638)
+	at java.util.ArrayList.get(ArrayList.java:414)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:140)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
@@ -998,48 +421,75 @@ java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisp
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
 	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
 	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:27:17,331 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisplayDescriptor cannot be cast to repast.simphony.gis.visualization.engine.GISDisplayDescriptor
-	at repast.simphony.gis.visualization.engine.DisplayCreatorFactoryGIS.createDisplayCreator(DisplayCreatorFactoryGIS.java:1)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+FATAL [Thread-16] 2017-05-06 16:18:01,808 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2001.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127)
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 9, Size: 9
+	at java.util.ArrayList.rangeCheck(ArrayList.java:638)
+	at java.util.ArrayList.get(ArrayList.java:414)
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118)
+	... 9 more
+WARN  [AWT-EventQueue-0] 2017-05-09 13:43:50,661 repast.simphony.util.ClassUtilities - Utilities.findMethod: warning, could not find method 'spatialAssociations([])' in class multiLevelGroups.Executor, returning null
+ERROR [AWT-EventQueue-0] 2017-05-09 13:43:50,662 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IllegalArgumentException: Method multiLevelGroups.Executor.spatialAssociations() not found!
+	at repast.simphony.engine.schedule.CallBackAction.initMethod(CallBackAction.java:101)
+	at repast.simphony.engine.schedule.CallBackAction.<init>(CallBackAction.java:79)
+	at repast.simphony.engine.schedule.DefaultActionFactory.createAction(DefaultActionFactory.java:45)
+	at repast.simphony.engine.schedule.DefaultSchedulableActionFactory.createAction(DefaultSchedulableActionFactory.java:81)
+	at repast.simphony.engine.schedule.Schedule.schedule(Schedule.java:191)
+	at multiLevelGroups.ModelSetup.createSchedule(ModelSetup.java:195)
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:161)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
@@ -1049,503 +499,729 @@ java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisp
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6527)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6292)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4883)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4705)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
 	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:27:17,346 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
-java.lang.NullPointerException
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:105)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:28:55,810 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisplayDescriptor cannot be cast to repast.simphony.gis.visualization.engine.GISDisplayDescriptor
-	at repast.simphony.gis.visualization.engine.DisplayCreatorFactoryGIS.createDisplayCreator(DisplayCreatorFactoryGIS.java:1)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:28:55,820 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
-java.lang.NullPointerException
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:105)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:29:54,483 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.ClassCastException: repast.simphony.visualization.engine.CartesianDisplayDescriptor cannot be cast to repast.simphony.gis.visualization.engine.GISDisplayDescriptor
-	at repast.simphony.gis.visualization.engine.DisplayCreatorFactoryGIS.createDisplayCreator(DisplayCreatorFactoryGIS.java:1)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:29:54,488 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
-java.lang.NullPointerException
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:105)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:32:15,462 repast.simphony.visualization.engine.DisplayProducer - Error creating display for GIS
-java.lang.RuntimeException: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 486; The element type "sld:PolygonSymbolizer" must be terminated by the matching end-tag "</sld:PolygonSymbolizer>".
-	at org.geotools.styling.SLDParser.readXML(SLDParser.java:355)
-	at repast.simphony.gis.visualization.engine.DisplayCreatorGIS.createDisplay(DisplayCreatorGIS.java:67)
-	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:59)
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:104)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 486; The element type "sld:PolygonSymbolizer" must be terminated by the matching end-tag "</sld:PolygonSymbolizer>".
-	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
-	at org.geotools.styling.SLDParser.readXML(SLDParser.java:351)
-	... 51 more
-ERROR [AWT-EventQueue-0] 2016-02-10 10:32:15,465 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
-java.lang.NullPointerException
-	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:105)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
-	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
-	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
-	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
-	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.step(RSApplication.java:209)
-	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
-ERROR [AWT-EventQueue-0] 2016-02-10 10:52:03,123 repast.simphony.visualization.gui.GISStylePanel - Error creating style
-java.lang.NullPointerException
-	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:412)
-	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:406)
-	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:215)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
-	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(Unknown Source)
-	at java.awt.Dialog.show(Unknown Source)
-	at java.awt.Component.show(Unknown Source)
-	at java.awt.Component.setVisible(Unknown Source)
-	at java.awt.Window.setVisible(Unknown Source)
-	at java.awt.Dialog.setVisible(Unknown Source)
-	at repast.simphony.ui.plugin.editor.OptionsDialog.showDialog(OptionsDialog.java:251)
-	at repast.simphony.ui.plugin.editor.OptionsEditorDialog.display(OptionsEditorDialog.java:59)
-	at repast.simphony.ui.tree.ScenarioTree.showDialog(ScenarioTree.java:251)
-	at repast.simphony.ui.tree.ScenarioTree.access$1(ScenarioTree.java:242)
-	at repast.simphony.ui.tree.ScenarioTree$EditAction.actionPerformed(ScenarioTree.java:225)
-	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
-	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
-	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
-	at javax.swing.AbstractButton.doClick(Unknown Source)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI.doClick(VsnetMenuItemUI.java:1395)
-	at com.jidesoft.plaf.vsnet.VsnetMenuItemUI$MouseInputHandler.mouseReleased(VsnetMenuItemUI.java:1190)
-	at java.awt.Component.processMouseEvent(Unknown Source)
-	at javax.swing.JComponent.processMouseEvent(Unknown Source)
-	at java.awt.Component.processEvent(Unknown Source)
-	at java.awt.Container.processEvent(Unknown Source)
-	at java.awt.Component.dispatchEventImpl(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
-	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
-	at java.awt.Container.dispatchEventImpl(Unknown Source)
-	at java.awt.Window.dispatchEventImpl(Unknown Source)
-	at java.awt.Component.dispatchEvent(Unknown Source)
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
-	at java.awt.EventQueue.access$400(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.awt.EventQueue$3.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.awt.EventQueue$4.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
-	at java.awt.EventQueue.dispatchEvent(Unknown Source)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
-	at java.awt.EventDispatchThread.run(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+INFO  [AWT-EventQueue-0] 2023-05-18T16:21:49,218 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-18T16:21:49,256 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-05-18T16:22:10,005 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-18T16:22:10,010 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:22:13,918 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/tyler_localhost10300817788572628954.zip to 
+/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684448532121 ...
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:22:13,953 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:22:13,955 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0305
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:22:13,955 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684448532121/tyler_localhost10300817788572628954.zip
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:22:14,254 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2023-05-18T16:22:26,282 repast.simphony.batch.ssh.LocalSession - ERROR [main] 16:22:26,276 MessageCenter.INTERNAL.repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - java.lang.ExceptionInInitializerError: null
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:807) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:574) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:496) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:465) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:411) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:378) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader$1.<init>(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.init(OneRunBatchRunner.java:53) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.<init>(OneRunBatchRunner.java:47) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.configure(InstanceRunner.java:157) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:214) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @486bb9ce
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.checkCanSetAccessible(Field.java:180) ~[?:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.setAccessible(Field.java:174) ~[?:?]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-3] 2023-05-18T16:22:26,283 repast.simphony.batch.ssh.LocalSession - 	... 14 more
+INFO  [pool-254-thread-1] 2023-05-18T16:23:14,259 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684448532121 for DONE:  yes
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:23:14,263 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0051
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:23:14,275 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684448532121
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:23:14,283 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:23:14,283 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0003
+INFO  [SwingWorker-pool-253-thread-2] 2023-05-18T16:23:14,283 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0361
+INFO  [AWT-EventQueue-0] 2023-05-19T11:43:32,879 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-19T11:43:32,899 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:43:37,315 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/tyler_localhost12267506806474121229.zip to 
+/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684518215519 ...
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:43:37,328 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:43:37,328 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0302
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:43:37,328 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684518215519/tyler_localhost12267506806474121229.zip
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:43:37,634 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - ERROR [main] 11:43:50,474 MessageCenter.INTERNAL.repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - ERROR [main] 11:43:50,474 MessageCenter.INTERNAL.repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - java.lang.ExceptionInInitializerError: null
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:807) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:574) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:496) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - java.lang.ExceptionInInitializerError: null
+INFO  [Thread-5] 2023-05-19T11:43:50,481 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:465) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:807) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:411) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:574) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:378) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:496) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader$1.<init>(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:465) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:411) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.init(OneRunBatchRunner.java:53) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.<init>(OneRunBatchRunner.java:47) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.configure(InstanceRunner.java:157) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:214) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:378) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader$1.<init>(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @486bb9ce
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:76) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.checkCanSetAccessible(Field.java:180) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.setAccessible(Field.java:174) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199) ~[repast.simphony.scenario.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	... 14 more
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.init(OneRunBatchRunner.java:53) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.<init>(OneRunBatchRunner.java:47) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.configure(InstanceRunner.java:157) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:214) ~[repast.simphony.distributed.batch.jar:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,482 repast.simphony.batch.ssh.LocalSession - Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @486bb9ce
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.checkCanSetAccessible(Field.java:180) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at java.lang.reflect.Field.setAccessible(Field.java:174) ~[?:?]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50) ~[xstream-1.4.7.jar:1.4.7]
+INFO  [Thread-5] 2023-05-19T11:43:50,483 repast.simphony.batch.ssh.LocalSession - 	... 14 more
+INFO  [pool-3686-thread-1] 2023-05-19T11:44:37,640 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684518215519 for DONE:  yes
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:44:37,641 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0052
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:44:37,645 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/simphony_model_1684518215519
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:44:37,646 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:44:37,646 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0001
+INFO  [SwingWorker-pool-253-thread-3] 2023-05-19T11:44:37,646 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0355
+FATAL [AWT-EventQueue-0] 2023-05-19T11:47:02,241 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:807) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:574) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:496) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:465) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:411) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:350) ~[xstream-1.4.7.jar:1.4.7]
+	at simphony.settings.SettingsIO.getXStream(SettingsIO.java:29) ~[saf.core.runtime.jar:?]
+	at simphony.settings.SettingsIO.loadSettings(SettingsIO.java:47) ~[saf.core.runtime.jar:?]
+	at simphony.settings.SettingsRegistry.getRegistry(SettingsRegistry.java:186) ~[saf.core.runtime.jar:?]
+	at repast.simphony.util.Settings.getRegistry(Settings.java:21) ~[?:?]
+	at repast.simphony.ui.RSApplication.<init>(RSApplication.java:117) ~[?:?]
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:88) ~[?:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:771) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:722) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:716) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:741) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @4550bb58
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+	at java.lang.reflect.Field.checkCanSetAccessible(Field.java:178) ~[?:?]
+	at java.lang.reflect.Field.setAccessible(Field.java:172) ~[?:?]
+	at com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39) ~[xstream-1.4.7.jar:1.4.7]
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50) ~[xstream-1.4.7.jar:1.4.7]
+	... 25 more
+INFO  [AWT-EventQueue-0] 2023-05-19T12:10:45,258 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-19T12:10:45,288 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-05-19T14:35:56,376 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-19T14:35:56,398 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-05-19T14:54:02,902 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-19T14:54:02,928 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+FATAL [Thread-2] 2023-05-19T15:17:18,509 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+INFO  [AWT-EventQueue-0] 2023-05-19T15:45:55,721 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/output/config.props
+INFO  [AWT-EventQueue-0] 2023-05-19T15:45:55,752 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/tyler/Documents/GitHub/multilevel_social_structure/MultiLevelGroups/batch/batch_params.xml to
+	/var/folders/97/rrjknrxd3jb9wmkxbdkbvl800000gn/T/unrolledParamFile.txt
+ERROR [AWT-EventQueue-0] 2023-05-19T16:14:20,274 MessageCenter.INTERNAL.repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Params.<init>(Params.java:107) ~[?:?]
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:43) ~[?:?]
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41) ~[?:?]
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383) ~[?:?]
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157) ~[?:?]
+	at repast.simphony.ui.RSApplication.step(RSApplication.java:209) ~[?:?]
+	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17) ~[?:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+ERROR [AWT-EventQueue-0] 2023-05-23T13:06:18,283 MessageCenter.INTERNAL.repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.ArrayIndexOutOfBoundsException: Index 14 out of bounds for length 14
+	at java.util.Arrays$ArrayList.get(Arrays.java:4351) ~[?:?]
+	at multiLevelGroups.Params.<init>(Params.java:125) ~[?:?]
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:43) ~[?:?]
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41) ~[?:?]
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383) ~[?:?]
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157) ~[?:?]
+	at repast.simphony.ui.RSApplication.step(RSApplication.java:209) ~[?:?]
+	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17) ~[?:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+ERROR [AWT-EventQueue-0] 2023-05-23T13:07:58,404 MessageCenter.INTERNAL.repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.NumberFormatException: For input string: "0.1"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:652) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:770) ~[?:?]
+	at multiLevelGroups.Params.<init>(Params.java:125) ~[?:?]
+	at multiLevelGroups.ModelSetup.build(ModelSetup.java:43) ~[?:?]
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41) ~[?:?]
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295) ~[?:?]
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212) ~[?:?]
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383) ~[?:?]
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157) ~[?:?]
+	at repast.simphony.ui.RSApplication.step(RSApplication.java:209) ~[?:?]
+	at repast.simphony.ui.action.StepRun.actionPerformed(StepRun.java:17) ~[?:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+FATAL [Thread-2] 2023-05-23T13:41:11,063 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+FATAL [Thread-2] 2023-05-23T13:41:42,712 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+FATAL [Thread-2] 2023-05-23T13:52:31,993 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2001.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+FATAL [Thread-3] 2023-05-23T20:44:47,565 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2001.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+FATAL [Thread-2] 2023-05-24T09:30:13,004 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2001.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+FATAL [Thread-10] 2023-05-24T09:34:50,801 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2001.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:129) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at multiLevelGroups.Executor.populationTurnover(Executor.java:118) ~[?:?]
+	at multiLevelGroups.Executor$$FastClassByCGLIB$$d4309a82.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.CallBackAction.execute(CallBackAction.java:127) ~[?:?]
+	... 6 more
+ERROR [AWT-EventQueue-0] 2023-05-24T09:36:29,328 MessageCenter.INTERNAL.repast.simphony.visualization.gui.GISStylePanel - Error creating style
+java.lang.NullPointerException: null
+	at repast.simphony.gis.styleEditor.ByValuePanel.initTable(ByValuePanel.java:337) ~[?:?]
+	at repast.simphony.gis.styleEditor.ByValuePanel.init(ByValuePanel.java:333) ~[?:?]
+	at repast.simphony.gis.styleEditor.StyleEditorPanel.setData(StyleEditorPanel.java:61) ~[?:?]
+	at repast.simphony.gis.styleEditor.StyleDialog.setData(StyleDialog.java:50) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:444) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:416) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:220) ~[?:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117) ~[?:?]
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:190) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:235) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:233) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:233) ~[?:?]
+	at java.awt.Dialog.show(Dialog.java:1070) ~[?:?]
+	at java.awt.Component.show(Component.java:1716) ~[?:?]
+	at java.awt.Component.setVisible(Component.java:1663) ~[?:?]
+	at java.awt.Window.setVisible(Window.java:1031) ~[?:?]
+	at java.awt.Dialog.setVisible(Dialog.java:1005) ~[?:?]
+	at repast.simphony.ui.plugin.editor.OptionsDialog.showDialog(OptionsDialog.java:252) ~[?:?]
+	at repast.simphony.ui.plugin.editor.OptionsEditorDialog.display(OptionsEditorDialog.java:59) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree.showDialog(ScenarioTree.java:251) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree.access$1(ScenarioTree.java:242) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree$1.mouseClicked(ScenarioTree.java:51) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseClicked(AWTEventMulticaster.java:278) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6638) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4556) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+ERROR [AWT-EventQueue-0] 2023-05-24T09:36:31,367 MessageCenter.INTERNAL.repast.simphony.visualization.gui.GISStylePanel - Error creating style
+java.lang.NullPointerException: null
+	at repast.simphony.gis.styleEditor.ByValuePanel.initTable(ByValuePanel.java:337) ~[?:?]
+	at repast.simphony.gis.styleEditor.ByValuePanel.init(ByValuePanel.java:333) ~[?:?]
+	at repast.simphony.gis.styleEditor.StyleEditorPanel.setData(StyleEditorPanel.java:61) ~[?:?]
+	at repast.simphony.gis.styleEditor.StyleDialog.setData(StyleDialog.java:50) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel.showStyleDialog(GISStylePanel.java:444) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel.access$9(GISStylePanel.java:416) ~[?:?]
+	at repast.simphony.visualization.gui.GISStylePanel$2.actionPerformed(GISStylePanel.java:220) ~[?:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117) ~[?:?]
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:190) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:235) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:233) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:233) ~[?:?]
+	at java.awt.Dialog.show(Dialog.java:1070) ~[?:?]
+	at java.awt.Component.show(Component.java:1716) ~[?:?]
+	at java.awt.Component.setVisible(Component.java:1663) ~[?:?]
+	at java.awt.Window.setVisible(Window.java:1031) ~[?:?]
+	at java.awt.Dialog.setVisible(Dialog.java:1005) ~[?:?]
+	at repast.simphony.ui.plugin.editor.OptionsDialog.showDialog(OptionsDialog.java:252) ~[?:?]
+	at repast.simphony.ui.plugin.editor.OptionsEditorDialog.display(OptionsEditorDialog.java:59) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree.showDialog(ScenarioTree.java:251) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree.access$1(ScenarioTree.java:242) ~[?:?]
+	at repast.simphony.ui.tree.ScenarioTree$1.mouseClicked(ScenarioTree.java:51) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseClicked(AWTEventMulticaster.java:278) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6638) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4556) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]

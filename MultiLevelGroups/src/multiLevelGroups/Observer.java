@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.util.ContextUtils;
 
 public class Observer {
@@ -43,6 +44,7 @@ public class Observer {
 				} else {
 
 					asso[myIndex][otherIndex] = 0 ;
+					
 				}
 
 			}
@@ -59,7 +61,7 @@ public class Observer {
 
 		try
 		{
-			BufferedWriter writer = new BufferedWriter(new FileWriter("socialStructure.csv",false));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("socialStructure_"+RunEnvironment.getInstance().getCurrentSchedule().getTickCount()+".csv",false));
 
 			//for each row and column
 			for(int i = 0; i < size; i++) {
@@ -130,7 +132,7 @@ public class Observer {
 
 		try
 		{
-			BufferedWriter writer = new BufferedWriter(new FileWriter("spatialStructure.csv",false));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("spatialStructure_"+RunEnvironment.getInstance().getCurrentSchedule().getTickCount()+".csv",false));
 
 			//for each row and column
 			for(int i = 0; i < size; i++) {

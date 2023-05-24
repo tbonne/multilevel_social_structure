@@ -149,6 +149,8 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 			geog.move(group, geom);
 
 		}
+		
+		System.out.println("Done adding cells");
 
 		/************************************
 		 * 							        *

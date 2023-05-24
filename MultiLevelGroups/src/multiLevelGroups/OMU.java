@@ -10,6 +10,7 @@ import org.apache.commons.math3.linear.RealVector;
 import repast.simphony.random.RandomHelper;
 import cern.jet.random.VonMises;
 
+import com.thoughtworks.xstream.mapper.SystemAttributeAliasingMapper;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Envelope;
 
@@ -21,6 +22,7 @@ public class OMU {
 	RealVector myTravelVector;
 	ArrayList<OMU> familiarOMUs;
 	ArrayList<Double> familiarOMU_values;
+	ArrayList<Cell> rememberedFood;
 	ArrayList<Integer> spatialAssoVal;
 	ArrayList<OMU> spatialAssoInds;
 	NormalDistribution nd;
@@ -79,9 +81,11 @@ public class OMU {
 	public void decision(){
 		destination = null;
 		ArrayList<Cell> food = getVisibleFoodPatches(Params.foodSearchRange);
+		ArrayList<Cell> food_remembered = getRememberedFood();
 		ArrayList<OMU> inds = getVisibleOMUs(Params.visualSearchRange);
 		calculateMoveCoordVM(food,inds);
 		updateFam(inds);
+		System.out.println("I'm deciding");
 	}
 
 	public void action(){
@@ -89,6 +93,7 @@ public class OMU {
 		move();
 		setMyCoord(ModelSetup.getGeog().getGeometry(this).getCoordinate());
 		eat();
+		System.out.println("I'm taking action");
 	}
 
 	/****************************
@@ -115,6 +120,12 @@ public class OMU {
 		}
 
 		return obj;
+	}
+	
+	private ArrayList<Cell> getRememberedFood(){
+		
+		return rememberedFood;
+		
 	}
 
 	private ArrayList<OMU> getVisibleOMUs(int f){
@@ -342,10 +353,12 @@ public class OMU {
 				if(di<minDist){
 					minDist = di;
 					myCell = ce;
+					System.out.println("I'm in "+foodSites.get(0).getCoord()+ " i also found many nearby!");
 				}
 			}
 		} else if (foodSites.size()==1){
 			myCell = foodSites.get(0);
+			System.out.println("I'm in "+foodSites.get(0).getCoord());
 		}
 
 		//If i'm in a food cell eat and update familiarity

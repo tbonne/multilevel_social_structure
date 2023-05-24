@@ -143,6 +143,12 @@ public class Executor {
 			ModelSetup.getGeog().move(newInd, geom);
 		}
 		
+		//Record network patterns to date
+		Observer.recordInfluencePatterns();
+		Observer.recordSpatialPatterns();
+		
+		System.out.println("Turnover");
+		
 	}
 	
 	public static void spatialAssociations(){
@@ -184,6 +190,7 @@ public class Executor {
 
 		Observer.recordInfluencePatterns();
 		Observer.recordSpatialPatterns();
+		System.exit(0); //kills the program
 
 	}
 

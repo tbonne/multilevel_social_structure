@@ -40,6 +40,10 @@
 		defaultValue="100" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 		
+	<parameter name="juveAge" displayName="Age juve becomes adult" type="java.lang.Integer"
+		defaultValue="100" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+		
 	<parameter name="homeWeight" displayName="Influence ratio of landscape: familiar Vs. food/dist"
 		type="java.lang.Double" defaultValue="0.0" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
