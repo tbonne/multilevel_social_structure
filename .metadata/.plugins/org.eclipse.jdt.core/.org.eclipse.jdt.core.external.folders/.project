@@ -10,14 +10,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.link0</name>
+			<name>.link2</name>
 			<type>2</type>
-			<location>C:/Users/t-work/.groovy/greclipse/global_dsld_support</location>
+			<location>/Users/tyler/.groovy/greclipse/global_dsld_support</location>
 		</link>
 		<link>
-			<name>.link1</name>
+			<name>.link3</name>
 			<type>2</type>
-			<location>C:/RepastSimphony-2.4/eclipse/plugins/org.codehaus.groovy_2.4.3.xx-201608111517-e46/plugin_dsld_support</location>
+			<location>/Users/tyler/Documents/Eclipse.app/Contents/Eclipse/plugins/org.codehaus.groovy_3.0.10.v202203311337-e2106-RELEASE/plugin_dsld_support</location>
 		</link>
 	</linkedResources>
 </projectDescription>

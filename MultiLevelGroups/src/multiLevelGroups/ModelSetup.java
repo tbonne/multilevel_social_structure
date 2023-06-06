@@ -35,6 +35,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	public static ArrayList<Cell> cellsToProcess;
 	public static ArrayList<Cell> removeCellsToProcess;
 	public static ArrayList<OMU> allOMUs;
+	public static int id_count;
 
 
 	public Context<Object> build(Context<Object> context){
@@ -51,6 +52,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		geog=null;
 		mainContext = context; //static link to context
 		resAdded=0;
+		id_count=0;
 		allCells = new ArrayList<Cell>();
 		cellsToProcess = new ArrayList<Cell>();
 		removeCellsToProcess = new ArrayList<Cell>();
@@ -142,7 +144,8 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 			int randId = RandomHelper.nextIntFromTo(1, allCells.size());
 			Coordinate coord = allCells.get(randId).getCoord();
 			//Coordinate coord = center.getCoord();
-			OMU group = new OMU(coord);
+			OMU group = new OMU(coord,id_count);
+			id_count++;
 			allOMUs.add(group);
 			context.add(group);
 			Point geom = fac.createPoint(coord);
@@ -190,7 +193,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		ScheduleParameters agentStepParams = ScheduleParameters.createRepeating(1, 1, 1);
 		schedule.schedule(agentStepParams,executor,"updateCells");
 		
-		ScheduleParameters agentStepCParams = ScheduleParameters.createRepeating(1, Params.turnover_time, 1);
+		ScheduleParameters agentStepCParams = ScheduleParameters.createRepeating(Params.turnover_time, Params.turnover_time, 1);
 		schedule.schedule(agentStepCParams,executor,"populationTurnover");
 		
 		ScheduleParameters agentStepEParams = ScheduleParameters.createRepeating(Params.spatialAssoStartTime, 100, 1);

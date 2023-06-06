@@ -2,6 +2,7 @@ package multiLevelGroups;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
+import java.util.*;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.linear.ArrayRealVector;
@@ -22,7 +23,9 @@ public class OMU {
 	RealVector myTravelVector;
 	ArrayList<OMU> familiarOMUs;
 	ArrayList<Double> familiarOMU_values;
+	ArrayList<Cell> homeRange;
 	ArrayList<Cell> rememberedFood;
+	ArrayList<Double> rememberedFood_maxValues;
 	ArrayList<Integer> spatialAssoVal;
 	ArrayList<OMU> spatialAssoInds;
 	NormalDistribution nd;
@@ -30,11 +33,14 @@ public class OMU {
 	int sex;
 	long age;
 	int modelEndNear;
+	String name;
+	int id;
+	double my_hunger;
 
 
 	/****************************OMU Construction************************/
 
-	public OMU(Coordinate coord) {
+	public OMU(Coordinate coord, int id_ini) {
 		myCoord = coord;
 		previousBearing = new ArrayRealVector(2);
 		previousBearing.setEntry(0, RandomHelper.nextDouble()-0.5);
@@ -53,9 +59,21 @@ public class OMU {
 		sex = RandomHelper.nextInt();
 		age = Params.juveAge+1;
 		modelEndNear = 0;
+		name="A"+id_ini;
+		id=id_ini;
+		homeRange = new ArrayList<Cell>();
+		
+		//Initialize starting point for memory
+		rememberedFood = new ArrayList<Cell>();
+		ArrayList<Cell> food = getVisibleFoodPatches(Params.foodSearchRange);
+		for(Cell c : food) {
+			c.updateFam(this, true);
+		}
+		rememberedFood_maxValues = new ArrayList<Double>(); 
+		while(rememberedFood_maxValues.size() < Params.landscapeWidth*Params.landscapeWidth) rememberedFood_maxValues.add(0.0);
 	}
 
-	public OMU(Coordinate coord, OMU mother) {
+	public OMU(Coordinate coord, OMU mother, int id_ini) {
 		myCoord = coord;
 		previousBearing = new ArrayRealVector(2);
 		previousBearing.setEntry(0, RandomHelper.nextDouble()-0.5);
@@ -74,26 +92,37 @@ public class OMU {
 		sex = RandomHelper.nextInt();
 		age=0;
 		modelEndNear = 0;
+		name=mother.id +"_"+id_ini;
+		id=id_ini;
+		homeRange = new ArrayList<Cell>();
+		
+		//Initialize starting point for memory
+		rememberedFood = new ArrayList<Cell>();
+		ArrayList<Cell> food = getVisibleFoodPatches(Params.foodSearchRange);
+		for(Cell c : food) {
+			c.updateFam(this, true);
+		}
+		rememberedFood_maxValues = new ArrayList<Double>(); 
+		while(rememberedFood_maxValues.size() < Params.landscapeWidth*Params.landscapeWidth) rememberedFood_maxValues.add(0.0);
 	}
 
 	/****************************OMU Behaviour************************/
 
 	public void decision(){
 		destination = null;
+		
 		ArrayList<Cell> food = getVisibleFoodPatches(Params.foodSearchRange);
-		ArrayList<Cell> food_remembered = getRememberedFood();
 		ArrayList<OMU> inds = getVisibleOMUs(Params.visualSearchRange);
+		updateFam(inds, food);
 		calculateMoveCoordVM(food,inds);
-		updateFam(inds);
-		System.out.println("I'm deciding");
+		
 	}
 
 	public void action(){
 		age++;
+		eat();
 		move();
 		setMyCoord(ModelSetup.getGeog().getGeometry(this).getCoordinate());
-		eat();
-		System.out.println("I'm taking action");
 	}
 
 	/****************************
@@ -109,7 +138,7 @@ public class OMU {
 		Iterable<Cell> objectsInArea = null;
 		Envelope envelope = new Envelope();
 		envelope.init(this.getMyCoord());
-		envelope.expandBy(f);
+		envelope.expandBy(Params.cellSize+Params.cellSize/2.0);
 		objectsInArea = ModelSetup.getGeog().getObjectsWithin(envelope,Cell.class);
 		envelope.setToNull();
 
@@ -118,16 +147,12 @@ public class OMU {
 			Cell ce = objectsInArea.iterator().next();
 			if(ce.getCoord().distance(this.getMyCoord())<Params.foodSearchRange)obj.add(ce);
 		}
-
+		
 		return obj;
 	}
 	
-	private ArrayList<Cell> getRememberedFood(){
-		
-		return rememberedFood;
-		
-	}
-
+	
+	
 	private ArrayList<OMU> getVisibleOMUs(int f){
 
 		Iterable<OMU> objectsInArea = null;
@@ -158,6 +183,12 @@ public class OMU {
 
 	private void calculateMoveCoordVM(ArrayList<Cell> foodSites, ArrayList<OMU> inds){
 
+		//Add food sites into Set (non-duplicates)
+		//Set<Cell> set = new LinkedHashSet<Cell>(foodSites);
+		//set.addAll(food_remembered);
+
+		//Convert Set to ArrayList
+		//ArrayList<Cell> combinedFood = new ArrayList<Cell>(set);
 
 		/****************initialize direction vector*********************/
 		RealVector myVector = new ArrayRealVector(2);
@@ -179,12 +210,75 @@ public class OMU {
 
 		for(Cell c : foodSites){
 
-			//calculate weight
+			//calculate expected patch utility
 			double distance = Math.max(1,  c.getCoord().distance(this.getMyCoord()));
-			double weight = (1-Params.homeWeight)*( c.getResourceLevel()/distance ) +  (Params.homeWeight)*(c.getFamiliarity(this));  
-			weights.add(weight);
-			sum = sum + weight;
+			double weight = 0;  
+			
+			//if patch is directly visible 
+			if(distance <= (Params.foodSearchRange)) {
+				
+				 weight = ( c.getResourceLevel()/(distance/Params.cellSize) );
+				 
+				 //Add to utility weight to array
+				 weights.add(weight);
+				 sum = sum + weight;
 
+				 //calculate the direction
+				 RealVector patchVector = new ArrayRealVector(2);
+				 double distX = c.getCoord().x-this.getMyCoord().x;
+				 double distY = c.getCoord().y-this.getMyCoord().y;
+				 patchVector.setEntry(0,distX);
+				 patchVector.setEntry(1,distY);
+				 if(distX!=0 && distY!=0)patchVector.unitize();
+				 directions.add(patchVector);
+			}
+			
+			
+		}
+		
+
+		//standardize the patch weights to sum to one
+		ArrayList<Double> weightsStan = new ArrayList<Double>();
+		for(Double d : weights){
+			weightsStan.add( Math.pow(d/sum,1) );
+		}
+
+		//calculate the avg direction 
+		RealVector avgFoodVector = new ArrayRealVector(2);
+		for(int i = 0 ; i< weights.size();i++){
+			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weightsStan.get(i))); //weightsStan  weights
+		}
+
+		//add to myVector
+		if((avgFoodVector.getEntry(0)==0 && avgFoodVector.getEntry(1)==0)==false)avgFoodVector.unitize();
+		avgFoodVector = avgFoodVector.mapMultiply(Params.foodWeight);
+		myVector = myVector.add(avgFoodVector);
+		
+		
+		/********************Home effects**********************/
+		
+		//calculate the weights of each patch
+		ArrayList<Double> weights_home = new ArrayList<Double>();  
+		ArrayList<RealVector> directions_home = new ArrayList<RealVector>();
+		double sum_home = 0;
+		
+		//if(this.toString().equals("multiLevelGroups.OMU@75b880f7")){
+		//	System.out.println("target ind ");
+		//}
+		//get all food remembered
+		ArrayList<Cell> food_remembered = getRememberedFood();
+		
+		for(Cell c : food_remembered){
+
+			//calculate expected patch utility
+			double distance_home = Math.max(1,  c.getCoord().distance(this.getMyCoord()));
+			double remembered_food_max = rememberedFood_maxValues.get(c.id);
+			double weight = (1-c.getMemW(this))*c.getMemR(this)*( remembered_food_max/(distance_home/Params.cellSize) );  
+			
+			//Add to utility weight to array
+			weights_home.add(weight);
+			sum_home = sum_home + weight;
+			
 			//calculate the direction
 			RealVector patchVector = new ArrayRealVector(2);
 			double distX = c.getCoord().x-this.getMyCoord().x;
@@ -192,89 +286,99 @@ public class OMU {
 			patchVector.setEntry(0,distX);
 			patchVector.setEntry(1,distY);
 			if(distX!=0 && distY!=0)patchVector.unitize();
-			directions.add(patchVector);
+			directions_home.add(patchVector);
 		}
+		
+		//Assume they focus on the max utility patch
+		//Cell chosenCell = foodSites.get(weights.indexOf(Collections.max(weights) ) );
+		
+		
 
 		//standardize the patch weights to sum to one
-		//ArrayList<Double> weightsStan = new ArrayList<Double>();
-		//for(Double d : weights){
-		//	weightsStan.add(d/sum);
-		//}
+		ArrayList<Double> weightsStan_home = new ArrayList<Double>();
+		for(Double d : weights_home){
+			weightsStan_home.add( Math.pow(d/sum_home,1) );
+		}
 
 		//calculate the avg direction 
-		RealVector avgFoodVector = new ArrayRealVector(2);
-		for(int i = 0 ; i< weights.size();i++){
-			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weights.get(i)));
+		RealVector avgHomeVector = new ArrayRealVector(2);
+		for(int i = 0 ; i< weights_home.size();i++){
+			avgHomeVector = avgHomeVector.add(directions_home.get(i).mapMultiply(weightsStan_home.get(i))); //weightsStan  weights
 		}
 
 		//add to myVector
-		if((avgFoodVector.getEntry(0)==0 && avgFoodVector.getEntry(1)==0)==false)avgFoodVector.unitize();
-		avgFoodVector = avgFoodVector.mapMultiply(Params.foodWeight);
-		myVector = myVector.add(avgFoodVector);
+		if((avgHomeVector.getEntry(0)==0 && avgHomeVector.getEntry(1)==0)==false)avgHomeVector.unitize();
+		avgHomeVector = avgHomeVector.mapMultiply(Params.homeWeight);
+		myVector = myVector.add(avgHomeVector);
 
 
 		/********************Social effects**********************/
-		//calculate the weights of each visible individual
-		double sumSoc = 0;
-		ArrayList<Double> weightsSoc = new ArrayList<Double>();
-		ArrayList<RealVector> directionsSoc = new ArrayList<RealVector>();
-		for(OMU ind : inds){
+		
+		//if i'm not hungry bias movement towards familiar others
+		if(my_hunger==Params.depletionRate) {
+			
+			//calculate the weights of each visible individual
+			double sumSoc = 0;
+			ArrayList<Double> weightsSoc = new ArrayList<Double>();
+			ArrayList<RealVector> directionsSoc = new ArrayList<RealVector>();
+			for(OMU ind : inds){
 
-			if(familiarOMUs.contains(ind)){
+				if(familiarOMUs.contains(ind)){
 
-				//calculate weight
-				double weightSoc = familiarOMU_values.get(familiarOMUs.indexOf(ind));
-				sumSoc = sumSoc + weightSoc;
-				weightsSoc.add(weightSoc);
+					//calculate weight
+					double weightSoc = familiarOMU_values.get(familiarOMUs.indexOf(ind));
+					sumSoc = sumSoc + weightSoc;
+					weightsSoc.add(weightSoc);
 
-				//calculate the direction
-				RealVector indVector = new ArrayRealVector(2);
-				double distX = ind.getMyCoord().x-this.getMyCoord().x;
-				double distY = ind.getMyCoord().y-this.getMyCoord().y;
-				indVector.setEntry(0,distX);
-				indVector.setEntry(1,distY);
-				if((distX==0 && distY==0)==false)indVector.unitize();
-				directionsSoc.add(indVector);
+					//calculate the direction
+					RealVector indVector = new ArrayRealVector(2);
+					double distX = ind.getMyCoord().x-this.getMyCoord().x;
+					double distY = ind.getMyCoord().y-this.getMyCoord().y;
+					indVector.setEntry(0,distX);
+					indVector.setEntry(1,distY);
+					if((distX==0 && distY==0)==false)indVector.unitize();
+					directionsSoc.add(indVector);
 
 
-			} else {
+				} else {
 
-				//calculate weight
-				double weightSoc = Params.famMinInd;
-				sumSoc = sumSoc + weightSoc;
-				weightsSoc.add(weightSoc);
+					//calculate weight
+					double weightSoc = Params.famMinInd;
+					sumSoc = sumSoc + weightSoc;
+					weightsSoc.add(weightSoc);
 
-				//calculate the direction
-				RealVector indVector = new ArrayRealVector(2);
-				double distX = ind.getMyCoord().x-this.getMyCoord().x;
-				double distY = ind.getMyCoord().y-this.getMyCoord().y;
-				indVector.setEntry(0,distX);
-				indVector.setEntry(1,distY);
-				if((distX==0 && distY==0)==false)indVector.unitize();
-				directionsSoc.add(indVector);
-			}
-		}
-
-		//If there was a visible individual
-		if(inds.size()>0){
-
-			//standardize the patch weights to sum to one
-			//ArrayList<Double> weightsSocStan = new ArrayList<Double>();
-			//for(Double d : weightsSoc){
-			//	weightsSocStan.add(d/sumSoc);
-			//}
-
-			//calculate the avg direction (weights*dir to each ind)
-			RealVector avgIndVector = new ArrayRealVector(2);
-			for(int i = 0 ; i< weightsSoc.size();i++){
-				avgIndVector = avgIndVector.add(directionsSoc.get(i).mapMultiply(weightsSoc.get(i)));
+					//calculate the direction
+					RealVector indVector = new ArrayRealVector(2);
+					double distX = ind.getMyCoord().x-this.getMyCoord().x;
+					double distY = ind.getMyCoord().y-this.getMyCoord().y;
+					indVector.setEntry(0,distX);
+					indVector.setEntry(1,distY);
+					if((distX==0 && distY==0)==false)indVector.unitize();
+					directionsSoc.add(indVector);
+				}
 			}
 
-			//add to myVector
-			if((avgIndVector.getEntry(0)==0 && avgIndVector.getEntry(1)==0)==false)avgIndVector.unitize();
-			avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
+			//If there was a visible individual
+			if(inds.size()>0){
 
-			myVector = myVector.add(avgIndVector);
+				//standardize the patch weights to sum to one
+				//ArrayList<Double> weightsSocStan = new ArrayList<Double>();
+				//for(Double d : weightsSoc){
+				//	weightsSocStan.add(d/sumSoc);
+				//}
+
+				//calculate the avg direction (weights*dir to each ind)
+				RealVector avgIndVector = new ArrayRealVector(2);
+				for(int i = 0 ; i< weightsSoc.size();i++){
+					avgIndVector = avgIndVector.add(directionsSoc.get(i).mapMultiply(weightsSoc.get(i)));
+				}
+
+				//add to myVector
+				if((avgIndVector.getEntry(0)==0 && avgIndVector.getEntry(1)==0)==false)avgIndVector.unitize();
+				avgIndVector = avgIndVector.mapMultiply(Params.socialWeight);
+
+				myVector = myVector.add(avgIndVector);
+			}
 		}
 
 
@@ -286,9 +390,9 @@ public class OMU {
 		double length = Math.pow(Math.pow(myVector.getEntry(0),2)+Math.pow(myVector.getEntry(1), 2),0.5);
 		double maxLength = 0;
 		if(inds.size()>0){
-			maxLength = Params.bearingWeight + Params.foodWeight + Params.socialWeight ; 
+			maxLength = Params.bearingWeight + Params.foodWeight + Params.socialWeight + Params.homeWeight ; 
 		} else{
-			maxLength = Params.bearingWeight + Params.foodWeight ; 
+			maxLength = Params.bearingWeight + Params.foodWeight + Params.homeWeight ; 
 		}
 		double k = Math.max(-2*Math.log(length/maxLength),0.0001);
 
@@ -309,8 +413,11 @@ public class OMU {
 
 		//record current vector as previous vector for next movements
 		this.setPreviousBearing(myTravelVector);
-
+		
+		
 	}
+	
+	
 
 
 	private void move(){
@@ -353,18 +460,19 @@ public class OMU {
 				if(di<minDist){
 					minDist = di;
 					myCell = ce;
-					System.out.println("I'm in "+foodSites.get(0).getCoord()+ " i also found many nearby!");
 				}
 			}
 		} else if (foodSites.size()==1){
 			myCell = foodSites.get(0);
-			System.out.println("I'm in "+foodSites.get(0).getCoord());
 		}
 
 		//If i'm in a food cell eat and update familiarity
 		if(myCell!=null){
-			myCell.eatMe();
-			myCell.updateFam(this);
+			my_hunger = myCell.eatMe();
+			myCell.updateFam(this, false);
+			if(homeRange.contains(myCell)==false) {
+				homeRange.add(myCell);
+			}
 		}
 
 	}
@@ -377,7 +485,10 @@ public class OMU {
 	 * 
 	 **************************/
 
-	private void updateFam(ArrayList<OMU> visibleInds){
+	private void updateFam(ArrayList<OMU> visibleInds, ArrayList<Cell> food){
+		
+		
+		//Update individual familiarity
 		
 		ArrayList<OMU> withinFamiliarRange = new ArrayList<OMU>();
 		for(OMU o: visibleInds){
@@ -431,12 +542,28 @@ public class OMU {
 			}
 		}
 
+		
 
 		//update list (remove all individuals that are lower or equal to the min familiarity)
 		for(OMU omu:removeFams){
 			familiarOMU_values.remove(familiarOMUs.indexOf(omu));
 			familiarOMUs.remove(omu);
 		}
+		
+		
+		//Update cell memory (just seen not necessarily in / used yet)
+		for (Cell c : food) {
+			
+			//update only ref memory (update working memory if i'm eating in this cell)
+			c.updateFam(this, true);
+			
+			//update remembered resource (moving average or experience with the cell)
+			rememberedFood_maxValues.set(c.id, (c.resources + rememberedFood_maxValues.get(c.id))/2.0 );
+			//if(c.resources > rememberedFood_maxValues.get(c.id)) {
+			//	rememberedFood_maxValues.set(c.id, c.resources);
+			//}
+		}
+		
 	}
 
 	/****************************
@@ -463,6 +590,23 @@ public class OMU {
 	}
 	public ArrayList<OMU> getSpatialAssoInds() {
 		return spatialAssoInds;
+	}
+
+	//controlling remembered cells
+	private ArrayList<Cell> getRememberedFood(){
+		return rememberedFood;
+	}
+	public void removeFamilarFood(Cell cell) {
+		rememberedFood.remove(cell);
+	}
+	public void addFamilarFood(Cell cell) {
+		rememberedFood.add(cell);
+	}
+	public int getNumbCellsRemembered() {
+		return rememberedFood.size();
+	}
+	public int getHomeRangeSize(){
+		return homeRange.size();
 	}
 
 }

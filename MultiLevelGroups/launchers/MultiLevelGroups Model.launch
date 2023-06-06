@@ -29,5 +29,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="MultiLevelGroups"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;${workspace_loc:MultiLevelGroups}/MultiLevelGroups.rs&quot;"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="MultiLevelGroups"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xss10M -Xmx2G"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xss10M -Xmx12G"/>
 </launchConfiguration>

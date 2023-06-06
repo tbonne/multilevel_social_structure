@@ -127,16 +127,17 @@ public class Executor {
 		//get female individuals to give birth
 		int count = 0, row=0;
 		while(count < Params.turnover && row<allInds.size()){
-			if(allInds.get(row).sex == 1){
+			//if(allInds.get(row).sex == 1){
 				indsToBirth.add(allInds.get(row));
 				count++;
-			}
+			//}
 			row++;
 		}
 		
 		//selected female individuals reproduce
 		for(OMU ind : indsToBirth){
-			OMU newInd = new OMU(ind.getMyCoord(),ind);
+			OMU newInd = new OMU(ind.getMyCoord(),ind, ModelSetup.id_count);
+			ModelSetup.id_count++;
 			ModelSetup.getContext().add(newInd);
 			ModelSetup.getAllOMUs().add(newInd);
 			Point geom = fac.createPoint(ind.getMyCoord());
@@ -144,8 +145,9 @@ public class Executor {
 		}
 		
 		//Record network patterns to date
-		Observer.recordInfluencePatterns();
-		Observer.recordSpatialPatterns();
+		Observer.recordInfluencePatterns(allInds);
+		Observer.recordSpatialPatterns(allInds);
+		Observer.recordHomeRangePatterns(allInds);
 		
 		System.out.println("Turnover");
 		
@@ -188,8 +190,9 @@ public class Executor {
 
 	public static void endModel(){
 
-		Observer.recordInfluencePatterns();
-		Observer.recordSpatialPatterns();
+		//Observer.recordInfluencePatterns();
+		//Observer.recordSpatialPatterns();
+		//Observer.recordHomeRangePatterns();
 		System.exit(0); //kills the program
 
 	}

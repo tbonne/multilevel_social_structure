@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
-		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\t-work\Documents\code\LUNA\MultiLevelGroups"/>
 		</list>
@@ -12,7 +12,7 @@
 		</list>
 	</section>
 	<section name="ResourceNavigator">
-		<item value="Aggregate for window 1492546120079" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
-		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1492546120079"/>
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
 	</section>
 </section>
