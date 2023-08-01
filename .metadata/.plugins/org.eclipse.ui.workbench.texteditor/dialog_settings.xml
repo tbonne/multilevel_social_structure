@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="calculateMoveCoordVM"/>
+		<item key="selection" value="printSpatialArrayToCSV"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="calculateMoveCoordVM"/>
-			<item value="eat"/>
-			<item value="updateFam"/>
+			<item value="printSpatialArrayToCSV"/>
+			<item value="printSpatialOverlapArrayToCSV"/>
+			<item value="getVisibleFoodPatches"/>
+			<item value="pearson"/>
+			<item value="getall"/>
+			<item value="ModelSetup.getAllOMUs()"/>
+			<item value="die"/>
+			<item value="recordHomeRangeOverlap"/>
+			<item value="max"/>
+			<item value="nd"/>
+			<item value="safeNeighboursReduction"/>
 			<item value="rememberedFood_maxValues"/>
-			<item value="remembered_food_max"/>
-			<item value="remember"/>
-			<item value="ositive weight"/>
-			<item value="move"/>
-			<item value="spatialAssoInds"/>
-			<item value="turnov"/>
-			<item value="homeRange"/>
-			<item value="getVisibleOMUs"/>
-			<item value="Params.cellSize"/>
-			<item value="getMemW"/>
-			<item value="rememberedFood"/>
+			<item value="spatialAssociations"/>
+			<item value="famili"/>
+			<item value="eat"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1799"/>
-		<item key="DIALOG_Y_ORIGIN" value="242"/>
+		<item key="DIALOG_X_ORIGIN" value="1598"/>
+		<item key="DIALOG_Y_ORIGIN" value="699"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

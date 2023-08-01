@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="net.sf.cglib.core.CollectionUtils"/>
     <fullyQualifiedTypeName name="com.jgoodies.binding.beans.Model"/>
     <fullyQualifiedTypeName name="repast.simphony.util.ContextUtils"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
@@ -21,4 +20,9 @@
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="multiLevelGroups.Params"/>
     <fullyQualifiedTypeName name="com.thoughtworks.xstream.mapper.SystemAttributeAliasingMapper"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.formula.functions.Now"/>
+    <fullyQualifiedTypeName name="org.piccolo2d.extras.util.Points"/>
+    <fullyQualifiedTypeName name="multiLevelGroups.ModelSetup"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

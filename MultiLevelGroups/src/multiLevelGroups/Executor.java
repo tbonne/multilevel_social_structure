@@ -121,7 +121,7 @@ public class Executor {
 		//remove those individuals
 		for(OMU ind : indsToRemove){
 			ModelSetup.getContext().remove(ind);
-			ModelSetup.getAllOMUs().remove(ind);
+			ModelSetup.removeOMU(ind);
 		}
 		
 		//get female individuals to give birth
@@ -145,6 +145,7 @@ public class Executor {
 		}
 		
 		//Record network patterns to date
+		allInds = ModelSetup.getAllOMUs();
 		Observer.recordInfluencePatterns(allInds);
 		Observer.recordSpatialPatterns(allInds);
 		Observer.recordHomeRangePatterns(allInds);
@@ -154,45 +155,41 @@ public class Executor {
 	}
 	
 	public static void spatialAssociations(){
-		
+
 		ArrayList<OMU> allInds = ModelSetup.getAllOMUs();
-		
+
 		for(OMU focal : allInds){
-			
+
 			for(OMU other: allInds){
-				
+
 				if(focal.getMyCoord().distance(other.myCoord)<Params.spatialRangeAsso && focal != other){
-					
+
 					if(focal.getSpatialAssoInds().contains(other)){
-						
+
 						int indexOfOther = focal.getSpatialAssoInds().indexOf(other);
 						int valueOfOther = focal.getSpatialAssoVal().get(indexOfOther);
-						
+
 						focal.getSpatialAssoVal().set(indexOfOther,valueOfOther+1);
-						
+
 					} else {
-						
+
 						focal.getSpatialAssoInds().add(other);
 						focal.getSpatialAssoVal().add(1);
-						
+
 					}
-					
 				}
 			}
-			
-			
-			
 		}
-		
-		
-		
 	}
-
+	
+	
+	
 	public static void endModel(){
 
 		//Observer.recordInfluencePatterns();
 		//Observer.recordSpatialPatterns();
 		//Observer.recordHomeRangePatterns();
+		Observer.recordHomeRangeOverlap(ModelSetup.getAllOMUs());
 		System.exit(0); //kills the program
 
 	}

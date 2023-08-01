@@ -167,14 +167,24 @@ public class Cell {
 		if(familiarityIDs.contains(omu)){
 
 			int  i = familiarityIDs.indexOf(omu);
-			familiarityValues.set(i, 0.999); //increase reference memory
+			
+			//familiarityValues.set(i, 0.999); //increase reference memory
+			double f = familiarityValues.get(i);
+			f = Math.min( (f + ((Params.lGrow) * (1-f)*f) ),Params.famMaxCell);
+			familiarityValues.set(i, f);
+			
 			if (reference_only==false)familiarityValues_work.set(i, 0.999); //only update working memory if I'm in the cell
 
 		//add new individual and increase value
 		} else {
 			
 			familiarityIDs.add(omu);
-			familiarityValues.add(0.999); //increase reference memory
+			
+			//familiarityValues.add(0.999); //increase reference memory
+			double f = 0.001*2; // decay will happen the same step so *2 ensures the cell will be remembered
+			f = Math.min( (f + ((Params.lGrow) * (1-f)*f) ),Params.famMaxCell);
+			familiarityValues.add(f);
+			
 			familiarityValues_work.add(0.001); //never seen before so working memory is zero
 			omu.addFamilarFood(this);
 		

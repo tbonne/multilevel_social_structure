@@ -36,6 +36,7 @@ public class Params {
 	public static double regrowthRate = 0.001;
 	public static double depletionRate = 0.01;
 	public static double foodDensity = 1.0;
+	public static double ideal_energy=0;
 	
 	//OMU population
 	public static int numbOMU = 100;
@@ -67,6 +68,7 @@ public class Params {
 	public static double famMaxCell = 0.999;
 	public static double famMaxInd = 0.999;
 	public static double errorInd = 0.001;
+	public static double depletionSD = 0.0;
 	
 	//Observer
 	public static int spatialRangeAsso = 100;
@@ -129,7 +131,8 @@ public class Params {
 					
 					homeWeight = Double.parseDouble(param_list.get(15));
 					depletionRate = Double.parseDouble(param_list.get(16));
-					regrowthRate = Double.parseDouble(param_list.get(17));
+					//regrowthRate = Double.parseDouble(param_list.get(17));
+					depletionSD = Double.parseDouble(param_list.get(18));
 
 				}
 			} catch (FileNotFoundException error) {

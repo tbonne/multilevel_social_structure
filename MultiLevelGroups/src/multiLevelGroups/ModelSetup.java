@@ -12,6 +12,7 @@ import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 
 import cern.jet.random.Distributions;
+import cern.jet.random.Normal;
 import cern.jet.random.engine.MersenneTwister;
 import cern.jet.random.engine.RandomEngine;
 import repast.simphony.context.Context;
@@ -36,6 +37,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	public static ArrayList<Cell> removeCellsToProcess;
 	public static ArrayList<OMU> allOMUs;
 	public static int id_count;
+	public static Normal depletion_dist;
 
 
 	public Context<Object> build(Context<Object> context){
@@ -57,6 +59,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		cellsToProcess = new ArrayList<Cell>();
 		removeCellsToProcess = new ArrayList<Cell>();
 		allOMUs = new ArrayList<OMU>();
+		depletion_dist = RandomHelper.createNormal(Params.depletionRate, Params.depletionSD);
 
 
 
@@ -141,7 +144,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		Cell center = allCells.get(0);
 		for (int j = 0; j < Params.numbOMU; j++){
 
-			int randId = RandomHelper.nextIntFromTo(1, allCells.size());
+			int randId = RandomHelper.nextIntFromTo(0, allCells.size()-1);
 			Coordinate coord = allCells.get(randId).getCoord();
 			//Coordinate coord = center.getCoord();
 			OMU group = new OMU(coord,id_count);
@@ -238,6 +241,10 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		Collections.shuffle(allOMUs);
 		return allOMUs;		
 	}
+	
+	public static void removeOMU(OMU allind){
+		allOMUs.remove(allind);
+	}
 
 	public static ArrayList<Cell> getAllCells(){
 		Collections.shuffle(allCells);
@@ -261,6 +268,9 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	}
 	public static Context getContext(){
 		return mainContext;
+	}
+	public static double getDepletionRate() {
+		return (depletion_dist.nextDouble()); 
 	}
 
 }
