@@ -10,3 +10,7 @@ Abstract:    While the development of social systems has been attributed to both
   
   
 ![](https://github.com/tbonne/multilevel_social_structure/blob/master/Simulated_data_results/Video_15000.mov)
+
+
+<img src="https://github.com/tbonne/multilevel_social_structure/blob/master/Simulated_data_results/Video_15000.mov" alt="Databay showcase gif" title="Databay showcase gif" width="500"/>
+  
