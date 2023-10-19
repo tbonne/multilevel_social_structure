@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-<libraryInfo home="C:\Program Files\Java\jdk1.8.0_05" version="1.8.0_05">
-<bootpath>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\resources.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\rt.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\sunrsasign.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jsse.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jce.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\charsets.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jfr.jar"/>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\classes"/>
-</bootpath>
-<extensionDirs>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\ext"/>
-<entry path="C:\Windows\Sun\Java\lib\ext"/>
-</extensionDirs>
-<endorsedDirs>
-<entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\endorsed"/>
-</endorsedDirs>
-</libraryInfo>
+    <libraryInfo home="C:\Program Files\Java\jdk1.8.0_05" version="1.8.0_05">
+        <bootpath>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\resources.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\rt.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jsse.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jce.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\charsets.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\jfr.jar"/>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\ext"/>
+            <entry path="C:\Windows\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files\Java\jdk1.8.0_05\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="/opt/homebrew/Cellar/openjdk@11/11.0.15/libexec/openjdk.jdk/Contents/Home" version="11.0.15"/>
+    <libraryInfo home="/opt/homebrew/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home" version="18.0.1"/>
+    <libraryInfo home="/Users/tyler/Documents/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_17.0.2.v20220201-1208/jre" version="17.0.2"/>
 </libraryInfos>

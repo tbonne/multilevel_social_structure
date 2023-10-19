@@ -26,6 +26,7 @@ public class Cell {
 	ArrayList<Cell> visibleSites;
 	int id;
 	ArrayList<Double> familiarityValues;
+	ArrayList<Double> familiarityValues_work;
 	ArrayList<OMU> familiarityIDs;
 
 
@@ -49,6 +50,7 @@ public class Cell {
 		timeCounter=0;
 
 		familiarityValues = new ArrayList<Double>();
+		familiarityValues_work = new ArrayList<Double>();
 		familiarityIDs = new ArrayList<OMU>();
 
 	}
@@ -81,6 +83,7 @@ public class Cell {
 	}
 
 	private void regrow(){
+		
 		//check to see if resource is at max levels
 		if (resources!=maxResources){
 			//the resource will grow back until it's maximum level is reached
@@ -107,42 +110,104 @@ public class Cell {
 
 		//decrease all familiarity values
 		for(int i =0;i<familiarityValues.size();i++){
+			
+			//////decrease reference memory/////
+			
 			double f = familiarityValues.get(i);
-			if(f<=Params.famMinCell){
-				f=Params.famMinCell;
-				toRemove.add(familiarityIDs.get(i));
+			
+			if(f<=0.001){
+				f=0.001;
+				toRemove.add(familiarityIDs.get(i)); //if reference memory is gone... remove the cell from memory
+				
 			} else {
-				
-				if(f<0){
-					f = Math.max( (f - Params.lDecay * (1+f)*f),-Params.famMaxCell);
-				} else {
-					f = Math.max( (f + Params.lDecay * (1-f)*f),-Params.famMaxCell);
-				}
-				
-				familiarityValues.set(i, f);
+
+				f = Math.max( (f - Params.lDecay * (1+f)*f),0.001); //
+			
 			}
+			
+			familiarityValues.set(i, f);
+			
+			
+			//////decrease working memory////
+			
+			double f_work = familiarityValues_work.get(i);
+			
+			//if(this.id == 8853){
+			//if(f_work>0.08) {
+			//	System.out.println(this.id + " cell has ref mem = "+ f + " and work mem = "+f_work);
+			//}
+			
+			if(f_work<=0.001){
+				f_work=0.001;
+			} else {
+				f_work = Math.max( (f_work - Params.lDecay_work * (1+f_work)*f_work),0.001); //
+			}
+			
+			familiarityValues_work.set(i, f_work);
+			
+			
 		}
+		
+		
+		
 
 		//remove any at or below familiarity min
 		for(OMU omu : toRemove){
 			int index = familiarityIDs.indexOf(omu);
 			familiarityIDs.remove(index);
 			familiarityValues.remove(index);
+			familiarityValues_work.remove(index);
+			omu.removeFamilarFood(this);
 		}
 	}
 
-	public void updateFam(OMU omu){
+	public void updateFam(OMU omu, Boolean reference_only){
 
-		//if already in the array increase value
+		//if already in the array: increase value
 		if(familiarityIDs.contains(omu)){
 
 			int  i = familiarityIDs.indexOf(omu);
-			familiarityValues.set(i, Params.famMaxCell);
+			
+			//familiarityValues.set(i, 0.999); //increase reference memory
+			double f = familiarityValues.get(i);
+			f = Math.min( (f + ((Params.lGrow) * (1-f)*f) ),Params.famMaxCell);
+			familiarityValues.set(i, f);
+			
+			if (reference_only==false)familiarityValues_work.set(i, 0.999); //only update working memory if I'm in the cell
 
 		//add new individual and increase value
 		} else {
+			
 			familiarityIDs.add(omu);
-			familiarityValues.add(Params.famMaxCell);
+			
+			//familiarityValues.add(0.999); //increase reference memory
+			double f = 0.0011; // decay will happen the same step so 0.0001 ensures the cell will be remembered
+			f = Math.min( (f + ((Params.lGrow) * (1-f)*f) ),Params.famMaxCell);
+			familiarityValues.add(f);
+			
+			familiarityValues_work.add(0.0011); //never seen before so working memory is zero
+			omu.addFamilarFood(this);
+		
+		}
+	}
+	
+	public double getMemR(OMU omu) {
+		int  i = familiarityIDs.indexOf(omu);
+		if(i<0) {
+			System.out.println("new cell that i have no memory of!");
+			return 0.1;
+		} else {
+			return familiarityValues.get(i);
+		}
+		
+	}
+	
+	public double getMemW(OMU omu) {
+		int  i = familiarityIDs.indexOf(omu);
+		if(i<0) {
+			return 0;
+		} else {
+			return familiarityValues_work.get(i);
 		}
 	}
 

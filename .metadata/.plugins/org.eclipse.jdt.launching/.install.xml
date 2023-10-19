@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-<entry loc="C:\Program Files\Java\jdk1.8.0_05" stamp="1398789378907"/>
+    <entry loc="C:\Program Files\Java\jdk1.8.0_05" stamp="1398789378907"/>
+    <entry loc="/opt/homebrew/Cellar/openjdk@11/11.0.15/libexec/openjdk.jdk/Contents/Home" stamp="1650397110000"/>
+    <entry loc="/opt/homebrew/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home" stamp="1646864449000"/>
+    <entry loc="/Users/tyler/Documents/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_17.0.2.v20220201-1208/jre" stamp="1646930437000"/>
 </dirs>

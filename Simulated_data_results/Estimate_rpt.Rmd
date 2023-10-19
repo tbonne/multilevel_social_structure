@@ -1,0 +1,971 @@
+---
+title: "Multilevel simulation optimization - social INDUCTION"
+output: html_notebook
+---
+
+#Setup
+
+Libraries needed
+```{r}
+library(igraph)
+library(dplyr)
+library(ggplot2)
+library(rptR)
+```
+
+
+
+# Results for variation in resrouce distribution and individual differences in metabolism
+
+
+Load the simulated data
+```{r}
+#load
+load("test_env_depletionVar_sept27_2023.RData")
+
+#take a look
+outputs_ind_var
+```
+
+Get summary stats
+```{r}
+library(dplyr)
+outputs_ind_var %>% group_by(par_envHeter) %>% summarise(mean_hr = mean(spa_deg) )
+```
+
+
+Raw simulated data (means and sd)
+```{r}
+
+library(reshape2)
+library(ggridges)
+library(dplyr)
+
+outputs_ind_NOvar2 <- outputs_ind_var %>% filter( (par_depletion_sd==0 | par_depletion_sd==0.002) & (par_envHeter==1) ) %>% dplyr::select(hr, spa_deg,spa_clus,par_depletion_sd)
+
+outputs_ind_NOvar2_melt<-melt(outputs_ind_NOvar2, id.vars = c("par_depletion_sd"))
+
+
+outputs_ind_NOvar_all_melt <- outputs_ind_NOvar2_melt
+
+#home range plot: mean and sd
+df_home <-outputs_ind_NOvar_all_melt %>% filter(variable=="hr") 
+
+p_home_range <- ggplot(data=df_home, aes(y=value, x=factor(par_depletion_sd), color= factor(par_depletion_sd) ) )+ geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=.3) + labs(x="Individual differences" , y="Cells visited") + theme_classic() + theme(legend.position = "none")
+
+#network degree plot: mean and sd
+df_deg <-outputs_ind_NOvar_all_melt %>% filter(variable=="spa_deg"| variable=="soc2_deg_sd") 
+#levels(df_deg$variable) <- c("SD home range", "SD degree", "soc_clus_sd", "Mean home range", "Mean degree", "soc_clus")
+
+p_deg <- ggplot(data=df_deg, aes(y=value, x=factor(par_depletion_sd), color= factor(par_depletion_sd) ) )+ geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=.3) + labs(x="Individual differences" , y="Network degree") + theme_classic() + theme(legend.position = "none")
+
+#network clustering plot: mean and sd
+df_clus <-outputs_ind_NOvar_all_melt %>% filter(variable=="spa_clus"| variable=="soc2_clus_sd") 
+
+p_clus <- ggplot(data=df_clus, aes(y=value, x=factor(par_depletion_sd), color= factor(par_depletion_sd) ) )+ geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=.3) + labs(x="Individual differences" , y="Clustering coefficient") + theme_classic() + theme(legend.position = "none")
+
+#plot together
+cowplot::plot_grid(p_home_range,p_deg, p_clus, nrow=1)
+
+```
+Home range x (degree and clustering)
+```{r social familiarity}
+
+#get data on soc degree and clustering for ind var and no ind var
+outputs_ind_NOvar2 <- outputs_ind_var %>% filter( (par_depletion_sd==0 | par_depletion_sd==0.002) & (par_envHeter==1) ) %>% dplyr::select(hr, spa_deg,soc_deg,spa_clus,soc_clus,par_depletion_sd)
+
+outputs_ind_NOvar2$ind_var <- ifelse(outputs_ind_NOvar2$par_depletion_sd==0, "0.000", "0.002")
+
+#home range: higher in short juve periods
+p.diff.hr <- ggplot(outputs_ind_NOvar2, aes(x=factor(ind_var), y=hr, color=factor(ind_var) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(alpha=0.3, width=0.1) + labs(x="Individual differences", y="Home Range") + theme_classic()+ theme(legend.position = "none")
+
+#clustering and degree: social
+p.diff.clus.degree <- ggplot(outputs_ind_NOvar2, aes(color=factor(ind_var), x=soc_deg, y=soc_clus ))  + geom_point() + labs(x="Social Degree", y="Social Clustering", color="Individual differences") + theme_classic() + theme(legend.position = "none") + xlim(0,25)
+
+#clustering and degree: 
+p.diff.clus.degree.spatial <- ggplot(outputs_ind_NOvar2, aes(color=factor(ind_var), x=spa_deg, y=spa_clus ))  + geom_point() + labs(x="Spatial Degree", y="Spatial Clustering", color="Individual differences") + theme_classic() + theme(legend.position = "none") + xlim(0,25)
+
+cowplot::plot_grid(p.diff.hr, p.diff.clus.degree, labels = c("a)","b)"), ncol=2 ) #p.diff.clus.degree.spatial
+```
+
+Calculate repeatability
+```{r calculate diffs}
+
+outputs_ind_NOvar2 <- outputs_ind_var %>% filter( (par_depletion_sd==0 | par_depletion_sd==0.002) & (par_envHeter==1) ) %>% select(hr, spa_deg,soc_deg,spa_clus,soc_clus,par_depletion_sd)
+
+outputs_ind_NOvar2$ind_var <- ifelse(outputs_ind_NOvar2$par_depletion_sd==0, "0.000", "0.002")
+
+library(brms)
+library(dplyr)
+
+fit0.soc.deg <-brm(soc_deg ~ 1 , data=outputs_ind_NOvar2 %>% filter(par_depletion_sd==0) )
+summary(fit0.soc.deg)
+
+fit0.soc.clus <-brm(soc_clus ~ 1 , data=outputs_ind_NOvar2%>% filter(par_depletion_sd==0.0) )
+summary(fit0.soc.clus)
+
+fit0.hr <-brm(hr ~ 1 , data=outputs_ind_NOvar2%>% filter(par_depletion_sd==0.0) )
+summary(fit0.hr)
+
+
+fit02.soc.deg <-brm(soc_deg ~ 1 , data=outputs_ind_NOvar2 %>% filter(par_depletion_sd==0.002) )
+summary(fit02.soc.deg)
+
+fit02.soc.clus <-brm(soc_clus ~ 1 , data=outputs_ind_NOvar2%>% filter(par_depletion_sd==0.002) )
+summary(fit02.soc.clus)
+
+fit02.hr <-brm(hr ~ 1 , data=outputs_ind_NOvar2%>% filter(par_depletion_sd==0.002) )
+summary(fit02.hr)
+
+
+```
+
+
+Plot of repetability
+```{r env one sd zero}
+outputs_ind_NOvar <- outputs_ind_var %>% filter( (par_envHeter==1) & (par_depletion_sd!=0.001) )%>% 
+  #mutate(hr_cv = (hr_sd/hr)*100,  deg_cv = (soc_deg_sd/soc_deg)*100, clus_cv = (soc_clus_sd/soc_clus)*100) %>%
+  dplyr::select(rpt_degree_noHR,rpt_hr_noDEGREE,rpt_clus_noHR,par_depletion_sd)
+
+library(reshape2)
+library(ggridges)
+outputs_ind_NOvar_melt<-melt(outputs_ind_NOvar, id.vars = "par_depletion_sd")
+table(outputs_ind_NOvar_melt$variable)
+outputs_ind_NOvar_melt <- outputs_ind_NOvar_melt %>%
+  mutate(variable = recode_factor(variable, "rpt_degree_noHR" = "Degree", "rpt_hr_noDEGREE" = "Home Range", "rpt_clus_noHR" = "Clustering"))
+outputs_ind_NOvar_melt$ind_diff = as.character(outputs_ind_NOvar_melt$par_depletion_sd)
+
+
+p_var<-ggplot(data=outputs_ind_NOvar_melt , aes(x=value, y=variable, color=ind_diff ) ) + geom_boxplot() + labs(x="Repeatability" , y="Social and spatial pehontypes") + theme_classic() + geom_vline(xintercept = 0.0, linetype="dashed")
+
+p_var
+```
+Model repeatability: explanatory
+```{r model repeatability}
+
+fit.rpt.indDiff <- brm(value ~ ind_diff*variable, data=outputs_ind_NOvar_melt, prior=prior("normal(0,1)", class="b"))
+fit.rpt.indDiff.base <- brm(value ~ variable, data=outputs_ind_NOvar_melt, prior=prior("normal(0,1)", class="b"))
+
+loo(fit.rpt.indDiff,fit.rpt.indDiff.base )
+
+```
+
+Repeatability when env is changed
+```{r rpt all}
+outputs_ind_NOvar <- outputs_ind_var %>% filter( (par_depletion_sd==0) )%>%  #& (env_dist!=0.1)
+  #mutate(hr_cv = (hr_sd/hr)*100,  deg_cv = (soc_deg_sd/soc_deg)*100, clus_cv = (soc_clus_sd/soc_clus)*100) %>%
+  select(rpt_degree_noHR,rpt_hr_noDEGREE,rpt_clus_noHR,par_envHeter)
+
+library(reshape2)
+library(ggridges)
+outputs_ind_NOvar_melt<-melt(outputs_ind_NOvar, id.vars = "par_envHeter")
+table(outputs_ind_NOvar_melt$variable)
+outputs_ind_NOvar_melt <- outputs_ind_NOvar_melt %>%
+  mutate(variable = recode_factor(variable, "rpt_degree_noHR" = "Degree", "rpt_hr_noDEGREE" = "Home Range", "rpt_clus_noHR" = "Clustering"))
+outputs_ind_NOvar_melt$env_dist = as.character(outputs_ind_NOvar_melt$par_envHeter)
+
+
+p_var_2<-ggplot(data=outputs_ind_NOvar_melt , aes(x=value, y=variable, color=env_dist ) ) + geom_boxplot() + labs(x="Repeatability" , y="Social and spatial pehontypes") + theme_classic() + geom_vline(xintercept = 0.0, linetype="dashed")
+
+p_var_2
+```
+
+Model repeatability
+```{r model repeatability env}
+
+fit.rpt.envDiff <- brm(value ~ env_dist*variable, data=outputs_ind_NOvar_melt, prior=prior("normal(0,1)", class="b"))
+fit.rpt.envDiff.base <- brm(value ~ variable, data=outputs_ind_NOvar_melt, prior=prior("normal(0,1)", class="b"))
+
+loo(fit.rpt.envDiff,fit.rpt.envDiff.base )
+
+```
+
+
+Plot together
+```{r}
+cowplot::plot_grid(p_var+xlim(0,1),p_var_2+xlim(0,1), ncol=1)
+```
+
+
+How does correlation between hr and deg change with env and metabolism
+```{r}
+
+#does the correlation between phenotypes change depending on the environment ()
+p_var_beha_corr_env25 <- ggplot(data=outputs_ind_var%>% filter(par_envHeter==0.25 & par_depletion_sd != 0.001) , aes(x=factor(par_depletion_sd), y=cor_hr_deg , color=factor(par_depletion_sd) ) ) + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="Variation in genotype (energy)" , y="Correlation of social and spatial pehontypes") + theme_classic()+ theme(legend.position = "none")
+
+
+p_var_beha_corr_env100 <- ggplot(data=outputs_ind_var%>% filter(par_envHeter==1 & par_depletion_sd != 0.001) , aes(x=factor(par_depletion_sd), y=cor_hr_deg , color=factor(par_depletion_sd)) ) + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="Variation in genotype (energy)" , y="Correlation of social and spatial pehontypes") + theme_classic()+ theme(legend.position = "none")
+
+
+p_var_beha_corr_env175 <- ggplot(data=outputs_ind_var%>% filter(par_envHeter==1.75 & par_depletion_sd != 0.001) , aes(x=factor(par_depletion_sd), y=cor_hr_deg, color=factor(par_depletion_sd) ) ) + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="Variation in genotype (energy)" , y="Correlation of social and spatial pehontypes") + theme_classic() + theme(legend.position = "none")
+
+#p_var_beha_corr
+
+#does the correlation between phenotypes change depending on the environment ()
+p_var_beha_corr_env <- ggplot(data=outputs_ind_var %>% filter(par_depletion_sd==0.002) , aes(x=factor(par_envHeter), y=cor_hr_deg ) ) + geom_boxplot(aes(x=factor(par_envHeter)),outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + geom_smooth(method="loess") + labs(x="Resource Distribution (k)" , y="Correlation (social x spatial pehontypes)") + theme_classic()
+
+#p_var_beha_corr_env
+
+#cowplot::plot_grid(p_var_beha_corr, p_var_beha_corr_env, labels = c("a)","b)"), nrow=1)
+
+cowplot::plot_grid(p_var_beha_corr_env25+ylim(0,1)+labs(title="Homogeneous (k=0.25)"), p_var_beha_corr_env100+ylim(0,1)+labs(title="Heterogeneous (k=1.00)"),p_var_beha_corr_env175+ylim(0,1)+labs(title="Highly heterogeneous (k=1.75)"), labels = c("a)","b)","c)"), nrow=1)
+```
+
+Model correlation: explanatory
+```{r quantify correlation}
+
+fit.cor.full <- brm(cor_hr_deg ~ par_envHeter*par_depletion_sd, data=outputs_ind_var %>% filter(par_depletion_sd!=0.001) , prior=prior("normal(0,1)", class="b"))
+
+fit.cor.sep <- brm(cor_hr_deg ~ par_envHeter+par_depletion_sd, data=outputs_ind_var %>% filter(par_depletion_sd!=0.001) , prior=prior("normal(0,1)", class="b"))
+
+fit.cor.base <- brm(cor_hr_deg ~ 1, data=outputs_ind_var %>% filter(par_depletion_sd!=0.001) )
+
+loo(fit.cor.full,fit.cor.sep,fit.cor.base )
+
+```
+
+# Results for variation in juve induction
+
+```{r}
+#load in the simulated results
+load("test_juvePeriods_sept24_2023.RData")
+```
+
+
+How different are the social structures when:
+  Juve period is short and familiarity growth is fast
+  Juve period is long and familiarity growth is slow
+
+Visualize the home range, network degree, and network clustering measures
+```{r}
+
+outputs_all_juve$social_system <- ifelse(outputs_all_juve$par_lgrow==0.1, "Short Juve Period / Fast Familiarity", "Long Juve Period / Slow Familiarity")
+
+#partners: higher in short juve periods
+p.juve.deg <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=spa_deg ))  + geom_boxplot() + geom_jitter() + labs(x="social dynamics", y="Network degree")
+
+#home range: higher in short juve periods
+p.juve.hr <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=hr ))  + geom_boxplot() + geom_jitter() + labs(x="social dynamics", y="Home Range")
+
+#clustering: high in both
+p.juve.clus<- ggplot(outputs_all_juve, aes(x=factor(social_system), y=spa_clus ))  + geom_boxplot() + geom_jitter() + labs(x="social dynamics", y="Clustering")
+
+cowplot::plot_grid(p.juve.hr, p.juve.deg, p.juve.clus, labels = c("a)","b)","c)" ), ncol=1 )
+```
+
+Compare long/slow and short/fast cases
+```{r social familiarity}
+#outputs_all_juve<-outputs_all_juve[,-ncol(outputs_all_juve)]
+outputs_all_juve$social_system <- ifelse(outputs_all_juve$par_lgrow==0.1, "Short/Fast", "Long/Slow")
+
+#partners: higher in short juve periods
+p.juve.deg <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=soc_deg ))  + geom_boxplot() + geom_jitter(width=0.1, alpha=0.3) + labs(x="social dynamics", y="Network degree")
+
+#home range: higher in short juve periods
+p.juve.hr <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=hr, color=factor(social_system) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="Social Induction", y="Home Range") + theme_classic()+ theme(legend.position = "none")
+
+#clustering: high in both
+p.juve.clus<- ggplot(outputs_all_juve, aes(x=factor(social_system), y=soc_clus ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="social dynamics", y="Clustering")
+
+#clustering and degree: social
+p.juve.clus.degree <- ggplot(outputs_all_juve, aes(color=factor(social_system), x=soc_deg, y=soc_clus ))  + geom_point(alpha=0.3) + labs(x="Social Degree", y="Social Clustering", color="Juve Period") + theme_classic() + theme(legend.position = "none") + xlim(0,25)
+
+#clustering and degree: 
+p.juve.clus.degree.spatial <- ggplot(outputs_all_juve, aes(color=factor(social_system), x=spa_deg, y=spa_clus ))  + geom_point(alpha=0.3) + labs(x="Spatial Degree", y="Spatial Clustering", color="Juve Period") + theme_classic() + theme(legend.position = "none") + xlim(0,25)
+
+cowplot::plot_grid(p.juve.hr, p.juve.clus.degree, labels = c("a)","b)","c)"), ncol=2) #p.juve.clus.degree.spatial
+```
+
+Model pheontypes:
+```{r calculate diffs juves}
+
+library(brms)
+library(dplyr)
+
+fitjuve.soc.deg <-brm(soc_deg ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.soc.deg)
+
+fitjuve.soc.clus <-brm(soc_clus ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.soc.clus)
+
+fitjuve.hr <-brm(hr ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.hr)
+
+
+fitjuve.soc.deg.long <-brm(soc_deg ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.soc.deg.long)
+
+fitjuve.soc.clus.long <-brm(soc_clus ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.soc.clus.long)
+
+fitjuve.hr.long <-brm(hr ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.hr.long)
+
+
+```
+
+
+
+
+Estimate repetability
+```{r}
+#repeatability:
+p.juve.rpt.deg <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=rpt_degree_noHR, color=factor(social_system) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="social dynamics", y="Repetability: degree")+ theme_classic()+ ylim(0,1) + theme(legend.position = "none")
+
+p.juve.rpt.hr <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=rpt_hr_noDEGREE, color=factor(social_system) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="social dynamics", y="Repetability: home range")+ theme_classic()+ ylim(0,1)+ theme(legend.position = "none")
+
+p.juve.rpt.clus <- ggplot(outputs_all_juve, aes(x=factor(social_system), y=rpt_clus_noHR, color=factor(social_system) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="social dynamics", y="Repetability: clustering") + theme_classic() + ylim(0,1)+ theme(legend.position = "none")
+
+cowplot::plot_grid(p.juve.rpt.hr, p.juve.rpt.deg, p.juve.rpt.clus, nrow=1, labels=c("a)","b)","c)") )
+```
+
+
+Model repetability
+```{r calculate diffs juves rpt}
+
+library(brms)
+library(dplyr)
+
+fitjuve.soc.deg.rpt <-brm(rpt_degree_noHR ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.soc.deg.rpt)
+
+fitjuve.soc.clus.rpt <-brm(rpt_clus_noHR ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.soc.clus.rpt)
+
+fitjuve.hr.rpt <-brm(rpt_hr_noDEGREE ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==3000) )
+summary(fitjuve.hr.rpt)
+
+
+fitjuve.soc.deg.rpt.short <-brm(rpt_degree_noHR ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.soc.deg.rpt.short)
+
+fitjuve.soc.clus.rpt.short <-brm(rpt_clus_noHR ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.soc.clus.rpt.short)
+
+fitjuve.hr.rpt.short <-brm(rpt_hr_noDEGREE ~ 1 , data=outputs_all_juve %>% as.data.frame() %>% filter(par_juveAge==100) )
+summary(fitjuve.hr.rpt.short)
+
+
+```
+
+How did the correlation between phenotypes change
+```{r}
+ggplot(outputs_all_juve, aes(x=factor(social_system), y=cor_hr_deg, color=factor(social_system) ))  + geom_boxplot(outlier.shape = NA) + geom_jitter(width=0.1, alpha=0.3) + labs(x="Juvenile induction", y="Correlation: home range x degree") + theme_classic()+ theme(legend.position = "none")
+
+```
+
+Model correlation
+```{r quantify diff in corr juves}
+
+fit.diff.cor.juve <- brm(cor_hr_deg ~ social_system, data=outputs_all_juve)
+summary(fit.diff.cor.juve)
+```
+
+
+How does the correlation change in respond to juve induction
+```{r}
+ggplot(outputs_all_juve, aes(x=factor(social_system), y=cor_hr_deg ))  + geom_boxplot() + geom_jitter() + labs(x="social dynamics", y="Correlation: hr x degree")
+
+```
+
+
+
+
+
+
+
+# Generate data using simulations
+
+Below is the code used to run the repast simulation from the command line. Once run, the simulation generates csv files that are then used as inputs to calculate various measures about social and spatial phenotypes.
+
+### Function used to run one simulation
+```{r}
+
+#function to simulate social formations taking parameters: 
+simulate.formation <- function(x, term=""){
+  
+  #alter the parameters file
+  outcsv <- x
+  write.table(as.matrix(t(outcsv)), sep=",", paste0("instance_1/data/params_set",term,".csv"), col.names=FALSE, row.names=FALSE)
+  
+  #run the model 
+  tab<-system('./runForaging.bat', intern = T, wait = T)
+}
+
+
+
+```
+
+
+### Function to calculate spatial and social phenotype measures
+```{r}
+library(netTS)
+
+#function to calculate social formation measures:
+calculate.measures <- function(pars_in){
+  
+  ############
+  #
+  # Home range estimates
+  #
+  ############
+  
+  #get home range data
+  temp = list.files(path=paste0(getwd(),"/instance_1/"),pattern=paste0("homeRangeStructure_"))
+  df_hr = data.frame()
+  for(i in 1:length(temp)){
+    df_hr <- bind_rows(df_hr, read.csv( paste0("instance_1/",temp[i]), header = F) )
+  }
+  colnames(df_hr) <- c("hr","id","depletionRate","numbInds", "eff", "time")
+  
+  #summarize home range data
+  hr_mean = mean(df_hr[df_hr$hr>1,]$hr, na.rm=TRUE)
+  hr_sd = sd(df_hr[df_hr$hr>1,]$hr, na.rm=TRUE)
+  hr_ci = HDInterval::hdi(df_hr[df_hr$hr>1,]$hr)
+  
+  #summarize efficiency data
+  eff_mean = mean(df_hr$eff, na.rm=TRUE)
+  eff_sd = sd(df_hr$eff, na.rm=TRUE)
+  eff_ci = HDInterval::hdi(df_hr$eff)
+  #hist(df_hr$hr) #why small bump
+  
+  #create the df to calculate repeatability
+  df_rpt <- df_hr
+  df_rpt$joinID <- paste0(df_rpt$time,"_",df_rpt$id)
+  df_rpt$degree <- NA #make room to fill in the data
+  df_rpt$clus <- NA #make room to fill in the data
+  df_rpt$degree_spa <- NA #make room to fill in the data
+  df_rpt$clus_spa <- NA #make room to fill in the data
+  
+  ############
+  #
+  # Spatial network
+  #
+  ############
+  
+  #get spatial network data
+  temp = list.files(path=paste0(getwd(),"/instance_1/"),pattern=paste0("spatialStructure_"), full.names = T)  #,sprintf("%.1f", pars_in[3]),"_",sprintf("%.1f", pars_in[16]))
+  #print(temp)
+  df_spa = data.frame()
+  for(i in 1:length(temp)){
+    tem <- read.csv( temp[i], header = T)
+    if(nrow(tem)>0)df_spa <- bind_rows(df_spa, tem )
+  }
+  
+  #remove duplicates (i.e., no self loops)
+  df_spa <- df_spa %>% filter(from!=to)
+  
+  #get metrics about spatial familiarity
+  if(nrow(df_spa)>0 ){
+    
+    #get times
+    unique_times<-sort(unique(df_spa$time))
+    
+    #####
+    #
+    # Last network: description
+    #
+    #####
+    
+    #create network from last time point
+    df_spa_max <- df_spa %>% filter(time==max(unique_times) )
+    g.asso <- graph_from_data_frame(df_spa_max, directed = F)
+    
+    E(g.asso)$weight <- 1
+    g.asso<-simplify(g.asso, edge.attr.comb=list(weight="sum"))
+    
+    
+    spa_clus = transitivity(g.asso)
+    spa_clus_sd = sd(transitivity(g.asso,type="local"), na.rm = T)
+    spa_deg_mean = mean(degree(g.asso), na.rm = T)
+    spa_deg_sd = sd(degree(g.asso), na.rm = T)
+    spa_str_mean = mean(strength(g.asso), na.rm = T)
+    spa_str_sd = sd(strength(g.asso), na.rm = T)
+    
+    #####
+    #
+    # Last two networks: correlation
+    #
+    #####
+    
+    if(length(unique_times) > 1){
+      spa_cosine_vals = vector()
+      rpt_degree=NA
+      rpt_hr=NA
+      
+      
+      for(i in 1:(length(unique_times)-1) ){
+        
+        #get the two networks
+        g.asso1 <- graph_from_data_frame(df_spa %>% filter( time==unique_times[i]), directed = T)
+        g.asso2 <- graph_from_data_frame(df_spa %>% filter( time==unique_times[i+1]), directed = T)
+        spa_cosine_vals[length(spa_cosine_vals)+1] <- cosine_between_graphs(g.asso1, g.asso2)  
+        
+        #create a dataframe with degree values for each individual and the time and joinID to match df_rpt
+        df_time_net_spa <- data.frame(degree_spa = degree(g.asso2), clus_spa = transitivity(g.asso2, type="local"), joinID = paste0(unique_times[i],"_",V(g.asso2)$name))
+        
+        #join data with df_rpt
+        df_rpt[df_rpt$joinID %in% df_time_net_spa$joinID, 'degree_spa'] <- df_time_net_spa[df_time_net_spa$joinID %in% df_rpt$joinID, 'degree_spa']
+        df_rpt[df_rpt$joinID %in% df_time_net_spa$joinID, 'clus_spa'] <- df_time_net_spa[df_time_net_spa$joinID %in% df_rpt$joinID, 'clus_spa']
+        
+        
+        
+      }
+      
+      #get the mean and sd of cosine similarity
+      spa_mean_cos <- mean(spa_cosine_vals, na.rm = T)
+      spa_sd_cos <- sd(spa_cosine_vals, na.rm = T)
+      
+      
+      #######
+      #
+      # Calculate repeatability
+      #
+      ########
+      
+      #run a model and extract repeatability and plasticity measures
+      df_rpt[is.na(df_rpt$degree_spa),]<-0 #make degree zero when individuals have no others 
+      df_rpt<-df_rpt[df_rpt$id!=0,]
+      
+      #scale variables
+      df_rpt$time.s <- scale(df_rpt$time)
+      df_rpt$hr.s <- scale(df_rpt$hr)
+      df_rpt$degree_spa.s <- scale(df_rpt$degree_spa)
+      df_rpt$clus_spa.s <- scale(df_rpt$clus_spa)
+      
+      #calculate the repeatability accounting for hr
+      df_rpt_noNA <- df_rpt %>% dplyr::select(clus_spa.s, time.s,hr.s,id) %>% na.omit()
+      if(nrow(df_rpt_noNA)>30){
+        
+        fit.rpt.clus_spa.noHR <- rpt(clus_spa.s ~ (1 | id), grname = c("id","Fixed"), data = df_rpt_noNA, datatype = "Gaussian", nboot = 0, npermut = 0)
+        
+        #store the results
+        rpt_clus_spa_noHR <- as.numeric(fit.rpt.clus.noHR$R[1])
+        
+      } else {
+        #not enough clus data to calculate rpt
+        rpt_clus_noHR <- NA
+      }
+      
+      #calculate the repeatability accounting for hr
+      df_rpt_noNA <- df_rpt %>% dplyr::select(degree_spa.s, time.s,hr.s,id) %>% na.omit()
+      
+      #calculate the repeatability accounting for hr
+      fit.rpt.deg_spa.noHR <- rpt(degree_spa.s ~ (1 | id), grname = c("id"), data = df_rpt, datatype = "Gaussian", nboot = 0, npermut = 0)
+      
+      #store values
+      rpt_degree_spa_noHR <- as.numeric(fit.rpt.deg_spa.noHR$R[1])
+      
+    }else {
+      spa_mean_cos <- NA
+      spa_sd_cos <- NA
+    }
+    
+  } else {
+    spa_mean_cos=NA
+    spa_sd_cos=NA
+    spa_cosine_vals = c(NA,NA)
+    spa_clus=NA
+    spa_clus_sd=NA
+    spa_deg_mean=NA
+    spa_deg_sd=NA
+    spa_str_mean=NA
+    spa_str_sd=NA
+    rpt_clus_spa_noHR=NA
+    rpt_degree_spa_noHR=NA
+  }
+  
+  
+  ###############
+  #
+  # Get social network data from familiarization weights
+  #
+  ###############
+  
+  #get social network data
+  temp = list.files(path=paste0(getwd(),"/instance_1/"),pattern=paste0("socialStructure_"), full.names = T) #,sprintf("%.1f", pars_in[3]),"_",sprintf("%.1f", pars_in[16])
+  df_soc = data.frame()
+  for(i in 1:length(temp)){
+    tem <- read.csv( temp[i], header = T)
+    if((nrow(tem)>0))df_soc <- bind_rows(df_soc, tem )
+  }
+  
+  #get metrics about social familiarity
+  if(nrow(df_soc)>0   ){
+    
+    #get times
+    unique_times<-sort(unique(df_soc$time))
+    
+    #create network from last time point
+    df_soc_max <- df_soc %>% filter(time==max(unique_times) )
+    g.aff <- graph_from_data_frame(df_soc_max %>% filter(weight>0.001), directed = T)
+    
+    E(g.aff)$weight <- 1
+    g.aff<-simplify(g.aff, edge.attr.comb=list(weight="sum"))
+    
+    #plot(g.aff)
+    soc_clus = transitivity(g.aff)
+    soc_clus_sd = sd(transitivity(g.aff, type="local"), na.rm = T)
+    soc_deg_mean = mean(degree(g.aff), na.rm = T)
+    soc_str_mean = mean(strength(g.aff), na.rm = T)
+    soc_deg_sd = sd(degree(g.aff), na.rm = T)
+    soc_str_sd = sd(strength(g.aff), na.rm = T)
+    
+    if(length(unique_times) > 1){
+      
+      #define variables to measure
+      cosine_vals = vector()
+      rpt_degree=NA
+      rpt_hr=NA
+      plas_degree = NA
+      plas_hr = NA
+      
+      
+      for(i in 1:(length(unique_times)-1) ){
+        g.aff1 <- graph_from_data_frame(df_soc %>% filter(weight>0.001 & time==unique_times[i]), directed = T)
+        g.aff2 <- graph_from_data_frame(df_soc %>% filter(weight>0.001 & time==unique_times[i+1]), directed = T)
+        
+        #create a dataframe with degree values for each individual and the time and joinID to match df_rpt
+        df_time_net <- data.frame(degree = degree(g.aff2), clus = transitivity(g.aff2, type="local"), joinID = paste0(unique_times[i],"_",V(g.aff2)$name))
+        
+        #join data with df_rpt
+        df_rpt[df_rpt$joinID %in% df_time_net$joinID, 'degree'] <- df_time_net[df_time_net$joinID %in%  df_rpt$joinID, 'degree']
+        df_rpt[df_rpt$joinID %in% df_time_net$joinID, 'clus'] <- df_time_net[df_time_net$joinID %in%  df_rpt$joinID, 'clus']
+        
+        if(ecount(g.aff1)==0 |  ecount(g.aff2)==0){
+          cosine_vals[length(cosine_vals)+1] <- 0  
+        } else {
+          cosine_vals[length(cosine_vals)+1] <- cosine_between_graphs(g.aff1, g.aff2)  
+        }
+        
+      }
+      
+      #record mean cosine values
+      mean_cos <- mean(cosine_vals, na.rm=T)
+      sd_cos <- sd(cosine_vals, na.rm=T)
+      
+      #run a model and extract repeatability and plasticity measures
+      df_rpt[is.na(df_rpt$degree),]<-0 #make degree zero when individuals have no others 
+      df_rpt<-df_rpt[df_rpt$id!=0,]
+      
+      #scale variables
+      df_rpt$time.s <- scale(df_rpt$time)
+      df_rpt$hr.s <- scale(df_rpt$hr)
+      df_rpt$degree.s <- scale(df_rpt$degree)
+      df_rpt$clus.s <- scale(df_rpt$clus)
+      
+      #calculate the repeatability accounting for hr
+      df_rpt_noNA <- df_rpt %>% dplyr::select(clus.s, time.s,hr.s,id) %>% na.omit()
+      if(nrow(df_rpt_noNA)>30){
+        fit.rpt.clus <- rpt(clus.s ~ time.s + hr.s + (1 | id), grname = c("id","Fixed"), data = df_rpt_noNA, datatype = "Gaussian", nboot = 0, npermut = 0)
+        
+        fit.rpt.clus.noHR <- rpt(clus.s ~ (1 | id), grname = c("id","Fixed"), data = df_rpt_noNA, datatype = "Gaussian", nboot = 0, npermut = 0)
+        
+        #store the results
+        rpt_clus <- as.numeric(fit.rpt.clus$R[1])
+        rpt_clus_noHR <- as.numeric(fit.rpt.clus.noHR$R[1])
+        plas_hr_clus <- fit.rpt.clus$mod@beta[3]
+        
+        
+      } else {
+        #not enough clus data to calculate rpt
+        rpt_clus <- NA
+        rpt_clus_noHR <- NA
+        plas_hr_clus <- NA
+      }
+      
+      #calculate the repeatability accounting for hr
+      df_rpt_noNA <- df_rpt %>% dplyr::select(degree.s, time.s,hr.s,id) %>% na.omit()
+      
+      fit.rpt.deg <- rpt(degree.s ~  time.s + hr.s + (1 | id), grname = c("id","Fixed"), data = df_rpt_noNA, datatype = "Gaussian", nboot = 0, npermut = 0)
+      
+      #calculate the repeatability accounting for hr
+      fit.rpt.deg.noHR <- rpt(degree.s ~ (1 | id), grname = c("id"), data = df_rpt, datatype = "Gaussian", nboot = 0, npermut = 0)
+      
+      #calculate the repeatability accounting for degree
+      fit.rpt.hr <- rpt(hr.s ~ time.s + degree.s + (1 | id), grname = c("id","Fixed"), data = df_rpt, datatype = "Gaussian",  nboot = 0, npermut = 0)
+      
+      #calculate the repeatability accounting for degree
+      fit.rpt.hr.noDegree <- rpt(hr.s ~ (1 | id), grname = c("id"), data = df_rpt, datatype = "Gaussian", 
+                                 nboot = 0, npermut = 0)
+      
+      #store values
+      rpt_degree <- as.numeric(fit.rpt.deg$R[1])
+      rpt_degree_noHR <- as.numeric(fit.rpt.deg.noHR$R[1])
+      rpt_hr <- as.numeric(fit.rpt.hr$R[1])
+      rpt_hr_noDegree <- as.numeric(fit.rpt.hr.noDegree$R[1])
+      plas_degree <- fit.rpt.hr$mod@beta[3]
+      plas_hr <- fit.rpt.deg$mod@beta[3]
+      
+      
+    } else {
+      mean_cos <- NA
+      sd_cos <- NA
+    }
+    
+    
+  } else {
+    mean_cos=NA
+    sd_cos <- NA
+    cosine_vals = c(NA,NA)
+    soc_clus=NA
+    soc_clus_sd=NA
+    soc_deg_mean=NA
+    soc_deg_sd=NA
+    soc_str_mean=NA
+    soc_str_sd=NA
+    rpt_degree=NA
+    rpt_hr=NA
+    rpt_clus=NA
+    rpt_clus_noHR=NA
+    plas_degree = NA
+    plas_hr = NA
+    plas_hr_clus=NA
+    rpt_hr_noDegree=NA
+    rpt_degree_noHR=NA
+  }
+  
+  
+  ######################
+  #
+  #Compare individual spatial and social phenotypes
+  #
+  ######################
+  
+  #get the home range behaviour of all agents at the end of the simulation
+  unique_times<-sort(unique(df_hr$time))
+  df_hr_last = df_hr %>% filter(time == max(unique_times) )
+  
+  #get the social behaviour of all agents at the end of the simulation
+  df_soc_data = data.frame(deg = degree(g.aff), id = names(degree(g.aff)), stren = strength(g.aff), bet = betweenness(g.aff, weights = 1/E(g.aff)$weight ) )
+  
+  #join the data into one dataframe
+  df_all_soc_hr = left_join(df_soc_data, df_hr_last, by = "id")
+  
+    #get the social/spatial behaviour of all agents at the end of the simulation
+  df_spa_data = data.frame(deg_spa = degree(g.asso), id = names(degree(g.asso)), stren_spa=strength(g.asso), bet_spa = betweenness(g.asso, weights = 1/E(g.asso)$weight ) )
+  
+  #join the data into one dataframe
+  df_all_soc_hr = left_join(df_all_soc_hr, df_spa_data, by = "id")
+  
+  #calculate the correlation between social and spatial behaviour
+  cor_hr_soc = cor.test(df_all_soc_hr$deg, df_all_soc_hr$hr)
+  cor_hr_soc_spa = cor.test(df_all_soc_hr$deg_spa, df_all_soc_hr$hr)
+  
+  #get correlation between individual var in metabolism and var in homerange
+  cor_hr_delpletion = cor.test(df_hr_last$depletionRate, df_hr_last$hr)
+  
+  
+  print("done one!")
+  
+  return (c(hr_mean,
+            hr_sd,
+            hr_ci[1],
+            hr_ci[2],
+            spa_clus,
+            spa_clus_sd,
+            spa_deg_mean,
+            spa_deg_sd,
+            spa_str_mean,
+            spa_str_sd,
+            spa_mean_cos,
+            spa_sd_cos,
+            soc_clus,
+            soc_clus_sd,
+            soc_deg_mean,
+            soc_deg_sd,
+            soc_str_mean,
+            soc_str_sd,
+            mean_cos,
+            sd_cos,
+            pars_in,
+            cor_hr_soc$estimate,
+            cor_hr_soc_spa$estimate,
+            cor_hr_delpletion$estimate,
+            rpt_degree_noHR,
+            rpt_degree,
+            rpt_hr_noDegree,
+            rpt_hr,
+            rpt_clus_noHR,
+            rpt_clus,
+            rpt_clus_spa_noHR,
+            rpt_degree_spa_noHR,
+            plas_degree,
+            plas_hr,
+            plas_hr_clus,
+            eff_mean,
+            eff_sd,
+            eff_ci[1],
+            eff_ci[2]
+  ))
+  
+}
+
+
+
+```
+
+
+### Function to run simulation using a range of parameters
+
+Running the simulation by varying resource distribution (env_dist) and individual differences in metabolism (meta_sd)
+```{r}
+
+#range of growth rates to try
+env_dist <- c(0.25, 1, 1.75)
+meta_sd <- c(0.0,0.001, 0.002) #this sd will be the sd of a normal with mean 0.001
+pars_to_try <-  expand.grid(env_dist, meta_sd)
+
+#create replicates for each pair of parameters
+for(i in 1:7) pars_to_try <- pars_to_try %>% bind_rows(pars_to_try) #dupicate the dataframe i.e. replicates to run
+
+#randomize order (in case i'd like to stop early)
+pars_to_try <- pars_to_try[sample(1:nrow(pars_to_try) ),]
+
+#create a dataframe to store the results
+outputs_all <- data.frame()
+
+#run the simulations
+for(i in 1:nrow(pars_to_try) ){
+  
+  #set the parameters
+  params.opt <- c(1, #social weight
+                  pars_to_try[i,1], #env hetero
+                  0.0001, #indiv decay
+                  0.01, #indiv grow
+                  0.0001, #patch ref mem decay
+                  0.01, #patch work mem decay
+                  1500, #age ind turns to adult
+                  0.0001, #resource regrowth
+                  10, #how many ind turnover
+                  2000, #how frequent are turnovers
+                  1, #home bias
+                  0.01, #depletion rate
+                  pars_to_try[i,2] #sd in metabolism
+  )
+  
+  #place variables in order for simulation
+  params.final.opt <- matrix(nrow = 1, ncol=20)
+  params.final.opt[,1]<- 0.0 #bearing weight  
+  params.final.opt[,2]<- 1.0 #foodW           
+  params.final.opt[,3]<- params.opt[1] #socialW
+  params.final.opt[,4]<- 50000 #end time
+  params.final.opt[,5]<- params.opt[2] #envHetero #####################################
+  params.final.opt[,6]<- params.opt[3] #iDecay
+  params.final.opt[,7]<- params.opt[4]  #iGrow
+  params.final.opt[,8]<- params.opt[5] #lDecay reference mem
+  params.final.opt[,9]<- params.opt[6] #params.opt[7] #lDecay working mem
+  params.final.opt[,10]<- 0.999 #FamMaxInd
+  params.final.opt[,11]<- 0.001 #FamMinInd
+  params.final.opt[,12]<- params.opt[7] #age juve turns into an adult
+  params.final.opt[,13]<- params.opt[8] #regrowth
+  params.final.opt[,14]<- params.opt[9] #turnover
+  params.final.opt[,15]<- params.opt[10] #time until turnover
+  params.final.opt[,16]<- params.opt[11] #home bias
+  params.final.opt[,17]<- params.opt[12] #depletion rate
+  params.final.opt[,18]<- 0.0 #empty!?
+  params.final.opt[,19]<- params.opt[13]  #depletion rate sd. 
+  params.final.opt[,20]<- params.opt[4]  #depletion rate sd. 
+  
+  simulate.formation(params.final.opt[1,])
+  outputs <- calculate.measures(params.final.opt[1,])
+  
+  outputs_all <- bind_rows(outputs_all, as.data.frame(t(outputs)) )
+  
+  file.remove(list.files(path="instance_1/",pattern="homeRangeStructure", full.names = T))
+  file.remove(list.files(path="instance_1/",pattern="socialStructure", full.names = T)) 
+  file.remove(list.files(path="instance_1/",pattern="spatialStructure", full.names = T))
+  
+  #save output every 10 runs
+  if(i%%10==0)save(outputs_all, file = "test_env_depletionVar_sept27b_2023.RData")
+  
+}
+
+colnames(outputs_all) <- c("hr", "hr_sd","hr_low","hr_high","spa_clus","spa_clus_sd","spa_deg","spa_deg_sd","spa_str","spa_str_sd","spa_cos","spa_cos_sd","soc_clus","soc_clus_sd","soc_deg","soc_deg_sd","soc_str","soc_str_sd","soc_cos","soc_cos_sd", "par_bearingW","par_foodWeight","par_socWeight","endTime", "par_envHeter", "par_socDecay", "par_socGrow", "par_refDecay", "par_workDecay","par_famMax","par_famMin", "par_juveAge", "par_resGrowth", "turnover_inds","turnover_time", "par_homeBias", "par_depletion","par_empty","par_depletion_sd","par_lgrow", "cor_hr_deg", "cor_hr_deg_spa", "cor_hr_depletion","rpt_degree_noHR","rpt_degree","rpt_hr_noDEGREE","rpt_hr","rpt_clus_noHR","rpt_clus","rpt_clus_spa_noHR","rpt_degree_spa_noHR","plas_degree", "plas_hr","plas_hr_clus","eff_mean","eff_sd","eff_ci_low","eff_ci_high")
+
+
+outputs_all
+save(outputs_all, file = "test_env_depletionVar_sept27b_2023.RData")
+```
+
+
+Running the simulation by varying juvenile induction params
+```{r}
+
+#range of growth rates to try
+pars_to_try <- data.frame(juve_period=c(100,3000), familiarity_rate = c(0.1,0.001) )
+
+#create replicates for each pair of parameters
+for(i in 1:10) pars_to_try <- pars_to_try %>% bind_rows(pars_to_try) #dupicate the dataframe i.e. replicates to run
+
+#randomize order (in case i'd like to stop early)
+pars_to_try <- pars_to_try[sample(1:nrow(pars_to_try) ),]
+
+#create a dataframe to store the results
+outputs_all_juve <- data.frame()
+
+#run the simulations
+for(i in 1:nrow(pars_to_try) ){
+  
+  #set the parameters
+  params.opt <- c(1, #social weight
+                  1, #env hetero
+                  0.0001, #indiv decay
+                  pars_to_try[i,2], #indiv grow
+                  0.0001, #patch ref mem decay
+                  0.01, #patch work mem decay
+                  pars_to_try[i,1], #age ind turns to adult
+                  0.0001, #resource regrowth
+                  10, #how many ind turnover
+                  2000, #how frequent are turnovers
+                  1, #home bias
+                  0.01, #depletion rate
+                  0.0, #sd in metabolism
+                  pars_to_try[i,2]
+  )
+  
+  #place variables in order for simulation
+  params.final.opt <- matrix(nrow = 1, ncol=20)
+  params.final.opt[,1]<- 0.0 #bearing weight  
+  params.final.opt[,2]<- 1.0 #foodW           
+  params.final.opt[,3]<- params.opt[1] #socialW
+  params.final.opt[,4]<- 50000 #end time
+  params.final.opt[,5]<- params.opt[2] #envHetero #####################################
+  params.final.opt[,6]<- params.opt[3] #iDecay
+  params.final.opt[,7]<- params.opt[4]  #iGrow
+  params.final.opt[,8]<- params.opt[5] #lDecay reference mem
+  params.final.opt[,9]<- params.opt[6] #params.opt[7] #lDecay working mem
+  params.final.opt[,10]<- 0.999 #FamMaxInd
+  params.final.opt[,11]<- 0.001 #FamMinInd
+  params.final.opt[,12]<- params.opt[7] #age juve turns into an adult
+  params.final.opt[,13]<- params.opt[8] #regrowth
+  params.final.opt[,14]<- params.opt[9] #turnover
+  params.final.opt[,15]<- params.opt[10] #time until turnover
+  params.final.opt[,16]<- params.opt[11] #home bias
+  params.final.opt[,17]<- params.opt[12] #depletion rate
+  params.final.opt[,18]<- 0.0 #empty!?
+  params.final.opt[,19]<- params.opt[13]  #depletion rate sd. 
+  params.final.opt[,20]<- params.opt[14]  #lgrow familiarity growth towards cells
+  
+  simulate.formation(params.final.opt[1,])
+  outputs <- calculate.measures(params.final.opt[1,])
+  
+  outputs_all_juve <- bind_rows(outputs_all_juve, as.data.frame(t(outputs)) )
+  
+  file.remove(list.files(path="instance_1/",pattern="homeRangeStructure", full.names = T))
+  file.remove(list.files(path="instance_1/",pattern="socialStructure", full.names = T)) 
+  file.remove(list.files(path="instance_1/",pattern="spatialStructure", full.names = T))
+  
+  #save output every 10 runs
+  if(i%%10==0)save(outputs_all_juve, file = "test_juvePeriods_sept24_2023.RData")
+  
+}
+
+colnames(outputs_all_juve) <- c("hr", "hr_sd","hr_low","hr_high","spa_clus","spa_clus_sd","spa_deg","spa_deg_sd","spa_str","spa_str_sd","spa_cos","spa_cos_sd","soc_clus","soc_clus_sd","soc_deg","soc_deg_sd","soc_str","soc_str_sd","soc_cos","soc_cos_sd", "par_bearingW","par_foodWeight","par_socWeight","endTime", "par_envHeter", "par_socDecay", "par_socGrow", "par_refDecay", "par_workDecay","par_famMax","par_famMin", "par_juveAge", "par_resGrowth", "turnover_inds","turnover_time", "par_homeBias", "par_depletion","par_empty","par_depletion_sd","par_lgrow", "cor_hr_deg","cor_hr_deg_spa", "cor_hr_depletion","rpt_degree_noHR","rpt_degree","rpt_hr_noDEGREE","rpt_hr","rpt_clus_noHR","rpt_clus","rpt_clus_spa_noHR","rpt_degree_spa_noHR","plas_degree", "plas_hr","plas_hr_clus","eff_mean","eff_sd","eff_ci_low","eff_ci_high")
+
+
+outputs_all_juve
+#save(outputs_all_juve, file = "test_juvePeriods_sept24_2023.RData")
+```
+
+

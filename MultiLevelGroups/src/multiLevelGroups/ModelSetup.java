@@ -12,6 +12,7 @@ import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 
 import cern.jet.random.Distributions;
+import cern.jet.random.Normal;
 import cern.jet.random.engine.MersenneTwister;
 import cern.jet.random.engine.RandomEngine;
 import repast.simphony.context.Context;
@@ -35,6 +36,8 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	public static ArrayList<Cell> cellsToProcess;
 	public static ArrayList<Cell> removeCellsToProcess;
 	public static ArrayList<OMU> allOMUs;
+	public static int id_count;
+	public static Normal depletion_dist;
 
 
 	public Context<Object> build(Context<Object> context){
@@ -51,10 +54,12 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		geog=null;
 		mainContext = context; //static link to context
 		resAdded=0;
+		id_count=0;
 		allCells = new ArrayList<Cell>();
 		cellsToProcess = new ArrayList<Cell>();
 		removeCellsToProcess = new ArrayList<Cell>();
 		allOMUs = new ArrayList<OMU>();
+		depletion_dist = RandomHelper.createNormal(Params.depletionRate/10, Params.depletionSD); //agent internal energy depletion is 10 times less than energy depletion in the environment. Can take one "bite" and it will last the agent 10 steps.
 
 
 
@@ -139,16 +144,19 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		Cell center = allCells.get(0);
 		for (int j = 0; j < Params.numbOMU; j++){
 
-			int randId = RandomHelper.nextIntFromTo(1, allCells.size());
+			int randId = RandomHelper.nextIntFromTo(0, allCells.size()-1);
 			Coordinate coord = allCells.get(randId).getCoord();
 			//Coordinate coord = center.getCoord();
-			OMU group = new OMU(coord);
+			OMU group = new OMU(coord,id_count);
+			id_count++;
 			allOMUs.add(group);
 			context.add(group);
 			Point geom = fac.createPoint(coord);
 			geog.move(group, geom);
 
 		}
+		
+		System.out.println("Done adding cells");
 
 		/************************************
 		 * 							        *
@@ -188,7 +196,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		ScheduleParameters agentStepParams = ScheduleParameters.createRepeating(1, 1, 1);
 		schedule.schedule(agentStepParams,executor,"updateCells");
 		
-		ScheduleParameters agentStepCParams = ScheduleParameters.createRepeating(1, Params.turnover_time, 1);
+		ScheduleParameters agentStepCParams = ScheduleParameters.createRepeating(Params.turnover_time, Params.turnover_time, 1);
 		schedule.schedule(agentStepCParams,executor,"populationTurnover");
 		
 		ScheduleParameters agentStepEParams = ScheduleParameters.createRepeating(Params.spatialAssoStartTime, 100, 1);
@@ -208,23 +216,24 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	
 	//used to set total resources in the model
 	private void setTotalResources(int numbCells){
-			//calculate the percent difference between the total resource level now and the target level
-			double targetRes = numbCells*Params.foodDensity;
-			double perDiff = resAdded / targetRes;
-			System.out.println("conversion = "+perDiff);
-			double newTotal=0;
-			int count=0;
 
-			//Divide each resource by the percent difference to make the total equal the target resource amount
-			for (Cell c : this.getAllCells()){
-				c.setMaxResourceLevel(c.getMaxResourceLevel()/perDiff);
-				c.setResourceLevel(c.getResourceLevel()/perDiff);
-				newTotal = newTotal + c.getResourceLevel();
-				count++;
-			}
-			
-			System.out.println("total amount of food added = "+ resAdded + ",  updated to = " + newTotal);
+		//calculate the percent difference between the total resource level now and the target level
+		double targetRes = numbCells*Params.foodDensity;
+		double perDiff = resAdded / targetRes;
+		System.out.println("conversion = "+perDiff);
+		double newTotal=0;
+		int count=0;
+
+		//Divide each resource by the percent difference to make the total equal the target resource amount
+		for (Cell c : this.getAllCells()){
+			c.setMaxResourceLevel(c.getMaxResourceLevel()/perDiff);
+			c.setResourceLevel(c.getResourceLevel()/perDiff);
+			newTotal = newTotal + c.getResourceLevel();
+			count++;
 		}
+
+		System.out.println("total amount of food added = "+ resAdded + ",  updated to = " + newTotal);
+	}
 
 
 	/*******************************************get and set methods***********************************************/
@@ -232,6 +241,10 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	public static ArrayList<OMU> getAllOMUs(){
 		Collections.shuffle(allOMUs);
 		return allOMUs;		
+	}
+	
+	public static void removeOMU(OMU allind){
+		allOMUs.remove(allind);
 	}
 
 	public static ArrayList<Cell> getAllCells(){
@@ -256,6 +269,9 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	}
 	public static Context getContext(){
 		return mainContext;
+	}
+	public static double getDepletionRate() {
+		return (Math.abs(depletion_dist.nextDouble())); 
 	}
 
 }

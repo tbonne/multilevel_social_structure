@@ -121,69 +121,76 @@ public class Executor {
 		//remove those individuals
 		for(OMU ind : indsToRemove){
 			ModelSetup.getContext().remove(ind);
-			ModelSetup.getAllOMUs().remove(ind);
+			ModelSetup.removeOMU(ind);
 		}
 		
 		//get female individuals to give birth
 		int count = 0, row=0;
 		while(count < Params.turnover && row<allInds.size()){
-			if(allInds.get(row).sex == 1){
+			//if(allInds.get(row).sex == 1){
 				indsToBirth.add(allInds.get(row));
 				count++;
-			}
+			//}
 			row++;
 		}
 		
 		//selected female individuals reproduce
 		for(OMU ind : indsToBirth){
-			OMU newInd = new OMU(ind.getMyCoord(),ind);
+			OMU newInd = new OMU(ind.getMyCoord(),ind, ModelSetup.id_count);
+			ModelSetup.id_count++;
 			ModelSetup.getContext().add(newInd);
 			ModelSetup.getAllOMUs().add(newInd);
 			Point geom = fac.createPoint(ind.getMyCoord());
 			ModelSetup.getGeog().move(newInd, geom);
 		}
 		
+		//Record network patterns to date
+		allInds = ModelSetup.getAllOMUs();
+		Observer.recordInfluencePatterns(allInds);
+		Observer.recordSpatialPatterns(allInds);
+		Observer.recordHomeRangePatterns(allInds);
+		
+		System.out.println("Turnover");
+		
 	}
 	
 	public static void spatialAssociations(){
-		
+
 		ArrayList<OMU> allInds = ModelSetup.getAllOMUs();
-		
+
 		for(OMU focal : allInds){
-			
+
 			for(OMU other: allInds){
-				
+
 				if(focal.getMyCoord().distance(other.myCoord)<Params.spatialRangeAsso && focal != other){
-					
+
 					if(focal.getSpatialAssoInds().contains(other)){
-						
+
 						int indexOfOther = focal.getSpatialAssoInds().indexOf(other);
 						int valueOfOther = focal.getSpatialAssoVal().get(indexOfOther);
-						
+
 						focal.getSpatialAssoVal().set(indexOfOther,valueOfOther+1);
-						
+
 					} else {
-						
+
 						focal.getSpatialAssoInds().add(other);
 						focal.getSpatialAssoVal().add(1);
-						
+
 					}
-					
 				}
 			}
-			
-			
-			
 		}
-		
-		
-		
 	}
-
+	
+	
+	
 	public static void endModel(){
 
-		Observer.recordInfluencePatterns();
-		Observer.recordSpatialPatterns();
+		//Observer.recordInfluencePatterns();
+		//Observer.recordSpatialPatterns();
+		//Observer.recordHomeRangePatterns();
+		Observer.recordHomeRangeOverlap(ModelSetup.getAllOMUs());
+		System.exit(0); //kills the program
 
 	}
 
