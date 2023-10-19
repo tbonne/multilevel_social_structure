@@ -18,11 +18,12 @@
     <fullyQualifiedTypeName name="com.vividsolutions.jts.geom.Point"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
-    <fullyQualifiedTypeName name="multiLevelGroups.Params"/>
     <fullyQualifiedTypeName name="com.thoughtworks.xstream.mapper.SystemAttributeAliasingMapper"/>
     <fullyQualifiedTypeName name="java.util.logging.Level"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.formula.functions.Now"/>
     <fullyQualifiedTypeName name="org.piccolo2d.extras.util.Points"/>
-    <fullyQualifiedTypeName name="multiLevelGroups.ModelSetup"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="multiLevelGroups.Params"/>
+    <fullyQualifiedTypeName name="cern.jet.random.Normal"/>
+    <fullyQualifiedTypeName name="multiLevelGroups.ModelSetup"/>
 </qualifiedTypeNameHistroy>

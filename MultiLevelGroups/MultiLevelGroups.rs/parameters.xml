@@ -56,6 +56,10 @@
 		type="java.lang.Double" defaultValue="0.1" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 		
+	<parameter name="lGrow" displayName="Familiar growth: individuals"
+		type="java.lang.Double" defaultValue="0.1" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+		
 	<parameter name="iDecay" displayName="Familiar decay: individuals"
 		type="java.lang.Double" defaultValue="0.01" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />

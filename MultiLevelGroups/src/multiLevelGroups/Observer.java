@@ -132,6 +132,7 @@ public class Observer {
 	//this will export home range sizes of all individuals
 	public static void recordHomeRangePatterns(ArrayList<OMU> agents ){  
 
+		
 		//get all individuals
 		/*Iterable<OMU> allAgents = ModelSetup.getContext().getAgentLayer(OMU.class);
 		List<OMU> allAgentsOrdered = new ArrayList<OMU>();
@@ -146,6 +147,8 @@ public class Observer {
 		String[] hr_id = new String[ModelSetup.id_count];
 		double[] depletionRates = new double[ModelSetup.id_count];
 		int[] inds = new int[ModelSetup.id_count];
+		double[] eff = new double[ModelSetup.id_count];
+		
 		
 		int index_i = 0;
 
@@ -156,15 +159,15 @@ public class Observer {
 			hr_id[index_i] = focal.name;
 			depletionRates[index_i] = focal.myDepletionRate;
 			inds[index_i] = focal.getSocailAssoInds().size();
-			
+			eff[index_i] = focal.getEfficiency();
 			
 			index_i = index_i + 1;
 			
-			System.out.println("home range size: "+ focal.getHomeRangeSize());
+			//System.out.println("home range size: "+ focal.getHomeRangeSize());
 		}
 
 		//print the spatial association matrix
-		printCSV_homeRange(hr,hr_id,depletionRates,inds, agents.size());
+		printCSV_homeRange(hr,hr_id,depletionRates,inds,eff, agents.size());
 
 	}
 	
@@ -450,7 +453,7 @@ public class Observer {
 	}
 	
 	
-	public static void printCSV_homeRange(double[] hr,String[] hr_id,double[] depletionRates, int[] inds, int size){
+	public static void printCSV_homeRange(double[] hr,String[] hr_id,double[] depletionRates, int[] inds, double[] eff, int size){
 
 		try
 		{
@@ -465,6 +468,10 @@ public class Observer {
 					writer.append(String.valueOf(depletionRates[i]) );
 					writer.append(',');
 					writer.append(String.valueOf(inds[i]) );
+					writer.append(',');
+					writer.append(String.valueOf(eff[i]) );
+					writer.append(',');
+					writer.append(String.valueOf(RunEnvironment.getInstance().getCurrentSchedule().getTickCount() ) );
 					writer.newLine();
 			}
 			

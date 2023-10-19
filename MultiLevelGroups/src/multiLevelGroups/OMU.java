@@ -44,6 +44,8 @@ public class OMU {
 	//double my_hunger;
 	double energy;
 	double myDepletionRate;
+	double distanceTraveled;
+	double foodIntake;
 
 
 	/****************************OMU Construction************************/
@@ -74,6 +76,8 @@ public class OMU {
 		behaviour_adjustment=0.01;
 		non_forage_effort = 1;
 		energy = 0.0;
+		distanceTraveled=0.0;
+		foodIntake=0;
 		positions = new ArrayList<double[]>();
 		myDepletionRate = ModelSetup.getDepletionRate();
 		
@@ -113,6 +117,8 @@ public class OMU {
 		behaviour_adjustment=0.01;
 		non_forage_effort = 1;
 		energy = 0.0;
+		distanceTraveled=0.0;
+		foodIntake=0;
 		positions = new ArrayList<double[]>();
 		myDepletionRate = ModelSetup.getDepletionRate();
 		
@@ -323,7 +329,7 @@ public class OMU {
 			
 			double weight = (1-c.getMemW(this))*c.getMemR(this)*( remembered_food_max/(distance_home ) );  /// (Params.cellSize*2.0)
 			
-			if(distance_home > Params.visualSearchRange) { //
+			if(distance_home > Params.foodSearchRange) { //
 				
 				//System.out.println("MEMwork "+c.getMemW(this)+"  MEMref "+ c.getMemR(this)+ "  dist "+distance_home+" remeFood "+remembered_food_max + "  weight "+ weight);
 				
@@ -540,8 +546,10 @@ public class OMU {
 	private void move(){
 		if(age<Params.juveAge){
 			ModelSetup.getGeog().moveByDisplacement(this, this.motherAgent.myTravelVector.getEntry(0), this.motherAgent.myTravelVector.getEntry(1));
+			distanceTraveled = distanceTraveled + Math.sqrt( Math.pow(this.motherAgent.myTravelVector.getEntry(0),2) + Math.pow(this.motherAgent.myTravelVector.getEntry(1),2) );
 		} else {
 			ModelSetup.getGeog().moveByDisplacement(this, myTravelVector.getEntry(0), myTravelVector.getEntry(1));
+			distanceTraveled = distanceTraveled + Math.sqrt( Math.pow(myTravelVector.getEntry(0),2) + Math.pow(myTravelVector.getEntry(1),2) );
 		}
 	}
 
@@ -597,6 +605,9 @@ public class OMU {
 				//update energy
 				energy = energy + bite;
 				
+				//update total amount of food acquired
+				foodIntake = foodIntake + bite;
+				
 				//update desired number of social partners
 				adjust_numb_familiar(bite);
 			}
@@ -609,6 +620,8 @@ public class OMU {
 			
 			//Adjust energy levels
 			energy = energy - myDepletionRate;
+			
+			//System.out.println("My depletion rate "+ myDepletionRate);
 		}
 
 	}
@@ -626,7 +639,7 @@ public class OMU {
 		//
 		//if(energy < 0.0) {
 
-		if(bite<Params.depletionRate) {
+		if(bite<Params.depletionRate | energy < 0.0) {
 			//safeNeighboursReduction = Math.max(safeNeighboursReduction+1, familiarOMUs.size()-1);
 			non_forage_effort = Math.max(non_forage_effort-behaviour_adjustment, 0);
 			//	} //debugging here need to figure out if the neighbour size is changing the way it should
@@ -651,7 +664,7 @@ public class OMU {
 		//adjust familiarity growth based on adult
 		double learning_rate_decrease_adult = 0.0;
 		if(this.age>Params.juveAge) {
-			learning_rate_decrease_adult = 0.99;
+			learning_rate_decrease_adult = 0.0;//0.90;//0.99;
 		}
 		
 		//increase familiarity with those in range
@@ -820,6 +833,17 @@ public class OMU {
 	}
 	public double getEnergy() {
 		return energy;
+	}
+	public double getEfficiency() {
+		
+		//Calculate efficiency
+		double eff = foodIntake/distanceTraveled;
+		
+		//Return values to zero
+		distanceTraveled = 0.0;
+		foodIntake = 0.0;
+		
+		return eff;
 	}
 	
 

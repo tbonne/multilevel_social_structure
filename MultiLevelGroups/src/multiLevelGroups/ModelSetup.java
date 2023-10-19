@@ -59,7 +59,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		cellsToProcess = new ArrayList<Cell>();
 		removeCellsToProcess = new ArrayList<Cell>();
 		allOMUs = new ArrayList<OMU>();
-		depletion_dist = RandomHelper.createNormal(Params.depletionRate, Params.depletionSD);
+		depletion_dist = RandomHelper.createNormal(Params.depletionRate/10, Params.depletionSD); //agent internal energy depletion is 10 times less than energy depletion in the environment. Can take one "bite" and it will last the agent 10 steps.
 
 
 
@@ -216,23 +216,24 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 	
 	//used to set total resources in the model
 	private void setTotalResources(int numbCells){
-			//calculate the percent difference between the total resource level now and the target level
-			double targetRes = numbCells*Params.foodDensity;
-			double perDiff = resAdded / targetRes;
-			System.out.println("conversion = "+perDiff);
-			double newTotal=0;
-			int count=0;
 
-			//Divide each resource by the percent difference to make the total equal the target resource amount
-			for (Cell c : this.getAllCells()){
-				c.setMaxResourceLevel(c.getMaxResourceLevel()/perDiff);
-				c.setResourceLevel(c.getResourceLevel()/perDiff);
-				newTotal = newTotal + c.getResourceLevel();
-				count++;
-			}
-			
-			System.out.println("total amount of food added = "+ resAdded + ",  updated to = " + newTotal);
+		//calculate the percent difference between the total resource level now and the target level
+		double targetRes = numbCells*Params.foodDensity;
+		double perDiff = resAdded / targetRes;
+		System.out.println("conversion = "+perDiff);
+		double newTotal=0;
+		int count=0;
+
+		//Divide each resource by the percent difference to make the total equal the target resource amount
+		for (Cell c : this.getAllCells()){
+			c.setMaxResourceLevel(c.getMaxResourceLevel()/perDiff);
+			c.setResourceLevel(c.getResourceLevel()/perDiff);
+			newTotal = newTotal + c.getResourceLevel();
+			count++;
 		}
+
+		System.out.println("total amount of food added = "+ resAdded + ",  updated to = " + newTotal);
+	}
 
 
 	/*******************************************get and set methods***********************************************/
@@ -270,7 +271,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		return mainContext;
 	}
 	public static double getDepletionRate() {
-		return (depletion_dist.nextDouble()); 
+		return (Math.abs(depletion_dist.nextDouble())); 
 	}
 
 }

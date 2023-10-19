@@ -163,7 +163,7 @@ public class Cell {
 
 	public void updateFam(OMU omu, Boolean reference_only){
 
-		//if already in the array increase value
+		//if already in the array: increase value
 		if(familiarityIDs.contains(omu)){
 
 			int  i = familiarityIDs.indexOf(omu);
@@ -181,11 +181,11 @@ public class Cell {
 			familiarityIDs.add(omu);
 			
 			//familiarityValues.add(0.999); //increase reference memory
-			double f = 0.001*2; // decay will happen the same step so *2 ensures the cell will be remembered
+			double f = 0.0011; // decay will happen the same step so 0.0001 ensures the cell will be remembered
 			f = Math.min( (f + ((Params.lGrow) * (1-f)*f) ),Params.famMaxCell);
 			familiarityValues.add(f);
 			
-			familiarityValues_work.add(0.001); //never seen before so working memory is zero
+			familiarityValues_work.add(0.0011); //never seen before so working memory is zero
 			omu.addFamilarFood(this);
 		
 		}

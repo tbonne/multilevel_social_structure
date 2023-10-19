@@ -88,7 +88,7 @@ public class Params {
 			homeWeight = (Double)p.getValue("homeWeight");
 
 			juveAge = (Integer)p.getValue("juveAge");
-			
+			lGrow= (Double)p.getValue("lGrow");
 			lDecay= (Double)p.getValue("lDecay");
 			lDecay_work= (Double)p.getValue("lDecay");
 			iGrow= (Double)p.getValue("iGrow");
@@ -133,6 +133,7 @@ public class Params {
 					depletionRate = Double.parseDouble(param_list.get(16));
 					//regrowthRate = Double.parseDouble(param_list.get(17));
 					depletionSD = Double.parseDouble(param_list.get(18));
+					lGrow = Double.parseDouble(param_list.get(19));
 
 				}
 			} catch (FileNotFoundException error) {
@@ -140,9 +141,6 @@ public class Params {
 			} catch (IOException error) {
 				System.out.println("no manuall params file used!");
 			}
-
-			
-			
 		}
 	
 }
