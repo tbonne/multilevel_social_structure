@@ -1,46 +1,9 @@
 Development of social structures
 ================
-Tyler Bonnell
-April 26, 2017
 
-Modeling the development of multilevel social structures
+This repository contains the code and simulated data for the following manuscript:
+
+Memory keeps you at home and within a social group: a mechanistic movement model of social network emergence
 --------------------------------------------------------
 
-Social animals show a great variety of structuring. The arrival at any one particular expression of social structure is thought to be through the interaction between species specific behavioural traits and environmental context in which the species is found. We use the simulation framework developed here to make predictions about the development of social structures under alternative behavioural and ecological contexts.
-
-The simulations are based on a movement model proposed by Van Moorter et al (2009). In which individuals show movement bias for familiar sites. We extend this model to also allow for movement bias towards familiar individuals. By altering our assumptions about the growth/decay of familiarity towards landscape cells and individuals we produce predictions about the development of social structures.
-
-### Parameters:
-
--   **The movement model requires four parameters:**
-    -   Weight of previous bearing on movement
-    -   Weight of landscape cells on movement
-    -   Weight of individuals on movement
-    -   Relative weight of familiar sites (i.e., how familiar is it?) Vs. valuable sites (i.e., amount food/distance)
--   **The familiarization model requires two parameters:**
-    -   Growth/Decay of familiarization towards individuals
-    -   Growth/Decay of familiarization towards landscape cells
-
-### Model visual
-
-Below is a few examples of model runs:
-
--   Individuals with no familiarization for either cells or individuals, producing wide ranging and randomly spatially associating with other individuals.
-
-
-https://github.com/tbonne/multilevel_social_structure/blob/master/Simulated_data_results/Video_15000.mov
-
-
--   Individuals develop familiarization for cells only, producing home range like behaviour.
-
-<img src="Figs/multi_soc_2b.gif" title="Simulation 2" height="500" />
-
--   Individuals develop familiarization only for individuals, producing larger groups based on random spatial associations.
-
-<img src="Figs/multi_soc_3b.gif" title="Simulation 3" height="500" />
-
-### Model outputs
-
--   The output from the model is an association matrix capturing the familarization between individuals. Note: this example network was taken for the case where individuals develop familiarization with others (last example from above) resulting in three groups, where two group are linked by individual 'V1'.
-
-<img src="Figs/multi_soc_output_b.png" title="Output from simulation 2" width="500" />
+Abstract:    While the development of social systems has been attributed to both the physical environment and behavioural characteristics of a species, it is unknown to what extent they interact to produce emergent social structures. To model the development of social structures we extend an existing cognitive movement model to allow for social interactions. We use this cognitive movement model to quantify the variation within spatial and social phenotypes that emerge for a typical social forager. We then alter the distribution of resources, individual metabolisms, the magnitude of juvenile induction, and tested predictions about the impacts of these alterations on spatial and social phenotypes. We found that most of our predictions were not supported: individual differences in metabolism and patchier landscapes did not lead to increased individual differences in spatial or social phenotypes. We did, however, find that when juvenile induction was increased, consistent individual differences in spatial phenotypes did increase, but not for social phenotypes. We suggest that cognitive movement models, where learning is directly incorporated into movement and social behaviours, can provide a needed aid to intuition, help interpret empirical results, and drive theoretical developments at the spatial-social interface.
