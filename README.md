@@ -27,7 +27,7 @@ Below is a few examples of model runs:
 
 -   Individuals with no familiarization for either cells or individuals, producing wide ranging and randomly spatially associating with other individuals.
 
-<img src="Figs/multi_soc_1b.gif" title="Simulation 1" height="500" />
+<img src="Simulated_data_results/Video_15000.mov" title="Simulation 1" height="500" />
 
 -   Individuals develop familiarization for cells only, producing home range like behaviour.
 
