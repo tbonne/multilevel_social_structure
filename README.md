@@ -16,8 +16,8 @@ At 15000 steps
 
 
 https://github.com/tbonne/multilevel_social_structure/assets/15638723/ed74f68f-1f20-40f3-a03f-e2df3ad60565
+![](https://github.com/tbonne/multilevel_social_structure/blob/master/Figs/test6_new.gif)
 
-https://github.com/tbonne/multilevel_social_structure/blob/master/Figs/test6_new.gif
 
 At 30000 steps
 
