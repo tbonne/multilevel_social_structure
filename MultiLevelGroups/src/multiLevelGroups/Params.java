@@ -35,7 +35,7 @@ public class Params {
 	public final static int cellSize = 30;
 	public static double regrowthRate = 0.001;
 	public static double depletionRate = 0.01;
-	public static double foodDensity = 1.0;
+	public static double foodDensity = 0.50;
 	public static double ideal_energy=0;
 	
 	//OMU population
@@ -69,6 +69,7 @@ public class Params {
 	public static double famMaxInd = 0.999;
 	public static double errorInd = 0.001;
 	public static double depletionSD = 0.0;
+	public static double diff_IndEat_CellGrow = 10.0;
 	
 	//Observer
 	public static int spatialRangeAsso = 100;
@@ -113,6 +114,8 @@ public class Params {
 
 					List<String> param_list = mParams.get(0);
 					
+					System.out.println(param_list);
+					
 					bearingWeight= Double.parseDouble(param_list.get(0));
 					foodWeight= Double.parseDouble(param_list.get(1));
 					socialWeight = Double.parseDouble(param_list.get(2));
@@ -141,6 +144,8 @@ public class Params {
 			} catch (IOException error) {
 				System.out.println("no manuall params file used!");
 			}
+			
+			System.out.println("new params? "+ lDecay_work);
 		}
 	
 }

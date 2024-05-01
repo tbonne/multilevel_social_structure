@@ -46,6 +46,7 @@ public class OMU {
 	double myDepletionRate;
 	double distanceTraveled;
 	double foodIntake;
+	Cell chosenFoodSource;
 
 
 	/****************************OMU Construction************************/
@@ -63,6 +64,7 @@ public class OMU {
 		spatialAssoInds = new ArrayList<OMU>();
 
 		myTravelVector = new ArrayRealVector(2);
+		chosenFoodSource = null;
 
 		//nd = new NormalDistribution(0,Params.errorInd);
 		motherAgent = null;
@@ -104,7 +106,8 @@ public class OMU {
 		spatialAssoInds = new ArrayList<OMU>();
 
 		myTravelVector = new ArrayRealVector(2);
-
+		chosenFoodSource = null;
+		
 		//nd = new NormalDistribution(0,Params.errorInd);
 		motherAgent = mother;
 		sex = RandomHelper.nextInt();
@@ -206,6 +209,38 @@ public class OMU {
 	 * 
 	 * 
 	 * ************************/
+	
+	public static int selectIndex(ArrayList<Double> weights) {
+		
+		// Normalize weights
+		double totalWeight = 0.0;
+		for (Double weight : weights) {
+			totalWeight += weight;
+		}
+
+		ArrayList<Double> normalizedWeights = new ArrayList<>();
+		for (Double weight : weights) {
+			normalizedWeights.add(weight / totalWeight);
+		}
+
+		// Calculate cumulative sum
+		ArrayList<Double> cumulativeSum = new ArrayList<>();
+		double sum = 0.0;
+		for (Double normalizedWeight : normalizedWeights) {
+			sum += normalizedWeight;
+			cumulativeSum.add(sum);
+		}
+
+		// Generate a random number and find the corresponding index
+		double random = Math.random();
+		for (int i = 0; i < cumulativeSum.size(); i++) {
+			if (random < cumulativeSum.get(i)) {
+				return i; // Found the index
+			}
+		}
+
+		return -1; // Shouldn't happen if weights were non-negative and not all zero
+	}
 
 
 	private void calculateMoveCoordVM(ArrayList<Cell> foodSites, ArrayList<OMU> inds){
@@ -256,7 +291,7 @@ public class OMU {
 			//if patch is directly visible 
 			if(distance <= (Params.foodSearchRange)) {
 				
-				 weight = ( c.getResourceLevel()/(distance/(Params.cellSize*2.0) ) );//
+				 weight = ( c.getResourceLevel()/(distance/(Params.cellSize*2) ) );//
 				 
 				 //Add to utility weight to array
 				 weights.add(weight);
@@ -277,21 +312,74 @@ public class OMU {
 		
 
 		//standardize the patch weights to sum to one
-		ArrayList<Double> weightsStan = new ArrayList<Double>();
-		for(Double d : weights){
-			weightsStan.add( Math.pow(d/sum,1) );
-		}
+		//ArrayList<Double> weightsStan = new ArrayList<Double>();
+		//for(Double d : weights){
+		//	weightsStan.add( Math.pow(d/sum,1) );
+		//}
 
 		//calculate the avg direction 
+		//RealVector avgFoodVector = new ArrayRealVector(2);
+		//for(int i = 0 ; i< weights.size();i++){
+		//	avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weightsStan.get(i))); //weightsStan  weights
+		//}
+		
+		
+		//Choose a food source
 		RealVector avgFoodVector = new ArrayRealVector(2);
-		for(int i = 0 ; i< weights.size();i++){
-			avgFoodVector = avgFoodVector.add(directions.get(i).mapMultiply(weightsStan.get(i))); //weightsStan  weights
+		int new_chosen_index=0;
+		int old_chosen_index=0;
+		
+		try {
+		
+		
+		if(this.chosenFoodSource == null || !foodSites.contains(this.chosenFoodSource)) {
+			
+			//use weighted probability to choose
+			new_chosen_index = selectIndex(weights);
+			
+			this.chosenFoodSource = foodSites.get(new_chosen_index);
+			avgFoodVector = directions.get(new_chosen_index);
+			
+		} else {
+			
+			//use weighted probability to choose a new index
+			new_chosen_index = selectIndex(weights);
+			old_chosen_index = foodSites.indexOf(this.chosenFoodSource);
+			
+			//Check if a new site is better
+			if (old_chosen_index == -1 || weights.get(old_chosen_index) < weights.get(new_chosen_index) ) {
+				
+				//new site is better change targeted food source
+				avgFoodVector = directions.get(new_chosen_index);
+				
+				//update the target
+				this.chosenFoodSource = foodSites.get(new_chosen_index);
+
+				
+			} else {
+				
+				//the old site is better.. stay on target
+				avgFoodVector = directions.get(old_chosen_index);
+			}
+			
+			
+			
 		}
+		
 
 		//add to myVector
 		//if((avgFoodVector.getEntry(0)==0 && avgFoodVector.getEntry(1)==0)==false)avgFoodVector.unitize();
 		avgFoodVector = avgFoodVector.mapMultiply(Params.foodWeight);
-		myVector = myVector.add(avgFoodVector);
+		
+		double current_distance = Math.max(1,  this.chosenFoodSource.getCoord().distance(this.getMyCoord()));
+		if(current_distance>(Params.maxDistPerStep*2.0)) {
+			myVector = myVector.add(avgFoodVector);
+		}
+		
+		
+		} catch (IndexOutOfBoundsException ee) {
+			System.out.println("something "+new_chosen_index);
+		}
 		
 		
 		/********************Home effects**********************/
@@ -532,7 +620,8 @@ public class OMU {
 		}
 
 		//multiply by movement scale and set travel information
-		myTravelVector = finalVector.mapMultiply(Params.maxDistPerStep);
+		myTravelVector = myVector;
+		//myTravelVector = finalVector.mapMultiply(Params.maxDistPerStep);
 
 		//record current vector as previous vector for next movements
 		this.setPreviousBearing(myTravelVector);
@@ -594,6 +683,11 @@ public class OMU {
 		//If i'm in a food cell eat and update familiarity
 		if(myCell!=null){
 			
+			//Add to my home range
+			if(homeRange.contains(myCell)==false) {
+				homeRange.add(myCell);
+			}
+			
 			//chance of eating is based on how hungry i am
 			double energey_scale = Math.max(Math.min(energy, 5),-5); //times 10 here speeds the changes up... depletion is currently around 0.01
 			double prob_eat = 1 - Math.exp(energey_scale)/(1+Math.exp(energey_scale)) ; 
@@ -614,12 +708,10 @@ public class OMU {
 			
 			//update memory of this cell
 			myCell.updateFam(this, false);
-			if(homeRange.contains(myCell)==false) {
-				homeRange.add(myCell);
-			}
+			
 			
 			//Adjust energy levels
-			energy = energy - myDepletionRate;
+			energy = energy - myDepletionRate / Params.diff_IndEat_CellGrow;
 			
 			//System.out.println("My depletion rate "+ myDepletionRate);
 		}
@@ -639,7 +731,7 @@ public class OMU {
 		//
 		//if(energy < 0.0) {
 
-		if(bite<Params.depletionRate | energy < 0.0) {
+		if(bite<myDepletionRate | energy < 0.0) {
 			//safeNeighboursReduction = Math.max(safeNeighboursReduction+1, familiarOMUs.size()-1);
 			non_forage_effort = Math.max(non_forage_effort-behaviour_adjustment, 0);
 			//	} //debugging here need to figure out if the neighbour size is changing the way it should
@@ -837,7 +929,7 @@ public class OMU {
 	public double getEfficiency() {
 		
 		//Calculate efficiency
-		double eff = foodIntake/distanceTraveled;
+		double eff = foodIntake/(distanceTraveled+1);
 		
 		//Return values to zero
 		distanceTraveled = 0.0;

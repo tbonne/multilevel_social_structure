@@ -59,7 +59,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		cellsToProcess = new ArrayList<Cell>();
 		removeCellsToProcess = new ArrayList<Cell>();
 		allOMUs = new ArrayList<OMU>();
-		depletion_dist = RandomHelper.createNormal(Params.depletionRate/10, Params.depletionSD); //agent internal energy depletion is 10 times less than energy depletion in the environment. Can take one "bite" and it will last the agent 10 steps.
+		depletion_dist = RandomHelper.createNormal(0, Params.depletionSD); //agent internal energy depletion is 10 times less than energy depletion in the environment. Can take one "bite" and it will last the agent 10 steps.
 
 
 
@@ -271,7 +271,7 @@ public class ModelSetup implements ContextBuilder<Object> 	{
 		return mainContext;
 	}
 	public static double getDepletionRate() {
-		return (Math.abs(depletion_dist.nextDouble())); 
+		return (Math.abs(depletion_dist.nextDouble()+Params.depletionRate )); 
 	}
 
 }
