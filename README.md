@@ -14,23 +14,4 @@ Example video
 
 At 15000 steps
 
-
-https://github.com/tbonne/multilevel_social_structure/assets/15638723/ed74f68f-1f20-40f3-a03f-e2df3ad60565
-
-<img src="https://github.com/tbonne/multilevel_social_structure/blob/master/Figs/test6_new.gif" width="300" />
-
-
-At 30000 steps
-
-
-https://github.com/tbonne/multilevel_social_structure/assets/15638723/9a23c37e-30e2-4bb1-b7a1-e3e8d22afaa0
-
-
-At 450000 steps
-
-
-https://github.com/tbonne/multilevel_social_structure/assets/15638723/64fa2182-b171-4e03-84b8-d824089af2bb
-
-
-  
-
+<img src="https://github.com/tbonne/multilevel_social_structure/blob/master/Figs/test6_new.gif" width="500" />
